@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Matriz — Arqueología visual de lo imaginario</title>
+<meta name="description" content="Plataforma de investigación visual. Rastreamos la genealogía y las transformaciones de los símbolos a través del arte, la literatura, los manuscritos y el cine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --serif: 'Cormorant Garamond', 'Georgia', serif;
+  --sans: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --bg: #FDFBF7;
+  --bg-warm: #F6F2EB;
+  --text: #1A1714;
+  --text-secondary: #6B6358;
+  --text-tertiary: #9C9487;
+  --accent-vermillion: #C4391D;
+  --accent-ultramarine: #1B3A8C;
+  --accent-gold: #B8922F;
+  --border: #E2DDD4;
+  --border-light: #EDE9E2;
+  --max-w: 1120px;
+  --content-w: 720px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ——— NAV ——— */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253,251,247,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+}
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  font-size: 0.8125rem !important;
+  color: var(--bg) !important;
+  background: var(--text);
+  padding: 8px 18px;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+.nav-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 20px;
+  position: relative;
+}
+.nav-menu-btn span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+.nav-menu-btn span:nth-child(1) { top: 0; }
+.nav-menu-btn span:nth-child(2) { top: 9px; }
+.nav-menu-btn span:nth-child(3) { top: 18px; }
+
+/* ——— HERO ——— */
+.hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+}
+.hero-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+.hero-description {
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.hero-cta {
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--text);
+  padding: 14px 36px;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+  letter-spacing: 0.01em;
+}
+.hero-cta:hover { opacity: 0.85; }
+.hero-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--border);
+  margin: 4rem auto 0;
+}
+
+/* ——— ENSAYO DESTACADO ——— */
+.featured {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+.featured-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.featured-img {
+  aspect-ratio: 4/3;
+  background: var(--bg-warm);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-light);
+}
+.featured-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+.featured-section-tag {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-vermillion);
+  margin-bottom: 1rem;
+}
+.featured-content h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.featured-content h2 a:hover { color: var(--accent-vermillion); transition: color 0.2s; }
+.featured-excerpt {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.featured-meta {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.25rem;
+  transition: gap 0.2s;
+}
+.read-link:hover { gap: 10px; }
+.read-link svg { width: 14px; height: 14px; }
+
+/* ——— BREVES ——— */
+.breves {
+  background: var(--bg-warm);
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+.breves-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.section-link {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.section-link:hover { color: var(--text); }
+.breves-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.breve-card {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.breve-card:hover { border-color: var(--border); }
+.breve-card-img {
+  aspect-ratio: 16/10;
+  background: var(--bg-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-tertiary);
+  font-size: 0.8125rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.breve-card-body { padding: 1.25rem; }
+.breve-tag {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+  display: inline-block;
+}
+.breve-tag.bestiario { color: var(--accent-vermillion); }
+.breve-tag.grimorios { color: var(--accent-gold); }
+.breve-tag.museo { color: var(--accent-ultramarine); }
+.breve-tag.pantalla { color: var(--text-secondary); }
+.breve-card h3 {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+.breve-card p {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
+/* ——— DOSSIER ——— */
+.dossier {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.dossier-inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  text-align: center;
+}
+.dossier-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-ultramarine);
+  margin-bottom: 1rem;
+}
+.dossier-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.dossier-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.dossier-entries {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.dossier-entry {
+  font-size: 0.8125rem;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+.dossier-entry:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+.dossier-entry.current {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+/* ——— SUSCRIPCIÓN ——— */
+.subscribe {
+  background: var(--text);
+  color: var(--bg);
+  padding: 4.5rem 2rem;
+}
+.subscribe-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+.subscribe-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #F6F2EB;
+}
+.subscribe-desc {
+  font-size: 0.9375rem;
+  color: #A09B92;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.subscribe-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 440px;
+  margin: 0 auto 1.25rem;
+}
+.subscribe-form input {
+  flex: 1;
+  padding: 12px 16px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  border: 1px solid #3D3A35;
+  border-radius: 4px;
+  background: #2A2722;
+  color: #F6F2EB;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.subscribe-form input::placeholder { color: #706B62; }
+.subscribe-form input:focus { border-color: #706B62; }
+.subscribe-form button {
+  padding: 12px 24px;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #F6F2EB;
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.subscribe-form button:hover { opacity: 0.9; }
+.subscribe-note {
+  font-size: 0.75rem;
+  color: #706B62;
+}
+
+/* ——— FORMATOS ——— */
+.formats {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.formats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+}
+.format-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  transition: border-color 0.2s;
+}
+.format-card:hover { border-color: var(--text-tertiary); }
+.format-card-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 0.75rem;
+}
+.format-card h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+}
+.format-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.format-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: gap 0.2s;
+}
+.format-card-link:hover { gap: 9px; }
+
+/* ——— SOBRE ——— */
+.about {
+  background: var(--bg-warm);
+  border-top: 1px solid var(--border-light);
+  padding: 4rem 2rem;
+}
+.about-inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  text-align: center;
+}
+.about-inner h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.about-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.about-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.about-link:hover { border-color: var(--text); }
+
+/* ——— FOOTER ——— */
+.footer {
+  border-top: 1px solid var(--border-light);
+  padding: 3rem 2rem 2rem;
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+}
+.footer-brand p {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.footer-brand-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.footer-col h4 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.625rem; }
+.footer-col a {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--text); }
+.footer-col .external::after {
+  content: ' ↗';
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+.footer-bottom {
+  max-width: var(--max-w);
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+.footer-subscribe {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.footer-subscribe input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+  font-family: var(--sans);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+.footer-subscribe input:focus { border-color: var(--text-tertiary); }
+.footer-subscribe button {
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: var(--sans);
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ——— MOBILE NAV ——— */
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg);
+  z-index: 99;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.125rem;
+  font-family: var(--serif);
+  color: var(--text);
+  border-bottom: 1px solid var(--border-light);
+}
+.nav-mobile-menu .nav-cta-mobile {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-align: center;
+  background: var(--text);
+  color: var(--bg);
+  padding: 14px 0;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-bottom: none;
+}
+
+/* ——— RESPONSIVE ——— */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-menu-btn { display: block; }
+  .hero { padding: 4rem 1.5rem 3.5rem; }
+  .featured-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .breves-grid { grid-template-columns: 1fr; }
+  .breves, .formats, .dossier, .subscribe, .about { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .formats-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .subscribe-form { flex-direction: column; }
+  .section-header { flex-direction: column; gap: 0.5rem; }
+}
+
+/* ——— ANIMATIONS ——— */
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero-tagline, .hero-description, .hero-cta,
+  .featured-inner, .breve-card, .dossier-inner, .format-card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .hero-tagline { animation-delay: 0.1s; }
+  .hero-description { animation-delay: 0.15s; }
+  .hero-cta { animation-delay: 0.2s; }
+  .featured-inner { animation-delay: 0.1s; }
+  .breve-card:nth-child(1) { animation-delay: 0.05s; }
+  .breve-card:nth-child(2) { animation-delay: 0.12s; }
+  .breve-card:nth-child(3) { animation-delay: 0.19s; }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+    <div class="nav-links">
+      <a href="/revista">Revista</a>
+      <a href="/seminarios">Seminarios</a>
+      <a href="/videoensayos">Videoensayos</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/suscribite" class="nav-cta">Suscribite</a>
+    </div>
+    <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu">
+  <a href="/revista">Revista</a>
+  <a href="/seminarios">Seminarios</a>
+  <a href="/videoensayos">Videoensayos</a>
+  <a href="/sobre">Sobre</a>
+  <a href="/ediciones">Ediciones</a>
+  <a href="/contacto">Contacto</a>
+  <a href="/suscribite" class="nav-cta-mobile">Suscribite a la revista</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">Plataforma de investigación visual</div>
+  <h1>Casa Matriz</h1>
+  <p class="hero-tagline">Arqueología visual de lo imaginario</p>
+  <p class="hero-description">
+    De dónde vienen las imágenes, cómo cambian a lo largo del tiempo, por qué persisten. Rastreamos la genealogía y las transformaciones de los símbolos a través del arte, la literatura, los manuscritos y el cine.
+  </p>
+  <a href="/suscribite" class="hero-cta">Suscribite a la revista</a>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- ENSAYO DESTACADO -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="featured-img">
+      <div class="featured-img-placeholder">Imagen del ensayo — Earthrise / grabado lunar</div>
+    </div>
+    <div class="featured-content">
+      <div class="featured-section-tag">Dossier · Volver a la Luna</div>
+      <h2><a href="/revista/volver-a-la-luna-por-que-necesitamos-ir-otra-vez">Volver a la Luna: por qué necesitamos ir otra vez</a></h2>
+      <p class="featured-excerpt">
+        El 6 de abril de 2026, cuatro astronautas sobrevolaron la cara oculta de la Luna. Era la primera vez que seres humanos salían de la órbita terrestre desde 1972. Y sin embargo, cuando la NASA transmitió las primeras imágenes, algo extraño pasó: la imagen no parecía nueva. Parecía un recuerdo.
+      </p>
+      <span class="featured-meta">Abril 2026 · Ensayo largo · 12 min de lectura</span>
+      <a href="/revista/volver-a-la-luna-por-que-necesitamos-ir-otra-vez" class="read-link">
+        Leer ensayo
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PIEZAS BREVES -->
+<section class="breves">
+  <div class="breves-inner">
+    <div class="section-header">
+      <h2 class="section-title">Piezas breves</h2>
+      <a href="/revista" class="section-link">Ver todo el archivo →</a>
+    </div>
+    <div class="breves-grid">
+
+      <article class="breve-card">
+        <div class="breve-card-img">Ilustración de selenita</div>
+        <div class="breve-card-body">
+          <span class="breve-tag bestiario">Bestiario</span>
+          <h3><a href="#">El selenita: genealogía de un habitante imposible</a></h3>
+          <p>Abril 2026</p>
+        </div>
+      </article>
+
+      <article class="breve-card">
+        <div class="breve-card-img">Lámina alquímica</div>
+        <div class="breve-card-body">
+          <span class="breve-tag grimorios">Grimorios</span>
+          <h3><a href="#">La Luna en los manuscritos iluminados: una lámina alquímica</a></h3>
+          <p>Abril 2026</p>
+        </div>
+      </article>
+
+      <article class="breve-card">
+        <div class="breve-card-img">Fotograma de Méliès</div>
+        <div class="breve-card-body">
+          <span class="breve-tag museo">Museo imaginario</span>
+          <h3><a href="#">La foto que no existe: el alunizaje como imagen mental</a></h3>
+          <p>Próximamente</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOSSIER EN CURSO -->
+<section class="dossier">
+  <div class="dossier-inner">
+    <div class="dossier-label">Dossier en curso · Primer trimestre</div>
+    <h2>Volver a la Luna</h2>
+    <p class="dossier-desc">
+      Tres ensayos que toman el regreso a la Luna como hecho contemporáneo y despliegan su complejidad simbólica: qué buscamos cuando decimos que volvemos, de dónde vienen las imágenes que nos fascinan, qué dice este viaje sobre lo que deseamos como especie.
+    </p>
+    <div class="dossier-entries">
+      <a href="/revista/volver-a-la-luna-por-que-necesitamos-ir-otra-vez" class="dossier-entry current">1. La imagen</a>
+      <a href="#" class="dossier-entry">2. La genealogía</a>
+      <a href="#" class="dossier-entry">3. La pregunta</a>
+    </div>
+  </div>
+</section>
+
+<!-- SUSCRIPCIÓN -->
+<section class="subscribe">
+  <div class="subscribe-inner">
+    <h2>La revista llega a tu correo</h2>
+    <p class="subscribe-desc">
+      Un ensayo largo y dos piezas breves por mes. Los ensayos del dossier son abiertos; las piezas breves, el archivo completo y las notas de investigación son para suscriptores.
+    </p>
+    <form class="subscribe-form" onsubmit="return false;">
+      <input type="email" placeholder="tu@correo.com" required>
+      <button type="submit">Suscribite</button>
+    </form>
+    <p class="subscribe-note">Gratuito para empezar. Suscripción paga desde 7 USD/mes.</p>
+  </div>
+</section>
+
+<!-- SEMINARIOS + VIDEOENSAYOS -->
+<section class="formats">
+  <div class="section-header" style="max-width: 800px; margin: 0 auto;">
+    <h2 class="section-title">Otros formatos</h2>
+  </div>
+  <div class="formats-grid">
+    <div class="format-card">
+      <div class="format-card-label">Seminarios de investigación</div>
+      <h3>Inmersiones colectivas</h3>
+      <p>3–4 encuentros por Zoom donde se propone un recorrido de investigación y los participantes piensan junto con la investigadora. Se graban y se venden como archivo.</p>
+      <a href="/seminarios" class="format-card-link">
+        Ver seminarios
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="format-card">
+      <div class="format-card-label">Videoensayos</div>
+      <h3>Una imagen, su historia secreta</h3>
+      <p>Cada episodio toma una imagen, un símbolo o un objeto visual y lo abre. 15–25 minutos. El material es inherentemente visual: grabados, fotogramas, detalles de pintura.</p>
+      <a href="/videoensayos" class="format-card-link">
+        Ver en YouTube
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about">
+  <div class="about-inner">
+    <h2>Sobre Casa Matriz</h2>
+    <p class="about-desc">
+      Casa Matriz nació hace veinte años y evolucionó hasta convertirse en una plataforma de investigación visual. Lo que la distingue es el método: tomar una imagen y desplegar su historia secreta. No clasificar imágenes, sino rastrear las corrientes subterráneas que las conectan a través del tiempo.
+    </p>
+    <a href="/sobre" class="about-link">Conocé el proyecto y a su directora →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p>Casa Matriz</p>
+      <span class="footer-brand-desc">Arqueología visual de lo imaginario</span>
+      <form class="footer-subscribe" onsubmit="return false;">
+        <input type="email" placeholder="tu@correo.com">
+        <button type="submit">Suscribite</button>
+      </form>
+    </div>
+    <div class="footer-col">
+      <h4>Revista</h4>
+      <ul>
+        <li><a href="/revista/bestiario">Bestiario</a></li>
+        <li><a href="/revista/grimorios">Grimorios</a></li>
+        <li><a href="/revista/museo-imaginario">Museo imaginario</a></li>
+        <li><a href="/revista/simbolismo-en-pantalla">Simbolismo en pantalla</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Proyecto</h4>
+      <ul>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/seminarios">Seminarios</a></li>
+        <li><a href="/ediciones">Ediciones</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes</h4>
+      <ul>
+        <li><a href="https://instagram.com/casamatriz" class="external">Instagram</a></li>
+        <li><a href="https://youtube.com/@casamatriz" class="external">YouTube</a></li>
+        <li><a href="#" class="external">Threads</a></li>
+        <li><a href="https://hijasdekore.com" class="external">Hijas de Kore</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Casa Matriz. Todos los derechos reservados.</span>
+    <span><a href="/legal" style="color:var(--text-tertiary)">Aviso legal</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

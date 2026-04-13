@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Casa Matriz</title>
+<meta name="description" content="Contacto para colaboraciones, charlas, textos por encargo, participación en festivales, museos, universidades y medios.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.contacto-content {
+  max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem;
+}
+.contacto-intro {
+  font-family: var(--serif); font-size: 1.125rem; color: var(--text-secondary);
+  line-height: 1.8; text-align: center; margin-bottom: 3rem;
+}
+.contacto-areas {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem;
+}
+.contacto-area {
+  padding: 1.5rem; border: 1px solid var(--border-light); border-radius: 6px;
+}
+.contacto-area h3 {
+  font-family: var(--serif); font-size: 1.0625rem; font-weight: 500; margin-bottom: 0.5rem;
+}
+.contacto-area p {
+  font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65;
+}
+
+.contacto-form {
+  max-width: 520px; margin: 0 auto;
+}
+.contacto-form h2 {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+  margin-bottom: 1.5rem; text-align: center;
+}
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block; font-size: 0.8125rem; font-weight: 500;
+  color: var(--text-secondary); margin-bottom: 0.375rem;
+}
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; padding: 12px 14px; font-size: 0.9375rem; font-family: var(--sans);
+  border: 1px solid var(--border); border-radius: 4px; background: var(--bg);
+  color: var(--text); outline: none; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: var(--text-tertiary);
+}
+.form-group textarea { min-height: 140px; resize: vertical; line-height: 1.6; }
+.form-group select { appearance: none; cursor: pointer; }
+.form-submit { text-align: center; margin-top: 1.5rem; }
+.form-note {
+  font-size: 0.75rem; color: var(--text-tertiary); text-align: center; margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contacto-areas { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<header class="page-header">
+  <h1>Contacto</h1>
+  <p class="page-header-desc">Para colaboraciones, invitaciones y propuestas editoriales.</p>
+  <div class="page-header-divider"></div>
+</header>
+
+<section class="contacto-content">
+  <p class="contacto-intro">Casa Matriz está abierta a colaboraciones con museos, festivales, universidades, medios y otros proyectos editoriales. Si querés proponer algo, este es el lugar.</p>
+
+  <div class="contacto-areas">
+    <div class="contacto-area">
+      <h3>Charlas e invitaciones</h3>
+      <p>Participación en festivales, ferias del libro, ciclos de conferencias, podcasts, mesas de debate, universidades.</p>
+    </div>
+    <div class="contacto-area">
+      <h3>Textos por encargo</h3>
+      <p>Ensayos, artículos, prólogos y textos curatoriales sobre simbolismo visual, bestiarios, manuscritos iluminados, iconografía en cine.</p>
+    </div>
+    <div class="contacto-area">
+      <h3>Colaboraciones editoriales</h3>
+      <p>Coediciones, publicaciones conjuntas, proyectos de investigación visual con otros sellos o instituciones.</p>
+    </div>
+    <div class="contacto-area">
+      <h3>Prensa y medios</h3>
+      <p>Entrevistas, notas, reseñas. Material de prensa disponible a pedido.</p>
+    </div>
+  </div>
+
+  <div class="contacto-form">
+    <h2>Escribinos</h2>
+    <form onsubmit="return false;">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tu@correo.com">
+      </div>
+      <div class="form-group">
+        <label for="asunto">Asunto</label>
+        <select id="asunto">
+          <option value="">Seleccioná un tema</option>
+          <option value="charla">Charla o invitación</option>
+          <option value="texto">Texto por encargo</option>
+          <option value="editorial">Colaboración editorial</option>
+          <option value="prensa">Prensa y medios</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Contanos qué tenés en mente"></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </div>
+      <p class="form-note">Respondemos dentro de una semana. Para suscripciones y consultas sobre la revista, usá la <a href="suscribite.html" style="color:var(--text-secondary);text-decoration:underline;">página de suscripción</a>.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="#">Bestiario</a></li><li><a href="#">Grimorios</a></li><li><a href="#">Museo imaginario</a></li><li><a href="#">Simbolismo en pantalla</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Sobre</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li><li><a href="#" class="external">Threads</a></li><li><a href="#" class="external">Hijas de Kore</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ediciones — Casa Matriz</title>
+<meta name="description" content="Microediciones derivadas de los dossiers de Casa Matriz. Cuadernos ilustrados, láminas comentadas, ediciones anotadas.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.ediciones-intro {
+  max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 3rem; text-align: center;
+}
+.ediciones-intro p {
+  font-size: 1rem; color: var(--text-secondary); line-height: 1.75;
+}
+.ediciones-grid {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 4rem;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+.edicion-card {
+  border: 1px solid var(--border-light); border-radius: 6px;
+  overflow: hidden; transition: border-color 0.2s;
+}
+.edicion-card:hover { border-color: var(--border); }
+.edicion-card-img .placeholder-img {
+  aspect-ratio: 3/4; border-bottom: 1px solid var(--border-light);
+  border-radius: 0;
+}
+.edicion-card-body { padding: 1.25rem; }
+.edicion-card h3 {
+  font-family: var(--serif); font-size: 1.125rem; font-weight: 500;
+  margin-bottom: 0.25rem; line-height: 1.3;
+}
+.edicion-card .subtitle {
+  font-family: var(--serif); font-style: italic; font-size: 0.875rem;
+  color: var(--text-secondary); margin-bottom: 0.75rem;
+}
+.edicion-card .desc {
+  font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;
+}
+.edicion-footer {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-top: 0.75rem; border-top: 1px solid var(--border-light);
+}
+.edicion-price { font-size: 1rem; font-weight: 500; }
+.edicion-badge {
+  font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 100px;
+}
+.badge-available { background: #E8F5E4; color: #2D6A1E; }
+.badge-soon { background: #FFF3E0; color: #9A6B1E; }
+.badge-soldout { background: var(--bg-warm); color: var(--text-tertiary); }
+
+.ediciones-note {
+  max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem; text-align: center;
+}
+.ediciones-note p {
+  font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7;
+  font-family: var(--serif); font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ediciones-grid { grid-template-columns: 1fr; max-width: 400px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<header class="page-header">
+  <div class="page-header-label">Materialidades</div>
+  <h1>Ediciones</h1>
+  <p class="page-header-desc">Microediciones derivadas de los dossiers de la revista. Tirada limitada, venta directa, sin intermediarios.</p>
+  <div class="page-header-divider"></div>
+</header>
+
+<div class="ediciones-intro">
+  <p>Cada dossier terminado es, potencialmente, una publicación. Tres ensayos sobre un manuscrito, editados y con sus imágenes, son un cuaderno ilustrado. Tres ensayos sobre cuadros ficticios son un librito. La revista genera los libros.</p>
+</div>
+
+<div class="ediciones-grid">
+
+  <article class="edicion-card">
+    <div class="edicion-card-img">
+      <div class="placeholder-img" style="aspect-ratio:3/4;border-radius:0;">Portada del cuaderno</div>
+    </div>
+    <div class="edicion-card-body">
+      <h3>Ejemplo: Cuaderno del Compendium</h3>
+      <p class="subtitle">Láminas comentadas del manuscrito</p>
+      <p class="desc">Selección de láminas del Compendium rarisimum ars magicas con ensayos breves que las abren. Impresión offset, tapas blandas, 48 páginas.</p>
+      <div class="edicion-footer">
+        <span class="edicion-price">25 USD</span>
+        <span class="edicion-badge badge-soon">Próximamente</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="edicion-card">
+    <div class="edicion-card-img">
+      <div class="placeholder-img" style="aspect-ratio:3/4;border-radius:0;">Lámina de bestiario</div>
+    </div>
+    <div class="edicion-card-body">
+      <h3>Ejemplo: Láminas del Bestiario</h3>
+      <p class="subtitle">Serie de 6 láminas comentadas</p>
+      <p class="desc">Seis criaturas fantásticas en reproducción de alta calidad, con texto al reverso. Presentadas en carpeta de cartón. Edición de 100 ejemplares.</p>
+      <div class="edicion-footer">
+        <span class="edicion-price">35 USD</span>
+        <span class="edicion-badge badge-soon">Próximamente</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="edicion-card">
+    <div class="edicion-card-img">
+      <div class="placeholder-img" style="aspect-ratio:3/4;border-radius:0;">Portada del almanaque</div>
+    </div>
+    <div class="edicion-card-body">
+      <h3>Ejemplo: Almanaque visual 2027</h3>
+      <p class="subtitle">Compilación anual de la revista</p>
+      <p class="desc">Los mejores ensayos y piezas breves del primer año, editados y ampliados. Con imágenes a color y bibliografía comentada.</p>
+      <div class="edicion-footer">
+        <span class="edicion-price">—</span>
+        <span class="edicion-badge badge-soon">Futuro</span>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<div class="ediciones-note">
+  <p>Las ediciones de Casa Matriz no compiten con Hijas de Kore: no son guías de vida, son investigación estética. Astrología, tarot y yoga viven en Hijas de Kore. Bestiarios, grimorios y museos imaginarios viven acá.</p>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="#">Bestiario</a></li><li><a href="#">Grimorios</a></li><li><a href="#">Museo imaginario</a></li><li><a href="#">Simbolismo en pantalla</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Sobre</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li><li><a href="#" class="external">Threads</a></li><li><a href="#" class="external">Hijas de Kore</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>

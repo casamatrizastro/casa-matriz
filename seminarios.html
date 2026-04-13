@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminarios — Casa Matriz</title>
+<meta name="description" content="Seminarios de inmersión en investigación visual. Encuentros por Zoom donde se propone un recorrido y los participantes piensan junto con la investigadora.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.seminario-featured {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 4rem;
+}
+.seminario-featured-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+}
+.seminario-img .placeholder-img { aspect-ratio: 4/3; border-radius: 6px; }
+.seminario-status {
+  display: inline-block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 1rem;
+}
+.status-open { background: #E8F5E4; color: #2D6A1E; }
+.status-closed { background: var(--bg-warm); color: var(--text-tertiary); }
+.status-soon { background: #FFF3E0; color: #9A6B1E; }
+.seminario-info h2 {
+  font-family: var(--serif); font-size: 1.75rem; font-weight: 500;
+  line-height: 1.25; margin-bottom: 0.75rem;
+}
+.seminario-info .subtitle {
+  font-family: var(--serif); font-style: italic; font-size: 1.0625rem;
+  color: var(--text-secondary); margin-bottom: 1.25rem;
+}
+.seminario-details {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;
+}
+.detail-item label {
+  display: block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.25rem;
+}
+.detail-item span { font-size: 0.9375rem; color: var(--text); }
+.seminario-desc {
+  font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem;
+}
+.seminario-program { margin-bottom: 2rem; }
+.seminario-program h3 {
+  font-family: var(--serif); font-size: 1.125rem; font-weight: 500; margin-bottom: 1rem;
+}
+.program-item {
+  display: flex; gap: 1rem; padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-light); font-size: 0.9375rem;
+}
+.program-item:last-child { border-bottom: none; }
+.program-num {
+  font-family: var(--sans); font-size: 0.75rem; color: var(--text-tertiary);
+  min-width: 24px; padding-top: 2px;
+}
+
+/* ——— ARCHIVO ——— */
+.archivo-section {
+  background: var(--bg-warm); border-top: 1px solid var(--border-light);
+  padding: 4rem 2rem;
+}
+.archivo-inner { max-width: var(--max-w); margin: 0 auto; }
+.archivo-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;
+}
+.archivo-card {
+  background: var(--bg); border: 1px solid var(--border-light); border-radius: 6px;
+  padding: 1.5rem; transition: border-color 0.2s;
+}
+.archivo-card:hover { border-color: var(--border); }
+.archivo-card h3 {
+  font-family: var(--serif); font-size: 1.125rem; font-weight: 500;
+  margin-bottom: 0.375rem; line-height: 1.3;
+}
+.archivo-card .subtitle {
+  font-family: var(--serif); font-style: italic; font-size: 0.875rem;
+  color: var(--text-secondary); margin-bottom: 0.75rem;
+}
+.archivo-card .meta {
+  font-size: 0.8125rem; color: var(--text-tertiary); margin-bottom: 1rem;
+}
+.archivo-price {
+  display: flex; align-items: baseline; justify-content: space-between;
+}
+.archivo-price .price {
+  font-size: 1rem; font-weight: 500;
+}
+.archivo-price a {
+  font-size: 0.8125rem; font-weight: 500; color: var(--text);
+  border-bottom: 1px solid var(--border); padding-bottom: 1px;
+}
+.archivo-price a:hover { border-color: var(--text); }
+
+@media (max-width: 768px) {
+  .seminario-featured-inner { grid-template-columns: 1fr; }
+  .archivo-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html">Revista</a><a href="seminarios.html" class="active">Seminarios</a>
+    <a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<header class="page-header">
+  <div class="page-header-label">Investigación colectiva</div>
+  <h1>Seminarios</h1>
+  <p class="page-header-desc">No son cursos: son inmersiones. Encuentros por Zoom donde se propone un recorrido de investigación visual y los participantes piensan junto con la investigadora.</p>
+  <div class="page-header-divider"></div>
+</header>
+
+<section class="seminario-featured">
+  <div class="seminario-featured-inner">
+    <div class="seminario-img">
+      <div class="placeholder-img" style="aspect-ratio:4/3;">Material visual del seminario</div>
+    </div>
+    <div class="seminario-info">
+      <span class="seminario-status status-soon">Próximamente</span>
+      <h2>Imágenes que no existen</h2>
+      <p class="subtitle">Genealogía visual de las obras de arte ficticias</p>
+
+      <div class="seminario-details">
+        <div class="detail-item"><label>Formato</label><span>4 encuentros por Zoom</span></div>
+        <div class="detail-item"><label>Duración</label><span>90 min por encuentro</span></div>
+        <div class="detail-item"><label>Fecha</label><span>Por confirmar</span></div>
+        <div class="detail-item"><label>Precio</label><span>Desde 50 USD</span></div>
+      </div>
+
+      <p class="seminario-desc">¿Qué nos dice una imagen que nunca existió? El retrato de Dorian Gray, los cuadros de Vermeer que inventó Van Meegeren, las écfrasis de Borges, los museos imaginarios de Malraux. Un recorrido por las obras de arte que solo existen en la literatura, el cine y la imaginación cultural, y que sin embargo operan sobre nosotros con la misma fuerza que las reales.</p>
+
+      <div class="seminario-program">
+        <h3>Programa</h3>
+        <div class="program-item"><span class="program-num">01</span><span>El cuadro que no se puede ver: Dorian Gray y sus antecedentes</span></div>
+        <div class="program-item"><span class="program-num">02</span><span>Écfrasis: cuando la literatura inventa obras de arte</span></div>
+        <div class="program-item"><span class="program-num">03</span><span>Falsificaciones y fantasmas: la obra que existe demasiado</span></div>
+        <div class="program-item"><span class="program-num">04</span><span>El museo imaginario: de Malraux a las pantallas</span></div>
+      </div>
+
+      <a href="#" class="btn-outline">Avisame cuando abra la inscripción</a>
+    </div>
+  </div>
+</section>
+
+<section class="archivo-section">
+  <div class="archivo-inner">
+    <div class="section-header">
+      <h2 class="section-title">Archivo de seminarios</h2>
+    </div>
+    <p style="font-size:0.9375rem;color:var(--text-secondary);margin-bottom:2rem;">Todos los seminarios se graban. Podés comprar el acceso a las grabaciones y al material visual curado.</p>
+
+    <div class="archivo-grid">
+      <div class="archivo-card">
+        <h3>Ejemplo de seminario anterior</h3>
+        <p class="subtitle">Subtítulo del seminario</p>
+        <p class="meta">4 encuentros · 6 horas · Material visual incluido</p>
+        <div class="archivo-price">
+          <span class="price">40 USD</span>
+          <a href="#">Comprar acceso</a>
+        </div>
+      </div>
+      <div class="archivo-card">
+        <h3>Ejemplo de seminario anterior</h3>
+        <p class="subtitle">Subtítulo del seminario</p>
+        <p class="meta">3 encuentros · 4.5 horas · Material visual incluido</p>
+        <div class="archivo-price">
+          <span class="price">35 USD</span>
+          <a href="#">Comprar acceso</a>
+        </div>
+      </div>
+      <div class="archivo-card" style="opacity:0.5;">
+        <h3>Próximo seminario grabado</h3>
+        <p class="subtitle">Se sumará al archivo cuando se complete</p>
+        <p class="meta">—</p>
+        <div class="archivo-price"><span class="price">—</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="#">Bestiario</a></li><li><a href="#">Grimorios</a></li><li><a href="#">Museo imaginario</a></li><li><a href="#">Simbolismo en pantalla</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Sobre</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li><li><a href="#" class="external">Threads</a></li><li><a href="#" class="external">Hijas de Kore</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>
