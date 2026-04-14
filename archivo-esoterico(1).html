@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archivo Esotérico Ilustrado — Casa Matriz</title>
+<meta name="description" content="Manuscritos iluminados, tratados alquímicos, grimorios, bestiarios y grabados herméticos. La tradición visual del conocimiento oculto.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.section-hero {
+  max-width: var(--max-w); margin: 0 auto; padding: 4rem 2rem 3rem;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center;
+}
+.section-hero-text .breadcrumb { font-size: 0.8125rem; color: var(--text-tertiary); margin-bottom: 1.5rem; }
+.section-hero-text .breadcrumb a { color: var(--text-secondary); }
+.section-hero-text .breadcrumb a:hover { color: var(--text); }
+.section-hero-text h1 {
+  font-family: var(--serif); font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 400; line-height: 1.1; margin-bottom: 0.75rem; color: var(--accent-gold);
+}
+.section-hero-text .pregunta {
+  font-family: var(--serif); font-style: italic; font-size: 1.25rem;
+  color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.5;
+}
+.section-hero-text .desc { font-size: 1rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem; }
+.section-hero-img .placeholder-img { aspect-ratio: 4/5; border-radius: 6px; }
+.section-nav {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 2rem;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.section-nav a {
+  font-size: 0.8125rem; font-weight: 500; color: var(--text-tertiary);
+  padding: 6px 16px; border: 1px solid var(--border-light); border-radius: 100px; transition: all 0.2s;
+}
+.section-nav a:hover { border-color: var(--border); color: var(--text-secondary); }
+.section-nav a.active { background: var(--accent-gold); color: #fff; border-color: var(--accent-gold); }
+.articles { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 4rem; }
+.article-item {
+  display: grid; grid-template-columns: 180px 1fr; gap: 1.75rem;
+  padding: 1.75rem 0; border-bottom: 1px solid var(--border-light); align-items: start;
+}
+.article-item:first-child { border-top: 1px solid var(--border-light); }
+.article-thumb { aspect-ratio: 1/1; border-radius: 4px; overflow: hidden; }
+.article-body h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; line-height: 1.3; margin-bottom: 0.5rem; }
+.article-body h3 a:hover { color: var(--accent-gold); transition: color 0.2s; }
+.article-excerpt { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.75rem; }
+.article-meta { font-size: 0.8125rem; color: var(--text-tertiary); }
+.related { background: var(--bg-warm); border-top: 1px solid var(--border-light); padding: 3rem 2rem; }
+.related-inner { max-width: var(--max-w); margin: 0 auto; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+.related-card { background: var(--bg); border: 1px solid var(--border-light); border-radius: 6px; padding: 1.25rem; transition: border-color 0.2s; }
+.related-card:hover { border-color: var(--border); }
+.related-card .tag { margin-bottom: 0.5rem; }
+.related-card h4 { font-family: var(--serif); font-size: 1.0625rem; font-weight: 500; line-height: 1.35; margin-bottom: 0.375rem; }
+.related-card p { font-size: 0.8125rem; color: var(--text-tertiary); }
+@media (max-width: 768px) {
+  .section-hero { grid-template-columns: 1fr; gap: 2rem; }
+  .section-hero-img { order: -1; }
+  .article-item { grid-template-columns: 1fr; gap: 1rem; }
+  .article-thumb { max-width: 180px; }
+  .related-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html" class="active">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<section class="section-hero">
+  <div class="section-hero-text">
+    <div class="breadcrumb"><a href="revista.html">Revista</a> / Archivo Esotérico Ilustrado</div>
+    <h1>Archivo Esotérico Ilustrado</h1>
+    <p class="pregunta">¿Cómo se vuelve visible lo invisible?</p>
+    <p class="desc">Manuscritos iluminados, tratados alquímicos, grimorios, bestiarios y grabados herméticos. Criaturas fantásticas, diagramas cabalísticos, láminas demonológicas. Esta sección reúne la tradición visual del conocimiento oculto: el arte de dibujar lo que no se debería saber, de dar forma a lo que no tiene cuerpo, de ilustrar lo prohibido. Del Splendor Solis al Compendium rarisimum, del Rosarium Philosophorum a los bestiarios medievales.</p>
+    <a href="suscribite.html" class="btn-outline">Suscribite para acceder a todas las piezas</a>
+  </div>
+  <div class="section-hero-img">
+    <div class="placeholder-img" style="aspect-ratio:4/5;">Lámina del Splendor Solis — imagen alquímica</div>
+  </div>
+</section>
+
+<div class="section-nav">
+  <a href="archivo-esoterico.html" class="active">Archivo Esotérico Ilustrado</a>
+  <a href="museo-imaginario.html">Museo imaginario</a>
+  <a href="simbolismo-en-escenas.html">Simbolismo en escenas</a>
+  <a href="imagenes-que-persisten.html">Imágenes que persisten</a>
+</div>
+
+<section class="articles">
+
+  <article class="article-item">
+    <img class="article-thumb" src="img-selenographia.jpg" alt="Mapa lunar — Selenographia, 1647" style="aspect-ratio:1/1;object-fit:cover;border-radius:4px;">
+    <div class="article-body">
+      <h3><a href="selenographia.html">El mapa imposible de Selenographia, sive Lunae descriptio</a></h3>
+      <p class="article-excerpt">A mediados del siglo XVII, Hevelius compuso una imagen de la Luna bajo una luz constante que ningún observador podría haber visto. Cada accidente aparece bajo una iluminación homogénea, como si un mismo amanecer recorriera toda la superficie. El resultado es un retrato total de un mundo que sólo puede verse por partes.</p>
+      <div class="article-meta">Abril 2026 · Pieza breve · 4 min · <span style="color:var(--accent-ultramarine);font-weight:500;">Dossier: Volver a la Luna</span></div>
+    </div>
+  </article>
+
+  <article class="article-item">
+    <div class="article-thumb placeholder-img">Lámina alquímica — Sol y Luna</div>
+    <div class="article-body">
+      <h3><a href="#">La Luna en los manuscritos iluminados: una lámina alquímica</a></h3>
+      <p class="article-excerpt">El sol y la luna como pareja alquímica, la conjunctio oppositorum dibujada en un tratado del siglo XVI. ¿Qué significa casar los opuestos en una imagen?</p>
+      <div class="article-meta">Abril 2026 · Pieza breve · 3 min · <span style="color:var(--accent-ultramarine);font-weight:500;">Dossier: Volver a la Luna</span></div>
+    </div>
+  </article>
+
+  <article class="article-item">
+    <div class="article-thumb placeholder-img">Selenita — grabado s. XVII</div>
+    <div class="article-body">
+      <h3><a href="#">El selenita: genealogía de un habitante imposible</a></h3>
+      <p class="article-excerpt">De Luciano de Samósata a H.G. Wells, de los grabados del siglo XVII a las ilustraciones pulp. ¿Cómo imaginamos al que ya estaba ahí antes de que llegáramos?</p>
+      <div class="article-meta">Abril 2026 · Pieza breve · 4 min · <span style="color:var(--accent-ultramarine);font-weight:500;">Dossier: Volver a la Luna</span></div>
+    </div>
+  </article>
+
+  <article class="article-item">
+    <div class="article-thumb placeholder-img">Demonio — Compendium rarisimum</div>
+    <div class="article-body">
+      <h3><a href="#">Cómo se dibuja un demonio: las láminas del Compendium rarisimum</a></h3>
+      <p class="article-excerpt">El Compendium rarisimum totius artis magicae es un manuscrito de alrededor de 1780 con 31 ilustraciones de demonios a acuarela. ¿Quién los dibujó, para quién, y por qué estas imágenes tienen un poder que sobrevive a su contexto?</p>
+      <div class="article-meta">Próximamente · Pieza breve · 5 min</div>
+    </div>
+  </article>
+
+  <article class="article-item">
+    <div class="article-thumb placeholder-img">Sirena — capitel románico</div>
+    <div class="article-body">
+      <h3><a href="#">La sirena de doble cola: de los capiteles al logo de Starbucks</a></h3>
+      <p class="article-excerpt">En el románico, la sirena de doble cola abre las piernas en los capiteles de las iglesias. Mil años después aparece estilizada en un vaso de café. Una genealogía visual que cruza la tentación medieval con el branding contemporáneo.</p>
+      <div class="article-meta">Próximamente · Pieza breve · 5 min</div>
+    </div>
+  </article>
+
+  <article class="article-item">
+    <div class="article-thumb placeholder-img">Diagrama cabalístico</div>
+    <div class="article-body">
+      <h3><a href="#">El Árbol de la Vida como diagrama: una historia de la forma</a></h3>
+      <p class="article-excerpt">El árbol sefirótico no es un símbolo estático: su forma visual cambió radicalmente entre el siglo XIII y el XIX. ¿Por qué un diagrama místico muta como si fuera un organismo vivo?</p>
+      <div class="article-meta">Próximamente · Pieza breve · 4 min</div>
+    </div>
+  </article>
+
+</section>
+
+<section class="related">
+  <div class="related-inner">
+    <h3 class="section-title">Desde otras secciones</h3>
+    <div class="related-grid">
+      <a href="#" class="related-card">
+        <span class="tag tag-museo">Museo imaginario</span>
+        <h4>La foto que no existe: el alunizaje como imagen mental</h4>
+        <p>Próximamente · 5 min</p>
+      </a>
+      <a href="#" class="related-card">
+        <span class="tag tag-persisten">Imágenes que persisten</span>
+        <h4>Earthrise: vida póstuma de una imagen</h4>
+        <p>Próximamente · 6 min</p>
+      </a>
+      <a href="articulo.html" class="related-card">
+        <span class="tag tag-dossier">Dossier</span>
+        <h4>Volver a la Luna: por qué necesitamos ir otra vez</h4>
+        <p>Abril 2026 · 12 min</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a></li><li><a href="museo-imaginario.html">Museo imaginario</a></li><li><a href="simbolismo-en-escenas.html">Simbolismo en escenas</a></li><li><a href="imagenes-que-persisten.html">Imágenes que persisten</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Acerca de</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li><li><a href="#" class="external">Threads</a></li><li><a href="#" class="external">Hijas de Kore</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>
