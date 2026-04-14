@@ -61,30 +61,8 @@
   font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65;
 }
 
-.about-autora {
-  max-width: var(--content-w); margin: 0 auto; padding: 4rem 2rem;
-}
-.autora-inner {
-  display: flex; gap: 2rem; align-items: flex-start;
-}
-.autora-photo .placeholder-img {
-  width: 140px; height: 140px; border-radius: 50%; flex-shrink: 0;
-}
-.autora-bio h2 {
-  font-family: var(--serif); font-size: 1.5rem; font-weight: 500; margin-bottom: 0.75rem;
-}
-.autora-bio p {
-  font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1rem;
-}
-.autora-bio .autora-link {
-  font-size: 0.8125rem; color: var(--text-secondary); transition: color 0.2s;
-}
-.autora-bio .autora-link:hover { color: var(--text); }
-.autora-bio .autora-link + .autora-link { margin-left: 1.5rem; }
-
 @media (max-width: 768px) {
   .secciones-grid { grid-template-columns: 1fr; }
-  .autora-inner { flex-direction: column; align-items: center; text-align: center; }
   .about-content blockquote { margin-left: 0; }
 }
 </style>
@@ -95,12 +73,12 @@
   <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
   <div class="nav-links">
     <a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a>
-    <a href="videoensayos.html">Videoensayos</a><a href="sobre.html" class="active">Acerca de</a>
+    <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html" class="active">Acerca de</a>
     <a href="suscribite.html" class="nav-cta">Suscribite</a>
   </div>
   <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Acerca de</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
 
 <header class="page-header">
   <h1>Acerca de</h1>
