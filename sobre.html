@@ -41,9 +41,14 @@
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;
 }
 .seccion-card {
-  padding: 1.5rem; border: 1px solid var(--border-light); border-radius: 6px;
-  background: var(--bg);
+  padding: 0; border: 1px solid var(--border-light); border-radius: 6px;
+  background: var(--bg); overflow: hidden;
 }
+.seccion-card-img {
+  width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block;
+  border-bottom: 1px solid var(--border-light);
+}
+.seccion-card-body { padding: 1.25rem 1.5rem 1.5rem; }
 .seccion-card h3 {
   font-family: var(--serif); font-size: 1.125rem; font-weight: 500;
   margin-bottom: 0.375rem;
@@ -52,7 +57,7 @@
   font-family: var(--serif); font-style: italic; font-size: 0.9375rem;
   color: var(--text-secondary); margin-bottom: 0.75rem;
 }
-.seccion-card p {
+.seccion-card p:last-child {
   font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65;
 }
 
@@ -130,24 +135,36 @@
     <h2 class="section-title">Las cuatro secciones</h2>
     <div class="secciones-grid">
       <div class="seccion-card">
-        <h3>Archivo Esotérico Ilustrado</h3>
-        <p class="pregunta">¿Cómo se vuelve visible lo invisible?</p>
-        <p>Manuscritos iluminados, tratados alquímicos, grimorios, bestiarios y grabados herméticos. La tradición visual del conocimiento oculto: criaturas fantásticas, diagramas cabalísticos, láminas demonológicas y el arte de ilustrar lo prohibido.</p>
+        <img src="img-archivo-esoterico.jpg" alt="Lámina alquímica — manuscrito iluminado" class="seccion-card-img">
+        <div class="seccion-card-body">
+          <h3>Archivo Esotérico Ilustrado</h3>
+          <p class="pregunta">¿Cómo se vuelve visible lo invisible?</p>
+          <p>Manuscritos iluminados, tratados alquímicos, grimorios, bestiarios y grabados herméticos. La tradición visual del conocimiento oculto: criaturas fantásticas, diagramas cabalísticos, láminas demonológicas y el arte de ilustrar lo prohibido.</p>
+        </div>
       </div>
       <div class="seccion-card">
-        <h3>Museo imaginario</h3>
-        <p class="pregunta">¿Qué nos dice una imagen que nunca existió?</p>
-        <p>Obras de arte que no existen materialmente pero operan en la cultura: cuadros ficticios, obras perdidas, écfrasis, museos imaginados. Lo que nunca existió también tiene genealogía.</p>
+        <img src="img-museo-imaginario.jpg" alt="The Sun and Solar Phenomena — grabado astronómico" class="seccion-card-img">
+        <div class="seccion-card-body">
+          <h3>Museo imaginario</h3>
+          <p class="pregunta">¿Qué nos dice una imagen que nunca existió?</p>
+          <p>Obras de arte que no existen materialmente pero operan en la cultura: cuadros ficticios, obras perdidas, écfrasis, museos imaginados. Lo que nunca existió también tiene genealogía.</p>
+        </div>
       </div>
       <div class="seccion-card">
-        <h3>Simbolismo en escenas</h3>
-        <p class="pregunta">¿De dónde viene lo que estamos viendo?</p>
-        <p>Lectura de símbolos, motivos visuales y genealogías iconográficas en cine y series contemporáneas. Cada plano es el último eslabón de una cadena visual de siglos.</p>
+        <img src="img-simbolismo-escenas.jpg" alt="Silueta frente a la Luna — fotograma cinematográfico" class="seccion-card-img">
+        <div class="seccion-card-body">
+          <h3>Simbolismo en escenas</h3>
+          <p class="pregunta">¿De dónde viene lo que estamos viendo?</p>
+          <p>Lectura de símbolos, motivos visuales y genealogías iconográficas en cine y series contemporáneas. Cada plano es el último eslabón de una cadena visual de siglos.</p>
+        </div>
       </div>
       <div class="seccion-card">
-        <h3>Imágenes que persisten</h3>
-        <p class="pregunta">¿Por qué ciertas formas sobreviven a quienes las crearon?</p>
-        <p>El Nachleben de las imágenes: sus derivas, sus retornos, las Pathosformeln que atraviesan el tiempo. Nudos donde se cruzan tiempos heterogéneos, constelaciones donde el pasado insiste en el presente.</p>
+        <img src="img-imagenes-persisten.jpg" alt="Abbey Road — imagen que persiste en la cultura" class="seccion-card-img">
+        <div class="seccion-card-body">
+          <h3>Imágenes que persisten</h3>
+          <p class="pregunta">¿Por qué ciertas formas sobreviven a quienes las crearon?</p>
+          <p>El Nachleben de las imágenes: sus derivas, sus retornos, las Pathosformeln que atraviesan el tiempo. Nudos donde se cruzan tiempos heterogéneos, constelaciones donde el pasado insiste en el presente.</p>
+        </div>
       </div>
     </div>
   </div>
