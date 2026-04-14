@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Museo imaginario — Casa Matriz</title>
-<meta name="description" content="Obras de arte que no existen materialmente pero operan en la cultura. Cuadros ficticios, obras perdidas, écfrasis, museos imaginados.">
+<title>Simbolismo en escenas — Casa Matriz</title>
+<meta name="description" content="Lectura de símbolos, motivos visuales y genealogías iconográficas en cine y series contemporáneas. ¿De dónde viene lo que estamos viendo?">
 <link rel="stylesheet" href="styles.css">
 <style>
 .section-hero {
@@ -15,15 +15,15 @@
 .section-hero-text .breadcrumb a { color: var(--text-secondary); }
 .section-hero-text .breadcrumb a:hover { color: var(--text); }
 .section-hero-text h1 {
-  font-family: var(--serif); font-size: clamp(2.25rem, 5vw, 3.5rem);
-  font-weight: 400; line-height: 1.1; margin-bottom: 0.75rem; color: var(--accent-ultramarine);
+  font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 400; line-height: 1.1; margin-bottom: 0.75rem; color: var(--text);
 }
 .section-hero-text .pregunta {
   font-family: var(--serif); font-style: italic; font-size: 1.25rem;
   color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.5;
 }
 .section-hero-text .desc { font-size: 1rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem; }
-.section-hero-img .placeholder-img { aspect-ratio: 4/5; border-radius: 6px; }
+.section-hero-img .placeholder-img { aspect-ratio: 16/10; border-radius: 6px; }
 .section-nav {
   max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 2rem;
   display: flex; gap: 1rem; flex-wrap: wrap;
@@ -33,16 +33,16 @@
   padding: 6px 16px; border: 1px solid var(--border-light); border-radius: 100px; transition: all 0.2s;
 }
 .section-nav a:hover { border-color: var(--border); color: var(--text-secondary); }
-.section-nav a.active { background: var(--accent-ultramarine); color: #fff; border-color: var(--accent-ultramarine); }
+.section-nav a.active { background: var(--text); color: var(--bg); border-color: var(--text); }
 .articles { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 4rem; }
 .article-item {
-  display: grid; grid-template-columns: 180px 1fr; gap: 1.75rem;
+  display: grid; grid-template-columns: 220px 1fr; gap: 1.75rem;
   padding: 1.75rem 0; border-bottom: 1px solid var(--border-light); align-items: start;
 }
 .article-item:first-child { border-top: 1px solid var(--border-light); }
-.article-thumb { aspect-ratio: 1/1; border-radius: 4px; overflow: hidden; }
+.article-thumb { aspect-ratio: 16/10; border-radius: 4px; overflow: hidden; }
 .article-body h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; line-height: 1.3; margin-bottom: 0.5rem; }
-.article-body h3 a:hover { color: var(--accent-ultramarine); transition: color 0.2s; }
+.article-body h3 a:hover { color: var(--accent-vermillion); transition: color 0.2s; }
 .article-excerpt { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.75rem; }
 .article-meta { font-size: 0.8125rem; color: var(--text-tertiary); }
 .related { background: var(--bg-warm); border-top: 1px solid var(--border-light); padding: 3rem 2rem; }
@@ -76,60 +76,68 @@
 
 <section class="section-hero">
   <div class="section-hero-text">
-    <div class="breadcrumb"><a href="revista.html">Revista</a> / Museo imaginario</div>
-    <h1>Museo imaginario</h1>
-    <p class="pregunta">¿Qué nos dice una imagen que nunca existió?</p>
-    <p class="desc">Obras de arte que no existen materialmente pero operan en la cultura con la misma fuerza que las reales. Cuadros ficticios dentro de novelas, obras perdidas que solo conocemos por descripción, écfrasis que inventan lo que dicen describir, museos que solo existen en la imaginación. El concepto viene de Malraux, pero Casa Matriz lo lleva más lejos: lo que nunca existió también tiene genealogía.</p>
+    <div class="breadcrumb"><a href="revista.html">Revista</a> / Simbolismo en escenas</div>
+    <h1>Simbolismo en escenas</h1>
+    <p class="pregunta">¿De dónde viene lo que estamos viendo?</p>
+    <p class="desc">Lectura de símbolos, motivos visuales y genealogías iconográficas en cine y series contemporáneas. Lo que parece una decisión estética de un director es, casi siempre, el último eslabón de una cadena visual de siglos. Esta sección tira del hilo: conecta un plano de Kubrick con un grabado renacentista, un encuadre de Ari Aster con un retablo medieval, una paleta de color de Wes Anderson con una tradición pictórica japonesa.</p>
     <a href="suscribite.html" class="btn-outline">Suscribite para acceder a todas las piezas</a>
   </div>
   <div class="section-hero-img">
-    <div class="placeholder-img" style="aspect-ratio:4/5;">Marco vacío / galería imaginaria — collage conceptual</div>
+    <div class="placeholder-img" style="aspect-ratio:16/10;">Fotograma cinematográfico — composición simétrica</div>
   </div>
 </section>
 
 <div class="section-nav">
   <a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a>
   
-  <a href="museo-imaginario.html" class="active">Museo imaginario</a>
-  <a href="simbolismo-en-escenas.html">Simbolismo en escenas</a>
-  <a href="imagenes-que-persisten.html">Imágenes que persisten</a>
+  <a href="museo-imaginario.html">Museo imaginario</a>
+  <a href="simbolismo-en-escenas.html" class="active">Simbolismo en escenas</a>
 </div>
 
 <section class="articles">
 
   <article class="article-item">
-    <div class="article-thumb placeholder-img">Composición fotográfica — alunizaje</div>
+    <div class="article-thumb placeholder-img">Fotograma — Earthrise en Artemis II</div>
     <div class="article-body">
-      <h3><a href="#">La foto que no existe: el alunizaje como imagen mental</a></h3>
-      <p class="article-excerpt">No hay una sola imagen icónica del alunizaje: hay un compuesto de varias. Casi nadie distingue cuál es la foto real y cuál es la reconstrucción. Una pieza sobre la imagen-que-todos-creen-haber-visto como obra de arte colectiva involuntaria.</p>
-      <div class="article-meta">Próximamente · Pieza breve · 5 min · <span style="color:var(--accent-ultramarine);font-weight:500;">Dossier: Volver a la Luna</span></div>
+      <h3><a href="articulo.html">Volver a la Luna: por qué necesitamos ir otra vez</a></h3>
+      <p class="article-excerpt">El 6 de abril de 2026, cuatro astronautas sobrevolaron la cara oculta de la Luna. ¿Por qué las imágenes que transmitieron nos parecieron un recuerdo? Un ensayo sobre la diferencia entre revelación y reconocimiento, entre 1968 y 2026.</p>
+      <div class="article-meta">Abril 2026 · Ensayo largo · 12 min · <span style="color:var(--accent-ultramarine);font-weight:500;">Dossier: Volver a la Luna</span></div>
     </div>
   </article>
 
   <article class="article-item">
-    <div class="article-thumb placeholder-img">Ilustración de Dorian Gray</div>
+    <div class="article-thumb placeholder-img">Fotograma — De Méliès a Kubrick</div>
     <div class="article-body">
-      <h3><a href="#">El retrato de Dorian Gray: historia de un cuadro que nadie vio</a></h3>
-      <p class="article-excerpt">Wilde nunca describió el cuadro. Y sin embargo, docenas de artistas lo pintaron después: para películas, para ediciones ilustradas, para exposiciones. ¿Cómo se le da forma a una imagen que el texto deliberadamente oculta?</p>
-      <div class="article-meta">Próximamente · Ensayo largo · 10 min</div>
+      <h3><a href="#">De Méliès a Kubrick: genealogía visual del viaje a la Luna</a></h3>
+      <p class="article-excerpt">La Luna como cara en Méliès, la primera cuenta regresiva inventada para una película de Fritz Lang, el monolito de Kubrick un año antes del alunizaje real. El viaje a la Luna ya había sido completado visualmente antes de 1969.</p>
+      <div class="article-meta">Próximamente · Ensayo largo · 14 min · <span style="color:var(--accent-ultramarine);font-weight:500;">Dossier: Volver a la Luna</span></div>
     </div>
   </article>
 
   <article class="article-item">
-    <div class="article-thumb placeholder-img">Vermeer — falsificación de Van Meegeren</div>
+    <div class="article-thumb placeholder-img">Fotograma — Kubrick simetría</div>
     <div class="article-body">
-      <h3><a href="#">El Vermeer que no era: Van Meegeren y la obra que existió demasiado</a></h3>
-      <p class="article-excerpt">Han van Meegeren falsificó Vermeers tan convincentes que engañaron a los expertos durante años. Cuando la falsificación se descubre, ¿deja de funcionar la imagen? ¿O la experiencia estética que produjo sigue siendo real?</p>
+      <h3><a href="#">Kubrick y la simetría: cinco siglos de composición central</a></h3>
+      <p class="article-excerpt">La composición simétrica en Kubrick no es un tic formal: es herencia directa de la pintura renacentista, de la perspectiva de Alberti, de la arquitectura sacra. Un hilo visual que conecta La última cena con El resplandor.</p>
+      <div class="article-meta">Próximamente · Ensayo largo · 11 min</div>
+    </div>
+  </article>
+
+  <article class="article-item">
+    <div class="article-thumb placeholder-img">Fotograma — color en Wes Anderson</div>
+    <div class="article-body">
+      <h3><a href="#">La paleta imposible: Wes Anderson y la tradición del color artificial</a></h3>
+      <p class="article-excerpt">Los colores de Wes Anderson no vienen de la realidad: vienen de las estampas japonesas ukiyo-e, de los carteles de Toulouse-Lautrec, de los decorados de Jacques Tati. Un ensayo sobre el color como cita visual.</p>
       <div class="article-meta">Próximamente · Pieza breve · 5 min</div>
     </div>
   </article>
 
   <article class="article-item">
-    <div class="article-thumb placeholder-img">Museo de Malraux — reproducción</div>
+    <div class="article-thumb placeholder-img">Fotograma — cuerpo transformado</div>
     <div class="article-body">
-      <h3><a href="#">El museo sin paredes: Malraux y la reproducción como forma de arte</a></h3>
-      <p class="article-excerpt">André Malraux propuso en 1947 que la fotografía había creado un museo imaginario donde cualquier obra podía convivir con cualquier otra. ¿Qué pasa cuando ese museo se convierte en un feed de Instagram?</p>
-      <div class="article-meta">Próximamente · Ensayo largo · 11 min</div>
+      <h3><a href="#">El cuerpo que muta: Cronenberg, Aster y la nueva carne</a></h3>
+      <p class="article-excerpt">La transformación del cuerpo en el cine contemporáneo tiene una genealogía que pasa por las Metamorfosis de Ovidio, los bestiarios medievales y los grabados alquímicos. ¿Qué deposita nuestra época en los cuerpos que se descomponen y recomponen en pantalla?</p>
+      <div class="article-meta">Próximamente · Pieza breve · 5 min</div>
     </div>
   </article>
 
@@ -146,13 +154,13 @@
       </a>
       <a href="#" class="related-card">
         <span class="tag tag-archivo">Archivo Esotérico Ilustrado</span>
-        <h4>Las láminas del Compendium rarisimum</h4>
-        <p>Próximamente · 5 min</p>
+        <h4>La Luna en los manuscritos iluminados</h4>
+        <p>Abril 2026 · 3 min</p>
       </a>
-      <a href="articulo.html" class="related-card">
-        <span class="tag tag-dossier">Dossier</span>
-        <h4>Volver a la Luna: por qué necesitamos ir otra vez</h4>
-        <p>Abril 2026 · 12 min</p>
+      <a href="#" class="related-card">
+        <span class="tag tag-museo">Museo imaginario</span>
+        <h4>El retrato de Dorian Gray: historia de un cuadro que nadie vio</h4>
+        <p>Próximamente · 10 min</p>
       </a>
     </div>
   </div>

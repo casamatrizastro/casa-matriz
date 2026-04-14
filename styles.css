@@ -123,10 +123,10 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; display: inline-block;
 }
-.tag-bestiario { color: var(--accent-vermillion); }
-.tag-grimorios { color: var(--accent-gold); }
+.tag-archivo { color: var(--accent-gold); }
 .tag-museo { color: var(--accent-ultramarine); }
-.tag-pantalla { color: var(--text-secondary); }
+.tag-escenas { color: var(--text-secondary); }
+.tag-persisten { color: var(--accent-vermillion); }
 .tag-dossier { color: var(--accent-ultramarine); }
 .arrow-icon {
   width: 14px; height: 14px; display: inline-block; vertical-align: middle;

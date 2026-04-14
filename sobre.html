@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre — Casa Matriz</title>
+<meta name="description" content="Casa Matriz es una plataforma de investigación visual dedicada a rastrear la genealogía y las transformaciones de los símbolos a través del arte, la literatura, los manuscritos y el cine.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.about-content {
+  max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem;
+}
+.about-content p {
+  font-family: var(--serif); font-size: 1.125rem; line-height: 1.8;
+  margin-bottom: 1.5rem; color: var(--text);
+}
+.about-content blockquote {
+  margin: 2.5rem 0 2.5rem 2rem; padding-left: 1.5rem;
+  border-left: 2px solid var(--accent-gold);
+  font-family: var(--serif); font-size: 1.0625rem;
+  font-style: italic; color: var(--text-secondary); line-height: 1.75;
+}
+.about-content blockquote cite {
+  display: block; margin-top: 0.5rem; font-size: 0.875rem;
+  font-style: normal; color: var(--text-tertiary);
+}
+.about-content hr {
+  border: none; height: 1px; background: var(--border); margin: 3rem auto; width: 48px;
+}
+.about-content h2 {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+  margin-bottom: 1.25rem; margin-top: 0.5rem;
+}
+
+.about-secciones {
+  background: var(--bg-warm); border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light); padding: 4rem 2rem;
+}
+.about-secciones-inner { max-width: var(--max-w); margin: 0 auto; }
+.secciones-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;
+}
+.seccion-card {
+  padding: 1.5rem; border: 1px solid var(--border-light); border-radius: 6px;
+  background: var(--bg);
+}
+.seccion-card h3 {
+  font-family: var(--serif); font-size: 1.125rem; font-weight: 500;
+  margin-bottom: 0.375rem;
+}
+.seccion-card .pregunta {
+  font-family: var(--serif); font-style: italic; font-size: 0.9375rem;
+  color: var(--text-secondary); margin-bottom: 0.75rem;
+}
+.seccion-card p {
+  font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65;
+}
+
+.about-autora {
+  max-width: var(--content-w); margin: 0 auto; padding: 4rem 2rem;
+}
+.autora-inner {
+  display: flex; gap: 2rem; align-items: flex-start;
+}
+.autora-photo .placeholder-img {
+  width: 140px; height: 140px; border-radius: 50%; flex-shrink: 0;
+}
+.autora-bio h2 {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 500; margin-bottom: 0.75rem;
+}
+.autora-bio p {
+  font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1rem;
+}
+.autora-bio .autora-link {
+  font-size: 0.8125rem; color: var(--text-secondary); transition: color 0.2s;
+}
+.autora-bio .autora-link:hover { color: var(--text); }
+.autora-bio .autora-link + .autora-link { margin-left: 1.5rem; }
+
+@media (max-width: 768px) {
+  .secciones-grid { grid-template-columns: 1fr; }
+  .autora-inner { flex-direction: column; align-items: center; text-align: center; }
+  .about-content blockquote { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="videoensayos.html">Videoensayos</a><a href="sobre.html" class="active">Sobre</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="videoensayos.html">Videoensayos</a><a href="sobre.html">Sobre</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<header class="page-header">
+  <h1>Sobre Casa Matriz</h1>
+  <div class="page-header-divider"></div>
+</header>
+
+<section class="about-content">
+  <h2>El proyecto</h2>
+  <p>Casa Matriz es una plataforma de investigación visual dedicada a rastrear la genealogía y las transformaciones de los símbolos a través del arte, la literatura, los manuscritos y el cine.</p>
+
+  <p>Nos proponemos desplegar la historia secreta de las imágenes: ¿de dónde vienen?, ¿qué formas han adoptado a lo largo del tiempo?, ¿qué revelan sobre las épocas en que se inscriben y sobre la nuestra?</p>
+
+  <blockquote>
+    Las imágenes no son ilustraciones de ideas; son entidades vivas que migran de una cultura a otra, de un siglo a otro, cargando consigo energías que sobreviven a quienes las crearon.
+    <cite>— Aby Warburg, sobre el Atlas Mnemosyne</cite>
+  </blockquote>
+
+  <p>Casa Matriz se inscribe en la tradición de Aby Warburg de rastrear la vida póstuma de las imágenes, sus derivas, sus retornos. Seguimos el movimiento de las <em>Pathosformeln</em>, esas fórmulas de intensidad que atraviesan el tiempo y reaparecen allí donde cada cultura se constituye. Las imágenes persisten como tensiones, como gestos que insisten, como memorias. Cada una es un nudo donde se cruzan tiempos heterogéneos.</p>
+
+  <p>Casa Matriz se sitúa en ese campo de fuerzas para trazar constelaciones, allí donde el pasado persiste en el presente y continúa escribiendo lo que vendrá.</p>
+
+  <hr>
+
+  <h2>La voz</h2>
+  <p>La voz de Casa Matriz es ensayo de autor. Prosa que piensa en voz alta, que se permite la primera persona y la digresión controlada, que cruza un grabado del siglo XVIII con un plano de Kubrick y lo hace parecer inevitable. El registro de Berger en <em>Sobre el dibujo</em>, de Sontag en <em>Sobre la fotografía</em>, de Manguel en <em>Una historia de la lectura</em>.</p>
+
+  <p>Curiosidad antes que autoridad. La voz de alguien que investiga y te lleva con ella, no la de alguien que ya sabe y te enseña.</p>
+</section>
+
+<section class="about-secciones">
+  <div class="about-secciones-inner">
+    <h2 class="section-title">Las cuatro secciones</h2>
+    <div class="secciones-grid">
+      <div class="seccion-card">
+        <h3>Archivo Esotérico Ilustrado</h3>
+        <p class="pregunta">¿Cómo se vuelve visible lo invisible?</p>
+        <p>Manuscritos iluminados, tratados alquímicos, grimorios, bestiarios y grabados herméticos. La tradición visual del conocimiento oculto: criaturas fantásticas, diagramas cabalísticos, láminas demonológicas y el arte de ilustrar lo prohibido.</p>
+      </div>
+      <div class="seccion-card">
+        <h3>Museo imaginario</h3>
+        <p class="pregunta">¿Qué nos dice una imagen que nunca existió?</p>
+        <p>Obras de arte que no existen materialmente pero operan en la cultura: cuadros ficticios, obras perdidas, écfrasis, museos imaginados. Lo que nunca existió también tiene genealogía.</p>
+      </div>
+      <div class="seccion-card">
+        <h3>Simbolismo en escenas</h3>
+        <p class="pregunta">¿De dónde viene lo que estamos viendo?</p>
+        <p>Lectura de símbolos, motivos visuales y genealogías iconográficas en cine y series contemporáneas. Cada plano es el último eslabón de una cadena visual de siglos.</p>
+      </div>
+      <div class="seccion-card">
+        <h3>Imágenes que persisten</h3>
+        <p class="pregunta">¿Por qué ciertas formas sobreviven a quienes las crearon?</p>
+        <p>El Nachleben de las imágenes: sus derivas, sus retornos, las Pathosformeln que atraviesan el tiempo. Nudos donde se cruzan tiempos heterogéneos, constelaciones donde el pasado insiste en el presente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-autora">
+  <div class="autora-inner">
+    <div class="autora-photo">
+      <div class="placeholder-img" style="width:140px;height:140px;border-radius:50%;">Foto</div>
+    </div>
+    <div class="autora-bio">
+      <h2>Mercedes</h2>
+      <p>Licenciada en Artes. Durante veinte años dirigió Casa Matriz como espacio de formación y consultoría astrológica, publicó <em>Mi otro, el amor en astrología</em>, y sostuvo proyectos de largo aliento como un ciclo de lectura del Tao Te Ching y un año de relecturas de los dioses del Olimpo.</p>
+      <p>Hoy sus líneas de investigación incluyen el Compendium rarisimum (manuscrito de c. 1780), la genealogía visual de obras de arte ficticias, las criaturas fantásticas y la simbología en el cine contemporáneo. Codirige con una socia la editorial Hijas de Kore.</p>
+      <a href="https://instagram.com/casamatriz" class="autora-link external" style="font-size:0.8125rem;">Instagram ↗</a>
+      <a href="https://hijasdekore.com" class="autora-link external" style="font-size:0.8125rem;">Hijas de Kore ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a></li><li><a href="museo-imaginario.html">Museo imaginario</a></li><li><a href="simbolismo-en-escenas.html">Simbolismo en escenas</a></li><li><a href="imagenes-que-persisten.html">Imágenes que persisten</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Sobre</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li><li><a href="#" class="external">Threads</a></li><li><a href="#" class="external">Hijas de Kore</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>
