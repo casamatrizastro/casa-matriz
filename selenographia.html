@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El mapa imposible de Selenographia — Casa Matriz</title>
+<meta name="description" content="En la Selenographia, la Luna aparece bajo una luz constante que ningún observador podría haber visto. La condensación de muchas imágenes nocturnas integradas como si todas estuvieran superpuestas.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.article-header {
+  max-width: var(--max-w); margin: 0 auto; padding: 3rem 2rem 0; text-align: center;
+}
+.article-dossier-tag {
+  display: inline-block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent-ultramarine);
+  padding: 6px 14px; border: 1px solid rgba(27,58,140,0.2); border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+.article-header h1 {
+  font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
+  max-width: 680px; margin: 0 auto 1.25rem;
+}
+.article-header-meta {
+  font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 2.5rem;
+}
+.article-hero-img {
+  max-width: var(--max-w); margin: 0 auto 1rem; padding: 0 2rem;
+}
+.article-hero-img img {
+  width: 100%; border-radius: 6px; aspect-ratio: 21/9; object-fit: cover;
+}
+.article-caption {
+  max-width: var(--content-w); margin: 0 auto 3rem;
+  font-size: 0.75rem; color: var(--text-tertiary); font-style: italic;
+  text-align: center; padding: 0 2rem; line-height: 1.6;
+}
+.article-content {
+  max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem;
+}
+.article-content p {
+  font-family: var(--serif); font-size: 1.1875rem; line-height: 1.8;
+  margin-bottom: 1.5rem; color: var(--text);
+}
+.article-content p em { font-style: italic; }
+.article-content hr {
+  border: none; height: 1px; background: var(--border);
+  margin: 2.5rem auto; width: 48px;
+}
+.article-content .dropcap::first-letter {
+  font-family: var(--serif); font-size: 3.5rem; font-weight: 500;
+  float: left; line-height: 0.8; margin: 0.1em 0.15em 0 0;
+  color: var(--text);
+}
+.article-content h2 {
+  font-family: var(--serif); font-size: 1.375rem; font-weight: 500;
+  margin: 2.5rem 0 1rem; color: var(--text);
+}
+.ficha {
+  background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: 6px;
+  padding: 1.5rem 2rem; margin: 2.5rem 0; font-family: var(--sans);
+}
+.ficha h3 {
+  font-family: var(--serif); font-size: 1.125rem; font-weight: 500; margin-bottom: 1rem;
+}
+.ficha p {
+  font-family: var(--sans) !important; font-size: 0.875rem !important;
+  line-height: 1.7 !important; margin-bottom: 0.5rem !important;
+  color: var(--text-secondary) !important;
+}
+.ficha a { color: var(--accent-ultramarine); text-decoration: underline; }
+.referencias {
+  margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-light);
+}
+.referencias h3 {
+  font-family: var(--serif); font-size: 1.125rem; font-weight: 500; margin-bottom: 1rem;
+}
+.referencias ul {
+  list-style: none; padding: 0;
+}
+.referencias li {
+  font-family: var(--sans); font-size: 0.8125rem; color: var(--text-secondary);
+  line-height: 1.65; margin-bottom: 0.75rem; padding-left: 1rem;
+  text-indent: -1rem;
+}
+.dossier-nav {
+  max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem;
+}
+.dossier-nav-inner {
+  background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: 6px;
+  padding: 2rem;
+}
+.dossier-nav-label {
+  font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent-ultramarine); margin-bottom: 1rem;
+}
+.dossier-nav-items { display: flex; flex-direction: column; gap: 0.75rem; }
+.dossier-nav-item {
+  display: flex; align-items: baseline; gap: 0.75rem;
+  font-family: var(--serif); font-size: 1.0625rem; color: var(--text-secondary);
+}
+.dossier-nav-item.current { color: var(--text); font-weight: 500; }
+.dossier-nav-item .num {
+  font-family: var(--sans); font-size: 0.75rem; color: var(--text-tertiary); min-width: 20px;
+}
+.dossier-nav-item.current .num { color: var(--accent-ultramarine); }
+.article-footer-cta {
+  max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem; text-align: center;
+}
+.article-footer-cta p {
+  font-family: var(--serif); font-size: 1.25rem; color: var(--text-secondary);
+  margin-bottom: 1.5rem; line-height: 1.6;
+}
+.subscribe-inline {
+  display: flex; gap: 0.75rem; max-width: 400px; margin: 0 auto;
+}
+.subscribe-inline input {
+  flex: 1; padding: 12px 16px; font-size: 0.9375rem; font-family: var(--sans);
+  border: 1px solid var(--border); border-radius: 4px; background: var(--bg);
+  color: var(--text); outline: none;
+}
+.subscribe-inline input:focus { border-color: var(--text-tertiary); }
+@media (max-width: 768px) {
+  .article-content { padding: 0 1.5rem 3rem; }
+  .subscribe-inline { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html" class="active">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos ↗</a><a href="sobre.html">Acerca de</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<header class="article-header">
+  <a href="archivo-esoterico.html" class="article-dossier-tag">Archivo Esotérico Ilustrado · Dossier: Volver a la Luna</a>
+  <h1>El mapa imposible de <em>Selenographia, sive Lunae descriptio</em></h1>
+  <div class="article-header-meta">Abril 2026 · Pieza breve · 4 min de lectura</div>
+</header>
+
+<div class="article-hero-img">
+  <div class="placeholder-img" style="aspect-ratio:21/9;border-radius:6px;">Mapa lunar compuesto con iluminación artificial — Johannes Heweliusz, Selenographia, 1647. Bodleian Libraries, Universidad de Oxford.</div>
+</div>
+<p class="article-caption">Mapa lunar compuesto con iluminación artificial, grabado a doble página. Johannes Heweliusz, <em>Selenographia, sive Lunae descriptio</em>, Gdańsk, 1647. Plancha grabada en cobre por el autor. Bodleian Libraries, Universidad de Oxford (Arch. H c.12).</p>
+
+<article class="article-content">
+  <p class="dropcap">En la <em>Selenographia, sive Lunae descriptio</em>, la Luna aparece bajo una luz constante que ningún observador podría haber visto. Se trata de la condensación de muchas imágenes nocturnas que fueron integradas como si todas esas observaciones estuvieran superpuestas.</p>
+
+  <p>A mediados del siglo XVII, la astronomía atravesaba una transformación decisiva, la observación de los cielos ponía el foco en volverlos legibles. La Luna, cambiante por definición —atravesada por fases que alteran continuamente la visibilidad de su relieve—, planteaba un problema específico. ¿Cómo fijar en una imagen aquello que sólo se da de manera fragmentaria? ¿Cómo convertir una sucesión de apariciones en una superficie coherente?</p>
+
+  <p>La respuesta de Hevelius fue integrarla. A partir de observaciones realizadas a lo largo de meses, compuso una imagen en la que cada accidente —cráteres, montañas, llanuras— aparece bajo una iluminación homogénea, como si un mismo amanecer recorriera toda la superficie lunar. En la Luna real, la línea de sombra —el terminador— se desplaza con las fases: lo que aparece en relieve una noche se aplana a la siguiente, y lo que estaba oculto emerge días después. El resultado es un retrato total de un mundo que, en la experiencia directa, sólo puede verse por partes.</p>
+
+  <p>En los márgenes del grabado, cuatro ángeles trabajan. Uno mira a través de un telescopio, otro toma notas en un cuaderno, un tercero sostiene un libro abierto, el último mide ángulos con un compás. Son putti barrocos, querubines regordetes y alados, que se han propuesto hacer ciencia. Hevelius los dibujó como testigos celestes del trabajo que él mismo hacía cada noche en los tejados de Gdańsk, y su presencia le da a la imagen una cualidad ambigua. ¿Es un mapa o es una visión? ¿Estamos ante un documento astronómico o ante una revelación? Los ángeles sugieren que cartografiar lo desconocido es también un acto de mediación entre lo visible y lo que excede la vista. En términos estrictos, es un montaje: la composición deliberada de fragmentos reales en una totalidad que nunca fue dada como tal. Mucho antes de que la fotografía institucionalizara el montaje como procedimiento, Hevelius ya operaba con esa lógica.</p>
+
+  <p>Hay algo inquietante —y profundamente moderno— en este gesto. Toda cartografía implica decisiones sobre qué mostrar y cómo hacerlo visible, pero aquí esa decisión se vuelve explícita en un punto crucial: la luz. Hevelius eligió una iluminación lateral constante para maximizar la legibilidad del relieve. Al hacerlo, no sólo resolvió un problema técnico, sino que instituyó una convención. La mayoría de los mapas lunares posteriores adoptaron ese mismo criterio. Lo que comenzó como artificio se convirtió en norma. Lo imposible devino estándar.</p>
+
+  <p>La continuidad luminosa de la mirada de los ángeles. Pero, también, la mirada en común. Como si toda cartografía no hiciera más que producir, a partir de lo múltiple, una forma compartida de mirar.</p>
+
+  <hr>
+
+  <h2>Unas observaciones acerca de la materialidad</h2>
+
+  <p>El grabado es cobre, y eso no es un dato menor. A diferencia de muchos astrónomos de su tiempo, Hevelius no delegó el trabajo en un grabador profesional: él mismo talló las planchas con buril. Cada línea fue incisa por la misma mano que, horas antes, había observado la Luna a través del telescopio y la había dibujado. Ojo, mano y herramienta forman aquí un único circuito operativo. No hay distancia entre observación, registro y reproducción.</p>
+
+  <p>La <em>Selenographia</em> fue impresa en 1647 en Gdańsk por Andreas Hünefeld, en formato folio, e incluye más de cien planchas (habitualmente se contabilizan 111, aunque el número puede variar según la encuadernación y el estado del ejemplar). El volumen que hoy conserva la Bodleian Library fue enviado por el propio Hevelius en 1649, acompañado de una dedicatoria manuscrita en la que solicita que se acepte "tan humilde regalo". Esa inscripción y su encuadernación lo convierten en un ejemplar singular. Su reciente digitalización en alta resolución permite hoy examinar el trazo del buril con un nivel de detalle que supera, en ciertos aspectos, la consulta directa.</p>
+
+  <div class="ficha">
+    <h3>Ficha del archivo</h3>
+    <p><strong>Imagen:</strong> Mapa lunar compuesto con iluminación artificial (<em>artificially shadowed Moon map</em>), grabado calcográfico a doble página.</p>
+    <p><strong>Autor:</strong> Johannes Heweliusz (Jan Heweliusz, 1611–1687).</p>
+    <p><strong>Obra:</strong> <em>Selenographia, sive Lunae descriptio</em>, Gdańsk, Typis Huenefeldianis, 1647. Planchas insertas entre pp. 222–227.</p>
+    <p><strong>Técnica:</strong> Grabado en cobre (talla dulce), ejecutado por el autor.</p>
+    <p><strong>Ejemplar de referencia:</strong> Bodleian Libraries, Universidad de Oxford, signatura Arch. H c.12. Copia de presentación con dedicatoria manuscrita del autor (1649). Digitalizada en 2025.</p>
+    <p><strong>Acceso digital:</strong> <a href="https://digital.bodleian.ox.ac.uk" target="_blank" rel="noopener">Bodleian Digital Library</a> · <a href="https://artsandculture.google.com" target="_blank" rel="noopener">Google Arts & Culture</a></p>
+  </div>
+
+  <div class="referencias">
+    <h3>Referencias</h3>
+    <ul>
+      <li>Hevelius, Johannes. <em>Selenographia, sive Lunae descriptio</em>. Gdańsk: Typis Huenefeldianis, 1647.</li>
+      <li>Winkler, Mary G. y Albert van Helden. "Representing the Heavens: Galileo and Visual Astronomy." <em>Isis</em>, vol. 83, no. 2, 1992, pp. 195–217.</li>
+      <li>Whitaker, Ewen A. <em>Mapping and Naming the Moon: A History of Lunar Cartography and Nomenclature</em>. Cambridge University Press, 1999.</li>
+      <li>Universidad de Oxford. "Mapping the Moon: the world's first lunar atlas goes digital." Bodleian Libraries, octubre de 2025.</li>
+    </ul>
+  </div>
+</article>
+
+<nav class="dossier-nav">
+  <div class="dossier-nav-inner">
+    <div class="dossier-nav-label">Dossier · Volver a la Luna</div>
+    <div class="dossier-nav-items">
+      <a href="articulo.html" class="dossier-nav-item"><span class="num">01</span> Volver a la Luna: por qué necesitamos ir otra vez</a>
+      <a href="selenographia.html" class="dossier-nav-item current"><span class="num">—</span> El mapa imposible de Selenographia</a>
+      <a href="#" class="dossier-nav-item"><span class="num">02</span> De Méliès a Kubrick: genealogía visual del viaje a la Luna</a>
+      <a href="#" class="dossier-nav-item"><span class="num">03</span> El deseo lunar: qué buscamos cuando decimos que volvemos</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-footer-cta">
+  <p>Si este texto te abrió una puerta,<br>la revista llega a tu correo.</p>
+  <form class="subscribe-inline" onsubmit="return false;">
+    <input type="email" placeholder="tu@correo.com">
+    <button type="submit" class="btn-primary" style="padding:12px 24px;">Suscribite</button>
+  </form>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a></li><li><a href="museo-imaginario.html">Museo imaginario</a></li><li><a href="simbolismo-en-escenas.html">Simbolismo en escenas</a></li><li><a href="imagenes-que-persisten.html">Imágenes que persisten</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Acerca de</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li><li><a href="#" class="external">Threads</a></li><li><a href="#" class="external">Hijas de Kore</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>
