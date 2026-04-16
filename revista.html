@@ -117,17 +117,16 @@ img.article-thumb { width: 100%; height: 100%; display: block; }
 </header>
 
 <div class="filters">
-  <button class="filter-btn active">Todo</button>
-  <button class="filter-btn">Archivo Esotérico Ilustrado</button>
-  
-  <button class="filter-btn">Museo imaginario</button>
-  <button class="filter-btn">Simbolismo en escenas</button>
-  <button class="filter-btn">Imágenes que persisten</button>
+  <button class="filter-btn active" data-filter="todo">Todo</button>
+  <button class="filter-btn" data-filter="archivo">Archivo Esotérico Ilustrado</button>
+  <button class="filter-btn" data-filter="museo">Museo imaginario</button>
+  <button class="filter-btn" data-filter="escenas">Simbolismo en escenas</button>
+  <button class="filter-btn" data-filter="persisten">Imágenes que persisten</button>
 </div>
 
 <section class="article-list">
 
-  <article class="article-item">
+  <article class="article-item" data-section="dossier">
     <img class="article-thumb" src="img-earthrise.jpg" alt="Earthrise, William Anders, Apollo 8, 1968" style="aspect-ratio:4/3;object-fit:cover;border-radius:4px;">
     <div class="article-body">
       <span class="tag tag-dossier">Dossier · Volver a la Luna</span>
@@ -137,7 +136,7 @@ img.article-thumb { width: 100%; height: 100%; display: block; }
     </div>
   </article>
 
-  <article class="article-item">
+  <article class="article-item" data-section="archivo">
     <img class="article-thumb" src="img-selenographia.jpg" alt="Mapa lunar — Selenographia, 1647" style="aspect-ratio:4/3;object-fit:cover;border-radius:4px;">
     <div class="article-body">
       <span class="tag tag-archivo">Archivo Esotérico Ilustrado</span>
@@ -147,7 +146,7 @@ img.article-thumb { width: 100%; height: 100%; display: block; }
     </div>
   </article>
 
-  <article class="article-item">
+  <article class="article-item" data-section="archivo">
     <img class="article-thumb" src="img-conjuncion.jpg" alt="Rosarium Philosophorum, grabado II" style="aspect-ratio:4/3;object-fit:cover;border-radius:4px;">
     <div class="article-body">
       <span class="tag tag-archivo">Archivo Esotérico Ilustrado</span>
@@ -157,7 +156,7 @@ img.article-thumb { width: 100%; height: 100%; display: block; }
     </div>
   </article>
 
-  <article class="article-item">
+  <article class="article-item" data-section="museo">
     <img class="article-thumb" src="img-basho.jpg" alt="Luna reflejada en estanque" style="aspect-ratio:4/3;object-fit:cover;border-radius:4px;">
     <div class="article-body">
       <span class="tag tag-museo">Museo imaginario</span>
@@ -167,7 +166,7 @@ img.article-thumb { width: 100%; height: 100%; display: block; }
     </div>
   </article>
 
-  <article class="article-item">
+  <article class="article-item" data-section="persisten">
     <img class="article-thumb" src="img-mujer-luna.jpg" alt="Mulier amicta sole — Beato Morgan" style="aspect-ratio:4/3;object-fit:cover;border-radius:4px;">
     <div class="article-body">
       <span class="tag tag-persisten">Imágenes que persisten</span>
@@ -177,7 +176,7 @@ img.article-thumb { width: 100%; height: 100%; display: block; }
     </div>
   </article>
 
-  <article class="article-item">
+  <article class="article-item" data-section="escenas">
     <div class="article-thumb placeholder-img">Fotograma — Melancholia, Von Trier</div>
     <div class="article-body">
       <span class="tag tag-escenas">Simbolismo en escenas</span>
@@ -222,6 +221,14 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    var filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.article-item').forEach(item => {
+      if (filter === 'todo' || item.getAttribute('data-section') === filter) {
+        item.style.display = 'grid';
+      } else {
+        item.style.display = 'none';
+      }
+    });
   });
 });
 </script>
