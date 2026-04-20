@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Luna herida — Casa Matriz</title>
+<meta name="description" content="Un proyectil se incrusta en el ojo derecho de la Luna. La Luna tiene rostro. La Luna reacciona. Méliès, Buñuel, Tarkovski: tres variaciones del mismo problema visual.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.article-header { max-width: var(--max-w); margin: 0 auto; padding: 3rem 2rem 0; text-align: center; }
+.article-dossier-tag { display: inline-block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); padding: 6px 14px; border: 1px solid var(--border); border-radius: 100px; margin-bottom: 1.5rem; }
+.article-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; max-width: 680px; margin: 0 auto 1.25rem; }
+.article-header-meta { font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 2.5rem; }
+.article-hero-img { max-width: var(--max-w); margin: 0 auto 1rem; padding: 0 2rem; }
+.article-hero-img img { width: 100%; border-radius: 6px; display: block; }
+.article-caption { max-width: var(--content-w); margin: 0 auto 3rem; font-size: 0.75rem; color: var(--text-tertiary); font-style: italic; text-align: center; padding: 0 2rem; line-height: 1.6; }
+.article-content { max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem; }
+.article-content p { font-family: var(--serif); font-size: 1.1875rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text); }
+.article-content p em { font-style: italic; }
+.article-content hr { border: none; height: 1px; background: var(--border); margin: 2.5rem auto; width: 48px; }
+.article-content .dropcap::first-letter { font-family: var(--serif); font-size: 3.5rem; font-weight: 500; float: left; line-height: 0.8; margin: 0.1em 0.15em 0 0; color: var(--text); }
+.inline-img { margin: 2.5rem 0; }
+.inline-img img { width: 100%; border-radius: 6px; display: block; }
+.inline-img-caption { font-size: 0.75rem; color: var(--text-tertiary); font-style: italic; margin-top: 0.5rem; line-height: 1.6; }
+.nota-box { background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: 6px; padding: 1.5rem 2rem; margin: 2.5rem 0; }
+.nota-box .nota-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1rem; }
+.nota-box p { font-family: var(--serif) !important; font-size: 1rem !important; line-height: 1.75 !important; color: var(--text-secondary) !important; margin-bottom: 1rem !important; }
+.nota-box p:last-child { margin-bottom: 0 !important; }
+.article-sign { font-family: var(--serif); font-style: italic; color: var(--text-tertiary); font-size: 1rem; margin-top: 2rem; text-align: right; }
+.gallery-section { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem 4rem; }
+.gallery-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-light); }
+.gallery-grid { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 220px 220px; gap: 4px; border-radius: 6px; overflow: hidden; }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.3s; }
+.gallery-grid img:hover { opacity: 0.85; }
+.g-main { grid-column: 1; grid-row: 1 / 3; }
+.g-top { grid-column: 2; grid-row: 1; }
+.g-bot { grid-column: 2; grid-row: 2; }
+.gallery-wide { margin-top: 4px; border-radius: 0 0 6px 6px; overflow: hidden; height: 240px; }
+.gallery-wide img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.3s; }
+.gallery-wide img:hover { opacity: 0.85; }
+.gallery-captions { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+.gcap { font-size: 0.75rem; color: var(--text-tertiary); font-style: italic; line-height: 1.55; }
+.gcap strong { display: block; font-style: normal; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.2rem; font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.dossier-nav { max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem; }
+.dossier-nav-inner { background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem; }
+.dossier-nav-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ultramarine); margin-bottom: 1rem; }
+.dossier-nav-items { display: flex; flex-direction: column; gap: 0.75rem; }
+.dossier-nav-item { display: flex; align-items: baseline; gap: 0.75rem; font-family: var(--serif); font-size: 1.0625rem; color: var(--text-secondary); }
+.dossier-nav-item.current { color: var(--text); font-weight: 500; }
+.dossier-nav-item .num { font-family: var(--sans); font-size: 0.75rem; color: var(--text-tertiary); min-width: 20px; }
+.dossier-nav-item.current .num { color: var(--accent-ultramarine); }
+.article-footer-cta { max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem; text-align: center; }
+.article-footer-cta p { font-family: var(--serif); font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; }
+.subscribe-inline { display: flex; gap: 0.75rem; max-width: 400px; margin: 0 auto; }
+.subscribe-inline input { flex: 1; padding: 12px 16px; font-size: 0.9375rem; font-family: var(--sans); border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--text); outline: none; }
+.subscribe-inline input:focus { border-color: var(--text-tertiary); }
+@media (max-width: 768px) {
+  .article-content { padding: 0 1.5rem 3rem; }
+  .subscribe-inline { flex-direction: column; }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: 240px 200px 200px; }
+  .g-main { grid-column: 1; grid-row: 1; }
+  .g-top { grid-column: 1; grid-row: 2; }
+  .g-bot { grid-column: 1; grid-row: 3; }
+  .gallery-captions { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html" class="active">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
+  </div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos ↗</a><a href="sobre.html">Acerca de</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
+
+<header class="article-header">
+  <a href="simbolismo-en-escenas.html" class="article-dossier-tag">Simbolismo en escenas · Dossier: Volver a la Luna</a>
+  <h1>La Luna herida: <em>Le Voyage dans la Lune</em></h1>
+  <div class="article-header-meta">Abril 2026 · Pieza breve · 5 min de lectura</div>
+</header>
+
+<div class="article-hero-img">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Le_Voyage_dans_la_Lune.jpg/1200px-Le_Voyage_dans_la_Lune.jpg" alt="Le Voyage dans la Lune, Georges Méliès, 1902">
+</div>
+<p class="article-caption"><em>Le Voyage dans la Lune</em>, Georges Méliès, 1902. El instante del impacto: el proyectil en el ojo derecho de la Luna.</p>
+
+<article class="article-content">
+  <p class="dropcap">Un proyectil se incrusta en el ojo derecho de la Luna. La Luna tiene rostro. La Luna reacciona.</p>
+
+  <p>La escena —entre las más difundidas de los orígenes del cine— dura apenas unos segundos, pero condensa una operación visual precisa. Una cápsula con forma de bala, disparada desde un cañón, atraviesa el espacio y se clava en un rostro humanizado. La Luna, que un instante antes avanzaba hacia cámara con expresión apacible —mediante una combinación de escenografía móvil y sobreimpresión—, se contrae en una mueca. El gesto introduce una discontinuidad: donde había superficie celeste, aparece sensibilidad.</p>
+
+  <p>La Luna deja de ser objeto astronómico o motivo simbólico para convertirse en figura animada, heredera de una tradición iconográfica anterior al cine. La Luna con rostro ya circulaba en grabados, caricaturas y representaciones populares del siglo XIX; lo específico aquí es que el dispositivo cinematográfico le confiere duración, gesto y, sobre todo, la posibilidad de ser <em>afectada</em>. Méliès la reactiva en clave espectacular, inscribiéndola en la lógica de la <em>féerie</em>: un teatro de ilusiones trasladado al nuevo dispositivo, donde los astrónomos son magos y el cosmos, escenografía.</p>
+
+  <p>La dimensión lúdica no diluye la intensidad de la imagen. El impacto en el ojo no se presenta como tragedia, pero tampoco es neutro: introduce una relación con el astro basada en la intervención. Llegar implica afectar, dejar marca. La Luna deja de ser objeto de contemplación distante para volverse superficie de acción —y esa superficie, notablemente, mira de vuelta.</p>
+
+  <hr>
+
+  <p>La asociación entre ojo y Luna, entre visión y vulnerabilidad, reaparece con otra intensidad en <em>Un perro andaluz</em> (Luis Buñuel y Salvador Dalí, 1929): el film se abre con el corte de un ojo humano en paralelo con una nube que atraviesa la Luna. El montaje no es ornamental. Al yuxtaponer el ojo rasgado con el astro velado, Buñuel y Dalí activan una lógica de equivalencias: lo que se hace al ojo se hace a la Luna; lo que se hace a la Luna se hace a la capacidad de ver. En ambas películas, la Luna no es fondo sino interlocutora. Compartir el plano con ella implica exponerse.</p>
+
+  <div class="inline-img">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Un_chien_andalou.jpg/800px-Un_chien_andalou.jpg" alt="Un perro andaluz, Buñuel y Dalí, 1929">
+    <p class="inline-img-caption"><em>Un perro andaluz</em>, Luis Buñuel y Salvador Dalí, 1929. El ojo rasgado en paralelo con la Luna velada: una lógica de equivalencias.</p>
+  </div>
+
+  <p>Hay, sin embargo, un tercer modo de plantear esta relación: no el impacto directo de Méliès ni el corte surrealista de Buñuel, sino la mirada que <em>vuelve sin que nadie la haya buscado</em>. En <em>Solaris</em> (Andrei Tarkovski, 1972), la estación espacial flota sobre un océano que lee las mentes de sus tripulantes y les devuelve materializados sus recuerdos más dolorosos. El astro no tiene rostro, pero tiene conciencia. No hay impacto visible: la intervención es interna, silenciosa, retroactiva. El personaje va al espacio a observar el planeta y el planeta lo observa de vuelta —y lo reconstruye desde adentro. La vulnerabilidad no está en el ojo sino en la memoria: ver el cosmos implica ser visto por él, y ser visto implica ser alterado.</p>
+
+  <p>Tarkovski lleva hasta su consecuencia más radical el problema que Méliès planteó en clave de espectáculo: que la distancia entre el que mira y lo mirado es ilusoria, que todo encuentro con lo celeste deja una marca que no se eligió. El ojo que dispara el proyectil, el ojo que recibe la navaja, la psique que el océano de Solaris lee y reescribe: son tres variaciones de la misma pregunta visual, formulada a lo largo de setenta años de cine.</p>
+
+  <hr>
+
+  <p>Lo que esta cadena de imágenes pone en evidencia es un problema visual persistente: cómo representar el acto de ver cuando ver implica siempre intervenir. En Méliès, la intervención es literal; en Buñuel y Dalí, es figural pero no menos violenta; en Tarkovski, es psíquica y diferida. El ojo no es instrumento neutral de percepción: es superficie vulnerable, capaz de ser herida, leída, rehecha. Y la Luna —o su equivalente, el cosmos que la aloja— se vuelve en estas imágenes aquello que devuelve la mirada y la acusa.</p>
+
+  <p>A comienzos del siglo XX, la Luna todavía podía ser rostro. Esa ambivalencia —superficie que mira y es mirada, que recibe y resiste— es lo que Méliès fija en una imagen de pocos segundos y que el surrealismo y el cine de autor retomarán décadas después desde ángulos distintos. En los tres casos, lo que está en juego no es la Luna como dato astronómico, sino como figura de lo que el ojo no puede tocar impunemente.</p>
+
+  <p class="article-sign">Mercedes Dellatorre, abril de 2026</p>
+
+  <div class="nota-box">
+    <p class="nota-label">Nota iconográfica</p>
+    <p>La representación de la Luna con rasgos humanos tiene una historia larga y específica antes de Méliès. En las escenas de Crucifixión medievales, el sol y la luna aparecen personificados —con rostros masculinos o femeninos— a ambos lados de la cruz, atribuidos a la representación del eclipse que los Evangelios mencionan en el momento de la muerte de Cristo. A partir del siglo XII esta iconografía se estabiliza; la luna, frecuentemente femenina, lleva un perfil facial que la separa del simple disco astronómico.</p>
+    <p>En el Renacimiento, esa tradición se seculariza y migra hacia la cartografía y la cosmografía ilustrada. Sebastian Münster, en su <em>Cosmographia</em> (Basilea, 1544), incluye xilografías de cuerpos celestes con fisionomías humanas —imágenes que circularon por toda Europa durante más de un siglo. Es en esa línea que se inscriben las lunas de las caricaturas y los grabados populares del siglo XIX que Méliès tenía ante los ojos cuando diseñó el rostro de su Luna filmada.</p>
+  </div>
+</article>
+
+<!-- GALERÍA -->
+<section class="gallery-section">
+  <p class="gallery-label">Genealogía visual — La luna con rostro antes del cine</p>
+
+  <div class="gallery-grid">
+    <div class="g-main">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Le_Voyage_dans_la_Lune.jpg/1200px-Le_Voyage_dans_la_Lune.jpg" alt="Le Voyage dans la Lune, Méliès, 1902">
+    </div>
+    <div class="g-top">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Man_in_the_Moon_from_Sebastian_Munster_Cosmographia_1544.jpg/800px-Man_in_the_Moon_from_Sebastian_Munster_Cosmographia_1544.jpg" alt="Luna con rostro, Sebastian Münster, Cosmographia, 1544">
+    </div>
+    <div class="g-bot">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Un_chien_andalou.jpg/800px-Un_chien_andalou.jpg" alt="Un perro andaluz, Buñuel y Dalí, 1929">
+    </div>
+  </div>
+
+  <div class="gallery-wide">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Solaris_-_1972_Soviet_film.jpg/1200px-Solaris_-_1972_Soviet_film.jpg" alt="Solaris, Tarkovski, 1972">
+  </div>
+
+  <div class="gallery-captions">
+    <div class="gcap">
+      <strong>I</strong>
+      <em>Le Voyage dans la Lune</em>, Méliès, 1902. La imagen fundacional: la Luna como figura animada que puede ser herida.
+    </div>
+    <div class="gcap">
+      <strong>II</strong>
+      Luna con rostro. Sebastian Münster, <em>Cosmographia</em>, Basilea, 1544 (xilografía). La tradición iconográfica que el cine hereda.
+    </div>
+    <div class="gcap">
+      <strong>III — IV</strong>
+      <em>Un perro andaluz</em>, Buñuel y Dalí, 1929. <em>Solaris</em>, Tarkovski, 1972. Dos variaciones del mismo problema a lo largo de setenta años.
+    </div>
+  </div>
+</section>
+
+<!-- DOSSIER -->
+<nav class="dossier-nav">
+  <div class="dossier-nav-inner">
+    <div class="dossier-nav-label">Dossier · Volver a la Luna</div>
+    <div class="dossier-nav-items">
+      <a href="articulo.html" class="dossier-nav-item"><span class="num">01</span> Volver a la Luna: por qué necesitamos ir otra vez</a>
+      <a href="luna-herida.html" class="dossier-nav-item current"><span class="num">02</span> La Luna herida: Le Voyage dans la Lune</a>
+      <a href="#" class="dossier-nav-item"><span class="num">03</span> El deseo lunar: qué buscamos cuando decimos que volvemos</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CTA -->
+<div class="article-footer-cta">
+  <p>Si este texto te abrió una puerta,<br>la revista llega a tu correo.</p>
+  <form class="subscribe-inline" onsubmit="return false;">
+    <input type="email" placeholder="tu@correo.com">
+    <button type="submit" class="btn-primary" style="padding:12px 24px;">Suscribirme</button>
+  </form>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a></li><li><a href="museo-imaginario.html">Museo imaginario</a></li><li><a href="simbolismo-en-escenas.html">Simbolismo en escenas</a></li><li><a href="imagenes-que-persisten.html">Imágenes que persisten</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Acerca de</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
+</body>
+</html>
