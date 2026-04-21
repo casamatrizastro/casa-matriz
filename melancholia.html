@@ -12,6 +12,8 @@
 .article-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; max-width: 680px; margin: 0 auto 1.25rem; }
 .article-header .subtitle { font-family: var(--serif); font-size: 1.0625rem; font-style: italic; color: var(--text-secondary); margin-bottom: 1.25rem; }
 .article-header-meta { font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 2.5rem; }
+.article-hero-img { max-width: var(--max-w); margin: 0 auto 3rem; padding: 0 2rem; }
+.article-hero-img img { width: 100%; border-radius: 6px; aspect-ratio: 21/9; object-fit: cover; max-width: 860px; margin: 0 auto; display: block; }
 .article-content { max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem; }
 .article-content p { font-family: var(--serif); font-size: 1.1875rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text); }
 .article-content p em { font-style: italic; }
@@ -44,6 +46,10 @@
   <div class="article-header-meta">Abril 2026 · Ensayo largo</div>
 </header>
 
+<div class="article-hero-img">
+  <img src="img-melancholia.jpg" alt="Melancholia, Lars von Trier, 2011">
+</div>
+
 <article class="article-content">
   <p class="dropcap">En el prólogo de <em>Melancholia</em>, un cuerpo celeste azul se aproxima a la Tierra con una lentitud que no admite corrección. No describe una órbita: avanza en línea de destino. No ilumina: densifica el espacio que ocupa. Durante varios minutos, sobre el <em>Liebestod</em> de <em>Tristan und Isolde</em>, Lars von Trier dispone una serie de imágenes en cámara extrema lenta que no anticipan la catástrofe: la presentan como ya cumplida. Pájaros que caen sin dramatismo, un caballo que se desploma como si hubiera olvidado sostenerse, una figura nupcial que avanza con dificultad mientras el suelo la retiene, filamentos eléctricos que parecen prolongar el cuerpo hacia el cielo. En todos los casos, la acción no progresa: se espesa. Y al fondo, constante, el planeta Melancholia crece hasta ocupar el campo visual.</p>
 
@@ -65,7 +71,7 @@
 </article>
 
 <div class="article-footer-cta">
-  <p>Si este texto te dejó con ganas de saber más,<br>la revista llega a tu correo.</p>
+  <p>Si este texto te abrió una puerta,<br>la revista llega a tu correo.</p>
   <form class="subscribe-inline" onsubmit="return false;">
     <input type="email" placeholder="tu@correo.com">
     <button type="submit" class="btn-primary" style="padding:12px 24px;">Suscribite</button>
