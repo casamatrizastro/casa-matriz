@@ -3,144 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Volver a la Luna: por qué necesitamos ir otra vez — Casa Matriz</title>
+<title>Volver a la Luna — Casa Matriz</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-.article-header {
-  max-width: var(--max-w); margin: 0 auto; padding: 3rem 2rem 0; text-align: center;
-}
-.article-dossier-tag {
-  display: inline-block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--accent-ultramarine);
-  padding: 6px 14px; border: 1px solid rgba(27,58,140,0.2); border-radius: 100px;
-  margin-bottom: 1.5rem;
-}
-.article-header h1 {
-  font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
-  max-width: 680px; margin: 0 auto 1.25rem;
-}
-.article-header-meta {
-  font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 2.5rem;
-}
-.article-hero-img {
-  max-width: var(--max-w); margin: 0 auto 3rem; padding: 0 2rem;
-}
-.article-hero-img .placeholder-img {
-  aspect-ratio: 21/9; border-radius: 6px; font-size: 0.9375rem;
-}
-.article-caption {
-  max-width: var(--content-w); margin: -2rem auto 3rem;
-  font-size: 0.75rem; color: var(--text-tertiary); font-style: italic;
-  text-align: center; padding: 0 2rem;
-}
-
-/* ——— ARTICLE BODY ——— */
-.article-content {
-  max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem;
-}
-.article-content p {
-  font-family: var(--serif); font-size: 1.1875rem; line-height: 1.8;
-  margin-bottom: 1.5rem; color: var(--text);
-}
+.article-header { max-width: var(--max-w); margin: 0 auto; padding: 3rem 2rem 0; text-align: center; }
+.article-dossier-tag { display: inline-block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ultramarine); padding: 6px 14px; border: 1px solid rgba(27,58,140,0.2); border-radius: 100px; margin-bottom: 1.5rem; }
+.article-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; max-width: 680px; margin: 0 auto 1.25rem; }
+.article-header-meta { font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: 2.5rem; }
+.article-hero-img { max-width: var(--max-w); margin: 0 auto 1rem; padding: 0 2rem; }
+.article-caption { max-width: var(--content-w); margin: 0 auto 3rem; font-size: 0.75rem; color: var(--text-tertiary); font-style: italic; text-align: center; padding: 0 2rem; line-height: 1.6; }
+.article-content { max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 2rem; }
+.article-content p { font-family: var(--serif); font-size: 1.1875rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text); }
 .article-content p em { font-style: italic; }
-.article-content hr {
-  border: none; height: 1px; background: var(--border);
-  margin: 2.5rem auto; width: 48px;
-}
-.article-content blockquote {
-  margin: 2rem 0 2rem 2rem; padding-left: 1.5rem;
-  border-left: 2px solid var(--accent-gold);
-  font-family: var(--serif); font-size: 1.125rem;
-  font-style: italic; color: var(--text-secondary); line-height: 1.75;
-}
-.article-content .dropcap::first-letter {
-  font-family: var(--serif); font-size: 3.5rem; font-weight: 500;
-  float: left; line-height: 0.8; margin: 0.1em 0.15em 0 0;
-  color: var(--text);
-}
-.article-sign {
-  font-family: var(--serif); font-style: italic;
-  color: var(--text-tertiary); font-size: 1rem;
-  margin-top: 2rem;
-}
-
-/* ——— DOSSIER NAV ——— */
-.dossier-nav {
-  max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem;
-}
-.dossier-nav-inner {
-  background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: 6px;
-  padding: 2rem;
-}
-.dossier-nav-label {
-  font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--accent-ultramarine); margin-bottom: 1rem;
-}
+.article-content hr { border: none; height: 1px; background: var(--border); margin: 2.5rem auto; width: 48px; }
+.article-content .dropcap::first-letter { font-family: var(--serif); font-size: 3.5rem; font-weight: 500; float: left; line-height: 0.8; margin: 0.1em 0.15em 0 0; color: var(--text); }
+.article-content a { color: #1B3A8C; }
+.article-content sup a { color: var(--accent-ultramarine); text-decoration: none; font-size: 0.75rem; }
+.footnotes { max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 2rem; border-top: 1px solid var(--border-light); }
+.footnotes h3 { font-family: var(--serif); font-size: 1rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--text-secondary); }
+.footnotes ol { padding-left: 1.25rem; }
+.footnotes li { font-family: var(--serif); font-size: 0.875rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0.75rem; }
+.footnotes li a { color: var(--accent-ultramarine); text-decoration: none; }
+.referencias { max-width: var(--content-w); margin: 0 auto; padding: 0 2rem 4rem; }
+.referencias h3 { font-family: var(--serif); font-size: 1.125rem; font-weight: 500; margin-bottom: 1rem; }
+.referencias ul { list-style: none; padding: 0; }
+.referencias li { font-family: var(--serif); font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.75rem; padding-left: 1rem; text-indent: -1rem; }
+.dossier-nav { max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem; }
+.dossier-nav-inner { background: var(--bg-warm); border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem; }
+.dossier-nav-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ultramarine); margin-bottom: 1rem; }
 .dossier-nav-items { display: flex; flex-direction: column; gap: 0.75rem; }
-.dossier-nav-item {
-  display: flex; align-items: baseline; gap: 0.75rem;
-  font-family: var(--serif); font-size: 1.0625rem; color: var(--text-secondary);
-}
+.dossier-nav-item { display: flex; align-items: baseline; gap: 0.75rem; font-family: var(--serif); font-size: 1.0625rem; color: var(--text-secondary); }
 .dossier-nav-item.current { color: var(--text); font-weight: 500; }
-.dossier-nav-item .num {
-  font-family: var(--sans); font-size: 0.75rem; color: var(--text-tertiary);
-  min-width: 20px;
-}
+.dossier-nav-item .num { font-family: var(--sans); font-size: 0.75rem; color: var(--text-tertiary); min-width: 20px; }
 .dossier-nav-item.current .num { color: var(--accent-ultramarine); }
-
-/* ——— SHARE + SUBSCRIBE ——— */
-.article-footer-cta {
-  max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem;
-  text-align: center;
-}
-.article-footer-cta p {
-  font-family: var(--serif); font-size: 1.25rem; color: var(--text-secondary);
-  margin-bottom: 1.5rem; line-height: 1.6;
-}
-.subscribe-inline {
-  display: flex; gap: 0.75rem; max-width: 400px; margin: 0 auto;
-}
-.subscribe-inline input {
-  flex: 1; padding: 12px 16px; font-size: 0.9375rem; font-family: var(--sans);
-  border: 1px solid var(--border); border-radius: 4px; background: var(--bg);
-  color: var(--text); outline: none;
-}
+.article-footer-cta { max-width: var(--content-w); margin: 0 auto 4rem; padding: 0 2rem; text-align: center; }
+.article-footer-cta p { font-family: var(--serif); font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; }
+.subscribe-inline { display: flex; gap: 0.75rem; max-width: 400px; margin: 0 auto; }
+.subscribe-inline input { flex: 1; padding: 12px 16px; font-size: 0.9375rem; font-family: var(--sans); border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--text); outline: none; }
 .subscribe-inline input:focus { border-color: var(--text-tertiary); }
-
-@media (max-width: 768px) {
-  .article-content { padding: 0 1.5rem 3rem; }
-  .subscribe-inline { flex-direction: column; }
-  .article-content blockquote { margin-left: 0; }
-}
+@media (max-width: 768px) { .article-content { padding: 0 1.5rem 2rem; } .subscribe-inline { flex-direction: column; } }
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
-    <div class="nav-links">
-      <a href="revista.html" class="active">Revista</a>
-      <a href="seminarios.html">Seminarios</a>
-      <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a>
-      <a href="sobre.html">Acerca de</a>
-      <a href="suscribite.html" class="nav-cta">Suscribite</a>
-    </div>
-    <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz"></a>
+  <div class="nav-links">
+    <a href="revista.html" class="active">Revista</a><a href="seminarios.html">Seminarios</a>
+    <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a>
+    <a href="suscribite.html" class="nav-cta">Suscribite</a>
   </div>
-</nav>
-<div class="nav-mobile-menu">
-  <a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a>
-  <a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos</a><a href="sobre.html">Acerca de</a>
-  <a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a>
-  <a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a>
-</div>
+  <button class="nav-menu-btn" onclick="document.querySelector('.nav-mobile-menu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-mobile-menu"><a href="revista.html">Revista</a><a href="seminarios.html">Seminarios</a><a href="https://youtube.com/canalcasamatriz" target="_blank" rel="noopener">Videos ↗</a><a href="sobre.html">Acerca de</a><a href="ediciones.html">Ediciones</a><a href="contacto.html">Contacto</a><a href="suscribite.html" class="nav-cta-mobile">Suscribite a la revista</a></div>
 
 <header class="article-header">
   <a href="revista.html" class="article-dossier-tag">Dossier · Volver a la Luna · Ensayo 1 de 3</a>
   <h1>Volver a la Luna</h1>
-  <div class="article-header-meta">Mercedes Dellatorre · Abril 2026 · Ensayo largo</div>
+  <div class="article-header-meta">Mercedes Dellatorre · Abril 2026 · Ensayo</div>
 </header>
 
 <div class="article-hero-img">
@@ -160,11 +80,9 @@
 
   <p>Le hemos dedicado canciones, poemas, libros enteros; aparece en películas, en relatos, en sistemas completos de creencias. Produce la escena siempre inquietante de los eclipses y sostiene una maquinaria simbólica persistente: de los lobizones a las diosas, del genio romántico al cuerpo alterado bajo su influjo.</p>
 
-  <p>La Luna es un misterio a medias. Está lo suficientemente cerca como para volverse íntima, y demasiado lejos como para permanecer inaccesible. Regula las mareas, ordena ritmos y, al mismo tiempo, no nos pertenece y quizá nunca lo haga. Se deja rodear, observar, inscribir; aunque no hemos logrado poseerla (no aún). Sobre esa distancia se construye su potencia.</p>
+  <p>La Luna es un misterio a medias. Está lo suficientemente cerca como para volverse íntima, y demasiado lejos como para permanecer inaccesible. Regula las mareas, ordena ritmos y, al mismo tiempo, no nos pertenece y quizá nunca lo haga. Se deja rodear, observar, inscribir; aunque no hemos logrado poseerla (no aún). Sobre esa distancia se construye su potencia. Es mucho más que una roca. Es una superficie de inscripción. Más que una materialidad visible, es un fenómeno persistente que acompaña la historia humana. Tal vez, incluso, sea el resto visible de una catástrofe originaria. La hipótesis más aceptada —la del impacto gigante— sostiene que la Luna se formó cuando un protoplaneta del tamaño de Marte, Theia, colisionó con la Tierra primitiva.</p>
 
-  <p>Es mucho más que una roca. Es una superficie de inscripción. Más que una materialidad visible, es un fenómeno persistente que acompaña la historia humana. Tal vez, incluso, sea el resto visible de una catástrofe originaria. La hipótesis más aceptada —la del impacto gigante— sostiene que la Luna se formó cuando un protoplaneta del tamaño de Marte, Theia, colisionó con la Tierra primitiva.</p>
-
-  <p>En ese sentido, es un resto material que conserva, en su misma forma, la memoria de una violencia primera. Y, al mismo tiempo, es la superficie sobre la que esa memoria se desplaza, se vuelve diosa, monstruo, amante, dictadora de presagios.</p>
+  <p>En ese sentido, es un resto material que conserva, en su misma forma, la memoria de una violencia primera.<sup><a href="#fn1" id="fnref1">1</a></sup> Y, al mismo tiempo, es la superficie sobre la que esa memoria se desplaza, se vuelve diosa, monstruo, amante, dictadora de presagios.</p>
 
   <p>No cambia —y, sin embargo, nunca es la misma. Con esa pertenencia incierta se abre, también, una capa de problemas que no son sólo geopolíticos. Si la Tierra contiene —en sus estratos, en sus ruinas, en sus marcas— la historia que la precede, la Luna aparece, en cambio, como un territorio sin archivo legible: una superficie que, al menos en el imaginario, todavía podría escribirse de otro modo.</p>
 
@@ -174,7 +92,7 @@
 
   <p>Más de medio siglo. Y, sin embargo, cuando la NASA transmitió las primeras imágenes de la Tierra como un creciente azul asomando detrás del borde lunar, desapareciendo después, no parecían nuevas.</p>
 
-  <p>Desde lo técnico, todo fue distinto. La tripulación de Artemis II no orbitó la Luna como el Apollo 8; la sobrevoló en una trayectoria de retorno libre, a más de seis mil kilómetros de la superficie. Las fotos también cambian: la Tierra se ve más pequeña, la Luna más lejana, la geometría es otra.</p>
+  <p>Desde lo técnico, todo fue distinto. La tripulación de Artemis II no orbitó la Luna como el Apollo 8; la sobrevoló en una trayectoria de retorno libre,<sup><a href="#fn2" id="fnref2">2</a></sup> a más de seis mil kilómetros de la superficie. Las fotos también cambian: la Tierra se ve más pequeña, la Luna más lejana, la geometría es otra.</p>
 
   <p>Pero lo que reconocimos fue la imagen de la Tierra elevándose detrás de la Luna, capturada por William Anders con una Hasselblad modificada el 24 de diciembre de 1968, durante la cuarta órbita del Apollo 8. Una imagen casi accidental —Anders fotografiaba cráteres cuando vio el planeta aparecer por la ventanilla y pidió, apurado, un rollo de película color— que terminaría convertida en lo que Galen Rowell llamó la fotografía ambiental más influyente jamás tomada.</p>
 
@@ -184,17 +102,17 @@
 
   <p>Para entender por qué volvemos hay que ir más allá de las respuestas técnicas o geopolíticas. Hay un dato que suele pasar desapercibido: la mayoría de las personas vivas hoy no habían nacido cuando el último ser humano caminó sobre la Luna. Para casi todos, el alunizaje no pertenece al archivo de la experiencia, sino a una memoria colectiva que se organiza en imágenes. Y no, precisamente, en imágenes nítidas. Más bien en un compuesto inestable de fotogramas en blanco y negro, una bandera que parece ondear donde no hay viento, una huella en el polvo, una frase célebre casi siempre mal citada. Mi recuerdo no es el de una familia reunida frente al televisor en un living futurista norteamericano, sino las imágenes coloreadas de la revista Billiken. En Argentina heredamos un collage de documentales, estampillas, portadas de revistas, escenas de películas. El alunizaje, para nosotros, no funciona tanto como un hecho sino como un mito visual.</p>
 
-  <p>Entiendo el «mito visual» como una configuración icónica que, por repetición, adquiere estatuto de verdad cultural. <a href="sobre.html#warburg" style="color:#1B3A8C;">Aby Warburg</a> lo había advertido con claridad al construir su <a href="sobre.html#atlas-mnemosyne" style="color:#1B3A8C;">Atlas Mnemosyne</a>: paneles donde las mismas formas —un cuerpo en torsión, un gesto de dolor, una figura en fuga— reaparecen a lo largo de los siglos, de la Antigüedad al Renacimiento y de allí a la prensa moderna, portando una energía que sobrevive a sus contextos. Para Warburg las imágenes migran. Cambian de soporte, de uso, de sentido, pero algo de su forma persiste.</p>
+  <p>Entiendo el «mito visual» como una configuración icónica que, por repetición, adquiere estatuto de verdad cultural. <a href="sobre.html#warburg">Aby Warburg</a> lo había advertido con claridad al construir su <a href="sobre.html#atlas-mnemosyne"><em>Atlas Mnemosyne</em></a><sup><a href="#fn3" id="fnref3">3</a></sup>: paneles donde las mismas formas —un cuerpo en torsión, un gesto de dolor, una figura en fuga— reaparecen a lo largo de los siglos, de la Antigüedad al Renacimiento y de allí a la prensa moderna, portando una energía que sobrevive a sus contextos. Para Warburg las imágenes migran. Cambian de soporte, de uso, de sentido, pero algo de su forma persiste.</p>
 
-  <p>Eso es, quizá, lo que se activa cuando miramos las fotos de Artemis II y sentimos que ya las vimos. No es exactamente un déjà vu. Es el <em>Earthrise</em> de 1968 imponiendo una gramática de lo visible en la que cada nueva imagen aparece como variación de aquella primera irrupción. Vuelve, como en una órbita, sobre una forma que la precede. En términos warburguianos: una <a href="sobre.html#pathosformel" style="color:#1B3A8C;"><em>Pathosformel</em></a> del regreso.</p>
+  <p>Eso es, quizá, lo que se activa cuando miramos las fotos de Artemis II y sentimos que ya las vimos. No es exactamente un <em>déjà vu</em>. Es el <em>Earthrise</em> de 1968 imponiendo una gramática de lo visible en la que cada nueva imagen aparece como variación de aquella primera irrupción. Vuelve, como en una órbita, sobre una forma que la precede. En términos warburguianos: una <a href="sobre.html#pathosformel"><em>pathosformel</em></a><sup><a href="#fn4" id="fnref4">4</a></sup> del regreso.</p>
 
   <p>El problema es que, si la forma migra, lo nuevo queda parcialmente capturado por lo ya conocido. Nunca vemos una imagen «por primera vez». Lo que aparece llega atravesado por otras formas, otros tiempos, otras supervivencias que prefiguran su lectura.</p>
 
-  <p>Lo nuevo está ahí —en las fotos de Artemis, en la geometría distinta, en los rostros detrás de los cascos—, pero su lectura llega después, cuando la imagen encuentra las condiciones de su reconocimiento. Como pensaba <a href="sobre.html#benjamin" style="color:#1B3A8C;">Walter Benjamin</a>, las imágenes se vuelven legibles en un tiempo específico, cuando irrumpen como <a href="sobre.html#imagen-dialectica" style="color:#1B3A8C;">imagen dialéctica</a>. Y ese tiempo no coincide necesariamente con el de su producción. A veces tarda décadas.</p>
+  <p>Lo nuevo está ahí —en las fotos de Artemis, en la geometría distinta, en los rostros detrás de los cascos—, pero su lectura llega después, cuando la imagen encuentra las condiciones de su reconocimiento. Como pensaba <a href="sobre.html#benjamin">Walter Benjamin</a>, las imágenes se vuelven legibles en un tiempo específico, cuando irrumpen como <a href="sobre.html#imagen-dialectica">imagen dialéctica</a>.<sup><a href="#fn5" id="fnref5">5</a></sup> Y ese tiempo no coincide necesariamente con el de su producción. A veces tarda décadas.</p>
 
   <p>De esa demora nace una tensión que este ensayo no se propone resolver, ya que cada nueva imagen del regreso a la Luna oscila entre repetición y diferencia, sin terminar de inscribirse del todo en ninguna de las dos.</p>
 
-  <p>Entonces, la pregunta se vuelve menos evidente, pero más precisa: <em>¿qué es lo que estamos viendo ahora sin poder reconocerlo todavía?</em></p>
+  <p><em>Entonces, la pregunta se vuelve menos evidente, pero más precisa: ¿qué es lo que estamos viendo ahora sin poder reconocerlo todavía?</em></p>
 
   <hr>
 
@@ -222,7 +140,9 @@
 
   <p>La Luna de Artemis ya no se presenta —al menos no en el mismo registro— como una Luna de conquista. Se vuelve más difusa, menos épica, más distribuida. Hay, desde luego, geopolítica, China desarrolla su propio programa lunar, pero el régimen de visibilidad es otro. La tripulación de Artemis II incluye al primer astronauta afroamericano en viajar más allá de la órbita terrestre, a la primera mujer, al primer británico. Son marcas que funcionan como síntomas: la narrativa ya no organiza el sentido en torno al «llegamos primero», sino al «esta vez vamos todos».</p>
 
-  <p>Conviene, sin embargo, no apresurarse hacia una lectura en clave de corrección simbólica. Lo que empuja a una civilización a retomar, tras más de medio siglo, una empresa abandonada no se decide únicamente en despachos ni se agota en la superficie del discurso. Se parece más a lo que Raymond Williams llamó «estructuras de sentimiento»: desplazamientos en la sensibilidad colectiva que preceden a su formulación conceptual. No son todavía ideología ni programa; son una presión difusa, una atmósfera que reconfigura lo pensable. Algo de ese orden, una acumulación de crisis climáticas, la fatiga de futuros incumplidos, la necesidad de reabrir un horizonte que no sea puramente catastrófico, parece haber devuelto a la Luna al campo de lo urgente. Volvemos porque algo en la trama social requiere ese retorno.</p>
+  <p>Conviene, sin embargo, no apresurarse hacia una lectura en clave de corrección simbólica. Lo que empuja a una civilización a retomar, tras más de medio siglo, una empresa abandonada no se decide únicamente en despachos ni se agota en la superficie del discurso.</p>
+
+  <p>Se parece más a lo que Raymond Williams llamó «estructuras de sentimiento»<sup><a href="#fn6" id="fnref6">6</a></sup>: desplazamientos en la sensibilidad colectiva que preceden a su formulación conceptual. No son todavía ideología ni programa; son una presión difusa, una atmósfera que reconfigura lo pensable. Algo de ese orden, una acumulación de crisis climáticas, la fatiga de futuros incumplidos, la necesidad de reabrir un horizonte que no sea puramente catastrófico, parece haber devuelto a la Luna al campo de lo urgente. Volvemos porque algo en la trama social requiere ese retorno.</p>
 
   <p>Que las imágenes de este nuevo ciclo insistan, una vez más, en mostrar la Tierra —frágil, azul, suspendida— no es un gesto inocente. Es una reactivación de la misma forma en otro régimen de experiencia. En 1968, <em>Earthrise</em> produjo conocimiento. En 2026, produce reconocimiento. Y reconocer es una operación más cercana al ritual que al conocimiento, más próxima a la liturgia que a la ciencia.</p>
 
@@ -238,20 +158,48 @@
 
   <p>Y, finalmente, un duelo más íntimo que sin embargo no es privado: el de una imaginación que creció proyectando hacia el espacio la promesa de un mundo mejor. La intuición infantil de que había un «afuera» más justo, más pleno, más intacto. El descubrimiento —tardío, pero inevitable— de que ese mundo ya estaba, antes de que llegáramos, comprometido.</p>
 
-  <p>En ese sentido, la <em>Pathosformel</em> que parece emerger es la de una conciencia herida que, sin embargo, insiste en mirar. Volvemos, entonces, no sólo a un lugar, sino a una imagen que nos precede. A la escena desde la cual aprendimos —por primera vez— a vernos desde afuera. Como si repitiéramos el gesto esperando, esta vez, leer algo distinto en nosotros mismos.</p>
+  <p>En ese sentido, la <em>pathosformel</em> que parece emerger es la de una conciencia herida que, sin embargo, insiste en mirar. Volvemos, entonces, no sólo a un lugar, sino a una imagen que nos precede. A la escena desde la cual aprendimos, por primera vez, a vernos desde afuera. Como si repitiéramos el gesto esperando, esta vez, leer algo distinto en nosotros mismos.</p>
 
   <hr>
 
-  <p>En ese sentido, la <em>Pathosformel</em> que parece emerger podría nombrarse como una <em>Pathosformel de la órbita herida</em>: una forma afectiva en la que el gesto es el de rodear y volver, sosteniendo una distancia que ya no es neutral sino cargada de conciencia.</p>
+  <p>En ese sentido, la <em>pathosformel</em> que parece emerger podría nombrarse como una <strong><em>pathosformel</em> de la órbita herida</strong>: una forma afectiva en la que el gesto es el de rodear y volver, sosteniendo una distancia que ya no es neutral sino cargada de conciencia.</p>
 
-  <p>Orbitar es insistir. Es mirar sin poder apropiarse del todo. Y esa mirada —repetida, mediada, técnica— se ejerce sobre un mundo cuya fragilidad ya no puede desconocerse.</p>
+  <p>Orbitar es insistir. Es mirar sin poder apropiarse del todo. Y esa mirada repetida, mediada, técnica se ejerce sobre un mundo cuya fragilidad ya no puede desconocerse.</p>
 
-  <p>La <em>Pathosformel</em> de la órbita herida nombra la inestabilidad de un mundo en el que el centro ya no puede sostenerse como destino, aunque tampoco termina de desaparecer. Orbitar, en este sentido, es participar en una relación de fuerzas que produce, una y otra vez, un centro precario. Sabemos que es una construcción —y, sin embargo, seguimos organizando la mirada en torno a él.</p>
+  <p>La <strong><em>pathosformel</em> de la órbita herida</strong> nombra la inestabilidad de un mundo en el que el centro ya no puede sostenerse como destino, aunque tampoco termina de desaparecer.</p>
+
+  <p>Orbitar, en este sentido, es participar en una relación de fuerzas que produce, una y otra vez, un centro precario. Sabemos que es una construcción —y, sin embargo, seguimos organizando la mirada en torno a él.</p>
 
   <p>Porque incluso después de haberlo desmontado, lo seguimos necesitando.</p>
-
-  <p class="article-sign">Mercedes Dellatorre, abril de 2026</p>
 </article>
+
+<div class="footnotes">
+  <h3>Notas</h3>
+  <ol>
+    <li id="fn1">La hipótesis del impacto gigante (<em>Giant Impact Hypothesis</em>), actualmente consensuada en la comunidad científica, propone que hace aproximadamente 4.500 millones de años un cuerpo protoplanetario llamado convencionalmente Theia —en referencia a la titánide madre de Selene en la mitología griega— colisionó con la proto-Tierra. El material eyectado se habría acretado para formar la Luna. <a href="#fnref1">↩</a></li>
+    <li id="fn2">Una trayectoria de retorno libre (<em>free return trajectory</em>) es una ruta orbital calculada de modo que la nave, sin necesidad de propulsión adicional, aproveche la gravedad lunar para volver hacia la Tierra. Su principal ventaja es de seguridad: en caso de fallo del motor, la tripulación retorna de manera autónoma. <a href="#fnref2">↩</a></li>
+    <li id="fn3">El <em>Atlas Mnemosyne</em> (1924–1929) es el proyecto inacabado de Aby Warburg: una serie de paneles de tela negra sobre los que disponía, sin jerarquía fija, reproducciones de obras de arte, mapas astrológicos, monedas, sellos y recortes de prensa. La yuxtaposición no era ilustrativa sino analítica: buscaba hacer visible la persistencia de ciertas formas a través del tiempo. <a href="#fnref3">↩</a></li>
+    <li id="fn4"><em>Pathosformel</em> (fórmula de pathos): concepto acuñado por Aby Warburg para designar las fórmulas gestuales o corporales que condensan una carga afectiva específica y migran a través del tiempo, los soportes y las culturas sin perder su energía expresiva. Se trata de una supervivencia (<em>Nachleben</em>), la forma reaparece porque algo de su potencia sigue activo. Warburg las rastreó desde los relieves de la Antigüedad hasta la prensa gráfica del siglo XX. <a href="#fnref4">↩</a></li>
+    <li id="fn5">La <em>imagen dialéctica</em> es un concepto central del pensamiento tardío de Walter Benjamin, desarrollado en los <em>Pasajes</em> (obra póstuma). Designa el instante en que una imagen del pasado y el presente se constelan de manera súbita, produciendo un «ahora de cognoscibilidad» (<em>Jetzt der Erkennbarkeit</em>), esto es, el momento en que lo que estaba latente se vuelve, por fin, legible. <a href="#fnref5">↩</a></li>
+    <li id="fn6">Raymond Williams acuñó el concepto de <em>structures of feeling</em> (estructuras de sentimiento) en <em>Marxismo y literatura</em> (1977) para designar los modos de experiencia colectiva que aún no han cristalizado en ideología o doctrina explícita. Son una presión difusa, una tonalidad del presente que se registra antes de poder formularse. <a href="#fnref6">↩</a></li>
+  </ol>
+</div>
+
+<div class="referencias">
+  <h3>Referencias</h3>
+  <ul>
+    <li>Anders, William A. <em>Earthrise</em> [fotografía]. NASA/Apollo 8, AS8-14-2383, 24 de diciembre de 1968.</li>
+    <li>Benjamin, Walter. <em>El libro de los pasajes</em>. Edición de Rolf Tiedemann. Traducción de Luis Fernández Castañeda, Isidro Herrera y Fernando Guerrero. Madrid: Akal, 2005 [redacción: 1927–1940].</li>
+    <li>Kennedy, John F. <em>Special Message to the Congress on Urgent National Needs</em> [discurso]. Washington D.C., 25 de mayo de 1961.</li>
+    <li>Méliès, Georges, dir. <em>Le Voyage dans la Lune</em> [Viaje a la Luna]. Star Film, 1902. 14 min.</li>
+    <li>NASA. <em>Artemis II Mission Overview</em>. Washington D.C.: NASA, 2024.</li>
+    <li>Poole, Robert. <em>Earthrise: How Man First Saw the Earth</em>. New Haven: Yale University Press, 2008. [Fuente de la referencia a Galen Rowell.]</li>
+    <li>Kubrick, Stanley, dir. <em>2001: A Space Odyssey</em>. Metro-Goldwyn-Mayer / Stanley Kubrick Productions, 1968. 149 min.</li>
+    <li>Warburg, Aby. <em>Atlas Mnemosyne</em> [1924–1929]. Edición de Martin Warnke y Claudia Brink. Berlín: Akademie Verlag, 2000. Traducción al español: Madrid: Akal, 2010.</li>
+    <li>Warburg, Aby. <em>El renacimiento del paganismo. Aportaciones a la historia cultural del Renacimiento europeo</em>. Traducción de Felipe Pereda. Madrid: Alianza, 2005.</li>
+    <li>Williams, Raymond. <em>Marxismo y literatura</em>. Traducción de Pablo di Masso. Barcelona: Península, 1980 [1977].</li>
+  </ul>
+</div>
 
 <nav class="dossier-nav">
   <div class="dossier-nav-inner">
@@ -272,16 +220,11 @@
   </form>
 </div>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span>
-      <form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form>
-    </div>
-    <div class="footer-col"><h4>Revista</h4><ul><li><a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a></li><li><a href="museo-imaginario.html">Museo imaginario</a></li><li><a href="simbolismo-en-escenas.html">Simbolismo en escenas</a></li><li><a href="imagenes-que-persisten.html">Imágenes que persisten</a></li></ul></div>
-    <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Acerca de</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div>
-</footer>
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-brand"><p>Casa Matriz</p><span class="footer-brand-desc">Arqueología visual de lo imaginario</span><form class="footer-subscribe" onsubmit="return false;"><input type="email" placeholder="tu@correo.com"><button type="submit">Suscribite</button></form></div>
+  <div class="footer-col"><h4>Revista</h4><ul><li><a href="archivo-esoterico.html">Archivo Esotérico Ilustrado</a></li><li><a href="museo-imaginario.html">Museo imaginario</a></li><li><a href="simbolismo-en-escenas.html">Simbolismo en escenas</a></li><li><a href="imagenes-que-persisten.html">Imágenes que persisten</a></li></ul></div>
+  <div class="footer-col"><h4>Proyecto</h4><ul><li><a href="sobre.html">Acerca de</a></li><li><a href="seminarios.html">Seminarios</a></li><li><a href="ediciones.html">Ediciones</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+  <div class="footer-col"><h4>Redes</h4><ul><li><a href="#" class="external">Instagram</a></li><li><a href="#" class="external">YouTube</a></li></ul></div>
+</div><div class="footer-bottom"><span>&copy; 2026 Casa Matriz</span><span><a href="#" style="color:var(--text-tertiary)">Aviso legal</a></span></div></footer>
 </body>
 </html>
