@@ -45,10 +45,8 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex; align-items: center; justify-content: space-between; height: 64px;
 }
 .nav-logo {
-  display: flex; align-items: center;
-}
-.nav-logo img {
-  height: 32px; width: 32px; object-fit: contain;
+  font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
+  letter-spacing: 0.02em; color: var(--text);
 }
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 .nav-links a {
@@ -123,10 +121,10 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; display: inline-block;
 }
-.tag-archivo { color: var(--accent-gold); }
+.tag-bestiario { color: var(--accent-vermillion); }
+.tag-grimorios { color: var(--accent-gold); }
 .tag-museo { color: var(--accent-ultramarine); }
-.tag-escenas { color: var(--text-secondary); }
-.tag-persisten { color: var(--accent-vermillion); }
+.tag-pantalla { color: var(--text-secondary); }
 .tag-dossier { color: var(--accent-ultramarine); }
 .arrow-icon {
   width: 14px; height: 14px; display: inline-block; vertical-align: middle;
