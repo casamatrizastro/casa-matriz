@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poseidón — Doce tronos, trece dioses · Casa Matriz</title>
+<meta name="description" content="Poseidón: El agitador de la tierra. Motivo, animal sagrado, pathosformeln visuales y conexiones cruzadas dentro del sistema olímpico.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1814; --ink-soft: #3d3830; --ink-muted: #7a7268; --ink-faint: #b5afa6;
+    --parchment: #f7f4ee; --parchment-warm: #ede8df; --parchment-dark: #d9d1c4;
+    --terra: #8b4a2e; --terra-light: #c4845e; --terra-faint: #f0e0d4;
+    --gold: #9a7a3a; --gold-light: #c9a85c; --gold-faint: #f5edd8;
+    --serif-display: 'IM Fell English', Georgia, serif;
+    --serif-body: 'Cormorant Garamond', Georgia, serif;
+    --serif-ui: 'Libre Baskerville', Georgia, serif;
+  }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { background: var(--parchment); color: var(--ink); font-family: var(--serif-body); font-size: 1.125rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid var(--parchment-dark); background: var(--parchment); position: sticky; top: 0; z-index: 10; }
+  .nav-logo { font-family: var(--serif-ui); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
+  .nav-dossier { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; }
+  .nav-dossier:hover { color: var(--ink); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-family: var(--serif-ui); font-size: 0.8rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .breadcrumb { max-width: 820px; margin: 0 auto; padding: 1.5rem 2.5rem 0; display: flex; align-items: center; gap: 0.5rem; }
+  .breadcrumb a, .breadcrumb span { font-family: var(--serif-ui); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--ink-faint); }
+  .breadcrumb a:hover { color: var(--ink-muted); }
+  .breadcrumb .sep { color: var(--parchment-dark); }
+  .ficha-hero { max-width: 820px; margin: 0 auto; padding: 3rem 2.5rem 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; border-bottom: 0.5px solid var(--parchment-dark); }
+  .ficha-num-hero { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+  .ficha-hero h1 { font-family: var(--serif-display); font-size: clamp(3.5rem, 8vw, 5.5rem); font-weight: 400; line-height: 1; color: var(--ink); margin-bottom: 0.5rem; }
+  .ficha-subtitulo { font-family: var(--serif-display); font-style: italic; font-size: 1.25rem; color: var(--ink-muted); display: block; margin-bottom: 1rem; }
+  .ficha-eje-tag { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); display: inline-block; border: 0.5px solid var(--terra-light); padding: 0.25rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; margin-bottom: 0.25rem; }
+  .ficha-hero-right { text-align: right; padding-bottom: 0.5rem; }
+  .animal-display { font-family: var(--serif-display); font-style: italic; font-size: 1rem; color: var(--ink-faint); display: block; margin-bottom: 0.3rem; }
+  .animal-name { font-family: var(--serif-display); font-size: 1.4rem; color: var(--ink-soft); }
+  .epigrafe-wrap { max-width: 820px; margin: 0 auto; padding: 2.5rem 2.5rem 0; }
+  .epigrafe { border-left: 2px solid var(--gold-light); padding-left: 1.5rem; margin-bottom: 3rem; }
+  .epigrafe p { font-family: var(--serif-display); font-style: italic; font-size: 1.15rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 0.5rem; }
+  .epigrafe cite { font-family: var(--serif-ui); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--ink-faint); font-style: normal; }
+  .ficha-layout { max-width: 820px; margin: 0 auto; padding: 0 2.5rem; display: grid; grid-template-columns: 1fr 220px; gap: 4rem; align-items: start; }
+  .ficha-body p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-soft); margin-bottom: 1.4rem; }
+  .ficha-body p:last-child { margin-bottom: 0; }
+  .section-title { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); margin-top: 3rem; margin-bottom: 1.25rem; display: block; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--parchment-dark); }
+  .obra { margin-bottom: 1.75rem; padding-left: 1rem; border-left: 2px solid var(--parchment-dark); }
+  .obra:hover { border-left-color: var(--gold-light); }
+  .obra-header { font-family: var(--serif-body); font-size: 0.95rem; color: var(--ink); margin-bottom: 0.3rem; }
+  .obra-header em { font-style: italic; }
+  .obra-header strong { font-weight: 600; }
+  .obra-museo { font-family: var(--serif-ui); font-size: 0.7rem; color: var(--ink-faint); letter-spacing: 0.05em; display: block; margin-bottom: 0.4rem; }
+  .obra-desc { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.7; }
+  .ficha-sidebar { position: sticky; top: 5rem; }
+  .sidebar-block { margin-bottom: 2.5rem; }
+  .sidebar-label { font-family: var(--serif-ui); font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; display: block; padding-bottom: 0.4rem; border-bottom: 0.5px solid var(--parchment-dark); }
+  .sidebar-motivo { font-family: var(--serif-display); font-style: italic; font-size: 1rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 1.5rem; }
+  .conexion-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--parchment-warm); }
+  .conexion-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .conexion-dios { font-family: var(--serif-display); font-size: 0.95rem; color: var(--terra); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem; text-decoration: none; }
+  .conexion-dios:hover { color: var(--terra-light); }
+  .conexion-dios::before { content: "↔"; font-style: normal; font-size: 0.75rem; }
+  .conexion-txt { font-size: 0.82rem; color: var(--ink-muted); line-height: 1.6; }
+  .notas-section { max-width: 820px; margin: 4rem auto 0; padding: 2rem 2.5rem; border-top: 0.5px solid var(--parchment-dark); }
+  .notas-title { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.25rem; display: block; }
+  .nota { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--ink-muted); line-height: 1.6; }
+  .nota-num { font-family: var(--serif-ui); font-size: 0.7rem; color: var(--ink-faint); min-width: 1.4rem; padding-top: 0.05rem; }
+  .ficha-nav { max-width: 820px; margin: 0 auto; padding: 3rem 2.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 0.5px solid var(--parchment-dark); gap: 1rem; }
+  .ficha-nav-link { text-decoration: none; display: flex; flex-direction: column; gap: 0.2rem; }
+  .ficha-nav-link.next { text-align: right; }
+  .nav-dir { font-family: var(--serif-ui); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+  .nav-dios { font-family: var(--serif-display); font-size: 1.2rem; color: var(--terra); transition: color 0.2s; }
+  .ficha-nav-link:hover .nav-dios { color: var(--terra-light); }
+  .ficha-nav-center { font-family: var(--serif-ui); font-size: 0.7rem; color: var(--ink-faint); text-decoration: none; letter-spacing: 0.1em; text-align: center; }
+  .ficha-nav-center:hover { color: var(--ink-muted); }
+  footer { background: var(--ink); padding: 3rem 2.5rem; }
+  .footer-inner { max-width: 820px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
+  .footer-logo { font-family: var(--serif-ui); font-size: 0.82rem; font-weight: 700; color: var(--parchment-warm); text-decoration: none; letter-spacing: 0.05em; display: block; margin-bottom: 0.4rem; }
+  footer p { font-size: 0.78rem; color: var(--ink-muted); line-height: 1.6; max-width: 340px; }
+  .footer-nav { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; text-align: right; }
+  .footer-nav a { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--parchment); }
+  sup { font-family: var(--serif-ui); font-size: 0.65rem; color: var(--gold); vertical-align: super; line-height: 0; margin-left: 1px; }
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { display: none; }
+    .ficha-hero { grid-template-columns: 1fr; padding: 2rem 1.25rem 1.5rem; } .ficha-hero-right { text-align: left; }
+    .ficha-layout { grid-template-columns: 1fr; gap: 2rem; padding: 0 1.25rem; } .ficha-sidebar { position: static; }
+    .epigrafe-wrap, .notas-section, .ficha-nav { padding-left: 1.25rem; padding-right: 1.25rem; } .breadcrumb { padding-left: 1.25rem; padding-right: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Casa Matriz</a>
+  <a href="olimpo.html" class="nav-dossier">← Doce tronos, trece dioses</a>
+  <ul class="nav-links">
+    <li><a href="revista.html">Revista</a></li>
+    <li><a href="seminarios.html">Seminarios</a></li>
+    <li><a href="suscribite.html">Suscribite</a></li>
+  </ul>
+</nav>
+<div class="breadcrumb">
+  <a href="index.html">Casa Matriz</a>
+  <span class="sep">·</span>
+  <a href="index.html">Doce tronos, trece dioses</a>
+  <span class="sep">·</span>
+  <span>Poseidón</span>
+</div>
+<header class="ficha-hero">
+  <div class="ficha-hero-left">
+    <span class="ficha-num-hero">Ficha IV de XIII</span>
+    <h1>Poseidón</h1>
+    <span class="ficha-subtitulo">El agitador de la tierra</span>
+    <span class="ficha-eje-tag">Umbral</span><span class="ficha-eje-tag">profundidad / superficie</span>
+  </div>
+  <div class="ficha-hero-right">
+    <span class="animal-display">Animal sagrado</span>
+    <span class="animal-name">El caballo, el delfín</span>
+  </div>
+</header>
+<div class="epigrafe-wrap">
+  <blockquote class="epigrafe">
+    <p>Espesó los celajes, y cogiendo el tridente<br>revolvió el océano, desató los vientos del huracán<br>y cegó con las nubes el cielo.</p>
+    <cite>Odisea, V, 291–294</cite>
+  </blockquote>
+</div>
+<div class="ficha-layout">
+  <main class="ficha-body">
+    <p>Un dios marino que se desplaza en carro tirado por caballos: la primera rareza de Poseidón ya lo delata. Antes de ser el dios griego de los mares, fue una divinidad de origen indoeuropeo con dominios terrestres. La segunda parte de su nombre alude a la diosa de la tierra y comparte raíz con <em>Damáter</em> (Deméter). Los cultos arcadios conservan el vínculo: Deméter Erinia fue fecundada como yegua por Poseidón en forma de caballo, y de esa unión nació Arión, el caballo maldito. Poseidón y Deméter son, en el origen, la tierra y lo que agita la tierra.</p>
+    <p>Gastón Bachelard, en <em>El agua y los sueños</em>, describe el agua como un destino esencial que transforma sin cesar la sustancia del ser. Bajo las imágenes superficiales del agua existe una serie de imágenes cada vez más profundas, cada vez más tenaces.<sup>1</sup> Poseidón habita exactamente ese estrato: no la superficie del mar sino sus capas más oscuras, donde las emociones no tienen nombre todavía.</p>
+    <p>Su comportamiento inestable —calmas repentinas, tempestades sin causa aparente, terremotos mientras duerme— es el de alguien cuya historia verdadera se cuenta desde abajo. En su aspecto benigno creaba islas y calmaba mares. Cuando se enojaba —y se enojaba con frecuencia— hendía el suelo con su tridente, provocaba naufragios, hundía puertos. No era capricho: era el rencor de alguien obligado a moverse en un elemento que no es el suyo.</p>
+    <p>El símbolo del USB está inspirado en el tridente de Poseidón. En el documental <em>Lo and Behold</em> (Werner Herzog, 2016), el pionero de internet Ted Nelson cuenta que de niño arrastraba sus manos en el agua de un bote para percibir cómo abría y cerraba espacios entre los dedos: esa fascinación lo llevó a imaginar las estructuras dinámicas de la red. <em>Navegar</em> por internet: el verbo ya estaba ahí, esperando a Poseidón.</p>
+    <span class="section-title">Pathosformeln visuales</span>
+    
+    <div class="obra">
+      <p class="obra-header"><strong>Escopas (atribuido)</strong>, <em>Poseidón del grupo escultórico</em> (siglo IV a.C., copia romana)</p>
+      <span class="obra-museo">Museo Arqueológico Nacional, Atenas</span>
+      <p class="obra-desc">Poseidón con tridente en tensión, la figura inclinada hacia adelante. <em>Pathosformel</em> del dios a punto de actuar: la fuerza contenida antes del terremoto, el instante antes de la agitación.</p>
+    </div>
+    <div class="obra">
+      <p class="obra-header"><strong>Fontana, Niccolò</strong>, <em>Fuente de Neptuno</em> (1563–1566)</p>
+      <span class="obra-museo">Piazza del Nettuno, Bolonia</span>
+      <p class="obra-desc">Poseidón en el centro de la fuente, tridente en alto, rodeado de sirenas. <em>Pathosformel</em> del dominio sobre el propio destierro: el dios que ejerce soberanía sobre el elemento que lo incomoda.</p>
+    </div>
+    <div class="obra">
+      <p class="obra-header"><strong>Böcklin, Arnold</strong>, <em>El juego de las olas</em> (1883)</p>
+      <span class="obra-museo">Neue Pinakothek, Múnich</span>
+      <p class="obra-desc">Poseidón emergente entre cuerpos que se agitan en el agua. <em>Pathosformel</em> del dios que sube a la superficie: lo que viene de las profundidades e irrumpe en el mundo visible con violencia y gozo simultáneos.</p>
+    </div>
+  </main>
+  <aside class="ficha-sidebar">
+    <div class="sidebar-block">
+      <span class="sidebar-label">El motivo</span>
+      <p class="sidebar-motivo">La perturbación necesaria que saca a la superficie lo que estaba oculto. Sus aguas agitadas no son capricho sino el rencor de alguien obligado a moverse en un elemento que no es el suyo.</p>
+    </div>
+    <div class="sidebar-block">
+      <span class="sidebar-label">Conexiones cruzadas</span>
+      
+    <div class="conexion-item">
+      <a href="demeter.html" class="conexion-dios">Deméter</a>
+      <p class="conexion-txt">El origen compartido en la tierra. Poseidón y Deméter son los dioses del sustrato: lo que sostiene antes de ser dividido entre mares y campos.</p>
+    </div>
+    <div class="conexion-item">
+      <a href="zeus.html" class="conexion-dios">Zeus</a>
+      <p class="conexion-txt">Los dos hermanos de Zeus condenados a reinos alejados del sol. El poder olímpico requiere que sus rivales potenciales estén lo más lejos posible del centro.</p>
+    </div>
+    <div class="conexion-item">
+      <a href="hermes.html" class="conexion-dios">Hermes</a>
+      <p class="conexion-txt">Poseidón es la profundidad; Hermes es el que cruza entre mundos. Entre los dos se articula el espacio de lo liminal.</p>
+    </div>
+    </div>
+    <div class="sidebar-block">
+      <span class="sidebar-label">Eje del sistema</span>
+      <p style="font-size:0.82rem;color:var(--ink-muted);line-height:1.7;">
+        <strong style="font-family:var(--serif-display);font-weight:400;color:var(--ink);">Umbral</strong><br>
+        Poseidón entre la superficie y las profundidades. El dios que habita el estrato emocional más oscuro, donde las experiencias antiguas pugnan por salir a la superficie.
+      </p>
+    </div>
+    <div class="sidebar-block">
+      <span class="sidebar-label">Referencias</span>
+      <p style="font-size:0.78rem;color:var(--ink-faint);line-height:1.7;">Homero, <em>Odisea</em> · Bachelard, <em>El agua y los sueños</em> · Herzog, <em>Lo and Behold</em> (2016)</p>
+    </div>
+  </aside>
+</div>
+<section class="notas-section"><span class="notas-title">Notas</span>
+    <div class="nota"><span class="nota-num">1.</span><span>Bachelard, Gastón. <em>El agua y los sueños. Ensayo sobre la imaginación de la materia</em>. Trad. Ida Vitale. FCE, 1978, pp. 11–15. El 'psiquismo hidratante' que Bachelard describe opera exactamente en el registro emocional que el mito asigna a Poseidón: lo que viene de las profundidades transforma la sustancia del ser.</span></div></section>
+<nav class="ficha-nav" aria-label="Navegación entre fichas">
+  <a href="hera.html" class="ficha-nav-link prev">
+        <span class="nav-dir">← Ficha III</span>
+        <span class="nav-dios">Hera</span>
+       </a>
+  <a href="index.html" class="ficha-nav-center">· · ·</a>
+  <a href="demeter.html" class="ficha-nav-link next">
+        <span class="nav-dir">Ficha V →</span>
+        <span class="nav-dios">Deméter</span>
+       </a>
+</nav>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="nav-logo footer-logo">Casa Matriz</a>
+      <p>Arqueología visual de lo imaginario. Rastreamos la genealogía y las transformaciones de los símbolos a través del arte, la literatura y el cine.</p>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="seminarios.html">Seminarios</a></li>
+      <li><a href="sobre.html">Acerca de</a></li>
+      <li><a href="suscribite.html">Suscribite</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

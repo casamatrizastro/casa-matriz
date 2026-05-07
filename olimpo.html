@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doce tronos, trece dioses — Casa Matriz</title>
+<meta name="description" content="La trama olímpica: motivos, animales y supervivencias. Un dossier de arqueología visual sobre el panteón griego y sus pathosformeln.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1814;
+    --ink-soft: #3d3830;
+    --ink-muted: #7a7268;
+    --ink-faint: #b5afa6;
+    --parchment: #f7f4ee;
+    --parchment-warm: #ede8df;
+    --parchment-dark: #d9d1c4;
+    --terra: #8b4a2e;
+    --terra-light: #c4845e;
+    --terra-faint: #f0e0d4;
+    --gold: #9a7a3a;
+    --gold-light: #c9a85c;
+    --gold-faint: #f5edd8;
+    --serif-display: 'IM Fell English', Georgia, serif;
+    --serif-body: 'Cormorant Garamond', Georgia, serif;
+    --serif-ui: 'Libre Baskerville', Georgia, serif;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    font-size: 1.125rem;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    border-bottom: 0.5px solid var(--parchment-dark);
+    background: var(--parchment);
+  }
+  .nav-logo {
+    font-family: var(--serif-ui);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--serif-ui);
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 2.5rem 3rem;
+    text-align: center;
+  }
+  .hero-label {
+    font-family: var(--serif-ui);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .hero h1 {
+    font-family: var(--serif-display);
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .hero-subtitle {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    color: var(--ink-muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+  .hero-meta {
+    font-family: var(--serif-ui);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+
+  .divider-ornament {
+    text-align: center;
+    color: var(--parchment-dark);
+    font-size: 1.2rem;
+    margin: 3rem 0;
+    letter-spacing: 0.5em;
+  }
+
+  /* ── SISTEMA SECTION ── */
+  .sistema-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2.5rem 4rem;
+  }
+  .section-label {
+    font-family: var(--serif-ui);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .sistema-section h2 {
+    font-family: var(--serif-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+  .sistema-section p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin-bottom: 3rem;
+    line-height: 1.85;
+  }
+
+  /* ── MAPA RELACIONAL ── */
+  .mapa-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .mapa-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .mapa-caption {
+    text-align: center;
+    font-family: var(--serif-ui);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  /* ── CANON SECTION ── */
+  .canon-section {
+    background: var(--parchment-warm);
+    border-top: 0.5px solid var(--parchment-dark);
+    border-bottom: 0.5px solid var(--parchment-dark);
+    padding: 4rem 2.5rem;
+    margin-bottom: 5rem;
+  }
+  .canon-inner {
+    max-width: 840px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .canon-card h3 {
+    font-family: var(--serif-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+  }
+  .canon-card .canon-sub {
+    font-family: var(--serif-ui);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .canon-card p {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+
+  /* ── FICHAS GRID ── */
+  .fichas-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2.5rem 6rem;
+  }
+  .fichas-section h2 {
+    font-family: var(--serif-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+  }
+  .fichas-intro {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    margin-bottom: 3rem;
+    max-width: 540px;
+    line-height: 1.8;
+  }
+
+  .fichas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 0.5px solid var(--parchment-dark);
+  }
+
+  .ficha-card {
+    border-right: 0.5px solid var(--parchment-dark);
+    border-bottom: 0.5px solid var(--parchment-dark);
+    padding: 1.5rem 1.25rem 1.25rem;
+    text-decoration: none;
+    display: block;
+    background: var(--parchment);
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .ficha-card:nth-child(3n) { border-right: none; }
+  .ficha-card:nth-last-child(-n+3) { border-bottom: none; }
+  .ficha-card:hover { background: var(--gold-faint); }
+  .ficha-card:hover .ficha-arrow { opacity: 1; transform: translateX(0); }
+
+  .ficha-num {
+    font-family: var(--serif-ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    color: var(--ink-faint);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .ficha-nombre {
+    font-family: var(--serif-display);
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+  .ficha-eje {
+    font-family: var(--serif-ui);
+    font-size: 0.68rem;
+    color: var(--terra);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .ficha-animal {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+  .ficha-motivo {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+    border-top: 0.5px solid var(--parchment-dark);
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .ficha-arrow {
+    position: absolute;
+    bottom: 1.1rem;
+    right: 1.1rem;
+    font-size: 0.8rem;
+    color: var(--gold);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s, transform 0.2s;
+    font-family: var(--serif-ui);
+  }
+
+  /* ── EJES SECTION ── */
+  .ejes-section {
+    background: var(--ink);
+    padding: 5rem 2.5rem;
+    margin-bottom: 0;
+  }
+  .ejes-inner {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+  .ejes-section .section-label { color: var(--gold-light); opacity: 0.7; margin-bottom: 1.5rem; }
+  .ejes-section h2 {
+    font-family: var(--serif-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--parchment);
+    margin-bottom: 0.75rem;
+  }
+  .ejes-section > .ejes-inner > p {
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+    max-width: 540px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  .ejes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #2a2820;
+  }
+  .eje-item {
+    background: var(--ink);
+    padding: 1.5rem 1.75rem;
+    border-left: 2px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .eje-item:hover { border-left-color: var(--gold-light); background: #1f1d17; }
+  .eje-par {
+    font-family: var(--serif-display);
+    font-size: 1.15rem;
+    color: var(--parchment);
+    margin-bottom: 0.3rem;
+  }
+  .eje-label {
+    font-family: var(--serif-ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .eje-desc {
+    font-size: 0.85rem;
+    color: #7a7268;
+    line-height: 1.7;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    padding: 3rem 2.5rem;
+    border-top: 0.5px solid #2a2820;
+  }
+  .footer-inner {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .footer-logo {
+    font-family: var(--serif-ui);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--parchment-warm);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  footer p {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    max-width: 340px;
+  }
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: right;
+  }
+  .footer-nav a {
+    font-family: var(--serif-ui);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .footer-nav a:hover { color: var(--parchment); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { display: none; }
+    .hero { padding: 3rem 1.25rem 2rem; }
+    .sistema-section, .fichas-section { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .canon-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .fichas-grid { grid-template-columns: 1fr 1fr; }
+    .ficha-card:nth-child(3n) { border-right: 0.5px solid var(--parchment-dark); }
+    .ficha-card:nth-child(2n) { border-right: none; }
+    .ejes-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-nav { text-align: left; }
+  }
+  @media (max-width: 480px) {
+    .fichas-grid { grid-template-columns: 1fr; }
+    .ficha-card { border-right: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Casa Matriz</a>
+  <ul class="nav-links">
+    <li><a href="revista.html">Revista</a></li>
+    <li><a href="seminarios.html">Seminarios</a></li>
+    <li><a href="https://youtube.com/canalcasamatriz">Videos</a></li>
+    <li><a href="sobre.html">Acerca de</a></li>
+    <li><a href="suscribite.html">Suscribite</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="hero-label">Dossier · Arqueología visual</span>
+  <h1>Doce tronos,<br>trece dioses</h1>
+  <p class="hero-subtitle">La trama olímpica: motivos, animales y supervivencias</p>
+  <p class="hero-desc">Los dioses griegos no son figuras del pasado sino estructuras del presente. Este dossier rastrea los motivos que cada dios encarna, los animales que los duplican y las fórmulas visuales que el arte ha transmitido durante veinticinco siglos sin que nadie las llamara por su nombre.</p>
+  <span class="hero-meta">2024 · 13 fichas · Dossier completo</span>
+</header>
+
+<div class="divider-ornament">· · ·</div>
+
+<!-- MAPA RELACIONAL -->
+<section class="sistema-section">
+  <span class="section-label">El sistema</span>
+  <h2>El olimpo como red de tensiones</h2>
+  <p>El Olimpo no es un catálogo de figuras aisladas. Es una estructura de relaciones en la que cada dios adquiere su sentido en relación con los demás. Los seis ejes que organizan el sistema son visibles en el mapa: cada dios ocupa una posición, y esa posición define lo que es.</p>
+
+  <!-- SVG MAP -->
+  <div class="mapa-wrap">
+    <svg class="mapa-svg" viewBox="0 0 780 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa relacional de los dioses olímpicos con sus seis ejes de tensión">
+      <title>Mapa relacional del sistema olímpico</title>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#b5afa6"/>
+        </marker>
+      </defs>
+
+      <!-- Ejes lines -->
+      <!-- Centro/Periferia: Zeus-Hestia (vertical center) -->
+      <line x1="390" y1="130" x2="390" y2="200" stroke="#c9a85c" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+      <!-- Razón/Desborde: Apolo-Dioniso (horizontal top) -->
+      <line x1="160" y1="120" x2="620" y2="120" stroke="#b5afa6" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.4"/>
+      <!-- Guerra: Atenea-Ares -->
+      <line x1="180" y1="240" x2="600" y2="240" stroke="#b5afa6" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.4"/>
+      <!-- Fecundidad: Deméter-Afrodita -->
+      <line x1="130" y1="360" x2="640" y2="360" stroke="#b5afa6" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.4"/>
+      <!-- Límite/Transgresión: Artemisa-Hermes -->
+      <line x1="170" y1="340" x2="610" y2="340" stroke="#b5afa6" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.4"/>
+      <!-- Expulsión/Creación: Hefesto-Hera diagonal -->
+      <line x1="640" y1="180" x2="180" y2="300" stroke="#b5afa6" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.3"/>
+
+      <!-- EJE LABELS -->
+      <text x="390" y="108" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="8" fill="#9a7a3a" letter-spacing="1.5">RAZÓN · DESBORDE</text>
+      <text x="14" y="244" font-family="'Libre Baskerville', Georgia, serif" font-size="7.5" fill="#b5afa6" letter-spacing="1">GUERRA</text>
+      <text x="14" y="364" font-family="'Libre Baskerville', Georgia, serif" font-size="7.5" fill="#b5afa6" letter-spacing="1">FECUNDIDAD</text>
+
+      <!-- CENTER: Zeus + Hestia -->
+      <g id="zeus" style="cursor:pointer">
+        <circle cx="390" cy="168" r="34" fill="#f5edd8" stroke="#c9a85c" stroke-width="1.5"/>
+        <text x="390" y="163" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="13" fill="#1a1814">Zeus</text>
+        <text x="390" y="178" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7.5" fill="#9a7a3a" letter-spacing="0.5">El águila</text>
+      </g>
+
+      <!-- Hestia - center slightly above -->
+      <g id="hestia" style="cursor:pointer">
+        <circle cx="390" cy="230" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="390" y="225" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Hestia</text>
+        <text x="390" y="238" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">El burro</text>
+      </g>
+
+      <!-- TOP ROW: Apolo | Dioniso -->
+      <g id="apolo" style="cursor:pointer">
+        <circle cx="160" cy="118" r="28" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="160" y="114" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="12" fill="#1a1814">Apolo</text>
+        <text x="160" y="127" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">El ratón</text>
+      </g>
+
+      <g id="dioniso" style="cursor:pointer">
+        <circle cx="620" cy="118" r="28" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="620" y="114" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="12" fill="#1a1814">Dioniso</text>
+        <text x="620" y="127" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">La pantera</text>
+      </g>
+
+      <!-- MID ROW: Hera | Poseidón | Atenea | Ares -->
+      <g id="hera" style="cursor:pointer">
+        <circle cx="148" cy="240" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="148" y="236" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Hera</text>
+        <text x="148" y="249" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">El pavo real</text>
+      </g>
+
+      <g id="poseidon" style="cursor:pointer">
+        <circle cx="274" cy="188" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="274" y="184" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Poseidón</text>
+        <text x="274" y="197" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">El caballo</text>
+      </g>
+
+      <g id="atenea" style="cursor:pointer">
+        <circle cx="506" cy="188" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="506" y="184" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Atenea</text>
+        <text x="506" y="197" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">La lechuza</text>
+      </g>
+
+      <g id="ares" style="cursor:pointer">
+        <circle cx="632" cy="240" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="632" y="236" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Ares</text>
+        <text x="632" y="249" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">El buitre</text>
+      </g>
+
+      <!-- HEFESTO -->
+      <g id="hefesto" style="cursor:pointer">
+        <circle cx="640" cy="340" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="640" y="336" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Hefesto</text>
+        <text x="640" y="349" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">La grulla</text>
+      </g>
+
+      <!-- BOTTOM ROW: Deméter | Hermes | Afrodita | Artemisa -->
+      <g id="demeter" style="cursor:pointer">
+        <circle cx="136" cy="360" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="136" y="356" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Deméter</text>
+        <text x="136" y="369" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">La serpiente</text>
+      </g>
+
+      <g id="hermes" style="cursor:pointer">
+        <circle cx="274" cy="340" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="274" y="336" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Hermes</text>
+        <text x="274" y="349" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">La tortuga</text>
+      </g>
+
+      <g id="afrodita" style="cursor:pointer">
+        <circle cx="390" cy="390" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="390" y="386" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Afrodita</text>
+        <text x="390" y="399" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">La paloma</text>
+      </g>
+
+      <g id="artemisa" style="cursor:pointer">
+        <circle cx="506" cy="340" r="26" fill="#f7f4ee" stroke="#d9d1c4" stroke-width="1"/>
+        <text x="506" y="336" text-anchor="middle" font-family="'IM Fell English', Georgia, serif" font-size="11.5" fill="#1a1814">Artemisa</text>
+        <text x="506" y="349" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="7" fill="#9a7a3a" letter-spacing="0.5">El ciervo</text>
+      </g>
+
+      <!-- Poseidón-Deméter connection (tierra) -->
+      <line x1="274" y1="214" x2="174" y2="340" stroke="#c9a85c" stroke-width="0.75" stroke-dasharray="2,4" opacity="0.4"/>
+
+      <!-- Eje label bottom right -->
+      <text x="680" y="300" font-family="'Libre Baskerville', Georgia, serif" font-size="7.5" fill="#b5afa6" letter-spacing="1" transform="rotate(-60,680,300)">EXPULSIÓN · CREACIÓN</text>
+      <text x="30" y="295" font-family="'Libre Baskerville', Georgia, serif" font-size="7.5" fill="#b5afa6" letter-spacing="1" transform="rotate(60,30,295)">LÍMITE · TRANSGRESIÓN</text>
+    </svg>
+  </div>
+  <p class="mapa-caption">Los dioses se organizan en seis ejes de tensión. Cada posición define un motivo; cada conexión, una relación que el sistema necesita para funcionar.</p>
+</section>
+
+<!-- CANON SECTION -->
+<section class="canon-section">
+  <div style="max-width:840px;margin:0 auto;">
+    <span class="section-label">El problema del canon</span>
+    <h2 style="font-family:'IM Fell English',Georgia,serif;font-size:1.9rem;font-weight:400;margin-bottom:1rem;color:var(--ink);">Doce tronos, trece dioses</h2>
+    <p style="font-size:1rem;color:var(--ink-soft);max-width:600px;margin-bottom:3rem;line-height:1.85;">El número doce es simbólico y nunca fue un canon doctrinal rígido. Diez dioses aparecen en todas las listas sin excepción. Los puestos once y doce rotan. Cada exclusión revela el tipo de orden que el sistema intenta construir.</p>
+    <div class="canon-inner">
+      <div class="canon-card">
+        <span class="canon-sub">Platón, Fedro · s. IV a.C.</span>
+        <h3>Hestia excluida por la filosofía</h3>
+        <p>En el Fedro, los doce dioses cabalgan en procesión por los cielos. Hestia permanece sola en la morada. El sistema filosófico requiere dioses con trayectoria cósmica; la quietud no tiene lugar en el zodíaco.</p>
+      </div>
+      <div class="canon-card">
+        <span class="canon-sub">Culto de Cos · período helenístico</span>
+        <h3>Hefesto desplazado por Heracles</h3>
+        <p>En la isla de Cos, Heracles y Dioniso reemplazan a Ares y Hefesto. Cuando el modelo heroico se impone sobre el artesanal, el dios que trabaja en los márgenes sobra. El sistema prefiere la conquista sobre la fabricación.</p>
+      </div>
+      <div class="canon-card">
+        <span class="canon-sub">Período helenístico · fuentes tardías</span>
+        <h3>Hestia reemplazada por Dioniso</h3>
+        <p>El culto de Dioniso, llegado de Oriente, resulta difícil de prohibir. Incorporarlo al panteón oficial es una forma de domesticarlo. Pero el precio es que el sistema pierde su punto fijo a cambio de desborde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FICHAS GRID -->
+<section class="fichas-section">
+  <span class="section-label">Las trece fichas</span>
+  <h2>Los dioses del dossier</h2>
+  <p class="fichas-intro">Cada ficha desarrolla el motivo arquetípico del dios, su animal sagrado, sus <em>pathosformeln</em> visuales con obras específicas y sus conexiones cruzadas dentro del sistema.</p>
+
+  <div class="fichas-grid">
+
+    <a href="zeus.html" class="ficha-card">
+      <span class="ficha-num">I</span>
+      <div class="ficha-nombre">Zeus</div>
+      <span class="ficha-eje">Centro · El águila</span>
+      <div class="ficha-motivo">El poder que se hereda y se cuida.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="hestia.html" class="ficha-card">
+      <span class="ficha-num">II</span>
+      <div class="ficha-nombre">Hestia</div>
+      <span class="ficha-eje">Centro / Periferia · El burro</span>
+      <div class="ficha-motivo">El secreto mejor guardado.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="hera.html" class="ficha-card">
+      <span class="ficha-num">III</span>
+      <div class="ficha-nombre">Hera</div>
+      <span class="ficha-eje">Expulsión / Creación · El pavo real</span>
+      <div class="ficha-motivo">La que todo lo ve y nada puede cambiar.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="poseidon.html" class="ficha-card">
+      <span class="ficha-num">IV</span>
+      <div class="ficha-nombre">Poseidón</div>
+      <span class="ficha-eje">Umbral · El caballo</span>
+      <div class="ficha-motivo">El agitador de la tierra.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="demeter.html" class="ficha-card">
+      <span class="ficha-num">V</span>
+      <div class="ficha-nombre">Deméter</div>
+      <span class="ficha-eje">Fecundidad ctónica · La serpiente</span>
+      <div class="ficha-motivo">La que enseña a perder.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="ares.html" class="ficha-card">
+      <span class="ficha-num">VI</span>
+      <div class="ficha-nombre">Ares</div>
+      <span class="ficha-eje">Guerra instintiva · El buitre</span>
+      <div class="ficha-motivo">La incomodidad fértil.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="afrodita.html" class="ficha-card">
+      <span class="ficha-num">VII</span>
+      <div class="ficha-nombre">Afrodita</div>
+      <span class="ficha-eje">Fecundidad celeste · La paloma</span>
+      <div class="ficha-motivo">El poder de la desnudez.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="apolo.html" class="ficha-card">
+      <span class="ficha-num">VIII</span>
+      <div class="ficha-nombre">Apolo</div>
+      <span class="ficha-eje">Razón / Desborde · El ratón</span>
+      <div class="ficha-motivo">La victoria sobre la violencia propia.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="hefesto.html" class="ficha-card">
+      <span class="ficha-num">IX</span>
+      <div class="ficha-nombre">Hefesto</div>
+      <span class="ficha-eje">Expulsión / Creación · La grulla</span>
+      <div class="ficha-motivo">Lo que el sistema expulsa y necesita.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="dioniso.html" class="ficha-card">
+      <span class="ficha-num">X</span>
+      <div class="ficha-nombre">Dioniso</div>
+      <span class="ficha-eje">Razón / Desborde · La pantera</span>
+      <div class="ficha-motivo">El dios que el sistema no puede contener.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="atenea.html" class="ficha-card">
+      <span class="ficha-num">XI</span>
+      <div class="ficha-nombre">Atenea</div>
+      <span class="ficha-eje">Guerra táctica · La lechuza</span>
+      <div class="ficha-motivo">La hija que el padre se tragó.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="hermes.html" class="ficha-card">
+      <span class="ficha-num">XII</span>
+      <div class="ficha-nombre">Hermes</div>
+      <span class="ficha-eje">Límite / Transgresión · La tortuga</span>
+      <div class="ficha-motivo">El que accede pero no posee.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+    <a href="artemisa.html" class="ficha-card">
+      <span class="ficha-num">XIII</span>
+      <div class="ficha-nombre">Artemisa</div>
+      <span class="ficha-eje">Límite / Transgresión · El ciervo</span>
+      <div class="ficha-motivo">La que huye para poder quedarse.</div>
+      <span class="ficha-arrow">→</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- EJES -->
+<section class="ejes-section">
+  <div class="ejes-inner">
+    <span class="section-label">Los seis ejes</span>
+    <h2>La estructura de tensiones</h2>
+    <p>El Olimpo se organiza en pares de fuerzas opuestas y complementarias. Sin los bordes que uno traza, las travesías del otro no tienen sentido.</p>
+    <div class="ejes-grid">
+      <div class="eje-item">
+        <span class="eje-label">Eje I</span>
+        <div class="eje-par">Zeus · Hestia</div>
+        <p class="eje-desc">Centro / Periferia. La llama inmóvil y el poder que gira en torno a ella. El sistema los necesita a ambos y desplaza a uno de ellos.</p>
+      </div>
+      <div class="eje-item">
+        <span class="eje-label">Eje II</span>
+        <div class="eje-par">Apolo · Dioniso</div>
+        <p class="eje-desc">Razón / Desborde. El autodominio conquistado y la disolución de los límites del yo. No son opuestos sino complementarios.</p>
+      </div>
+      <div class="eje-item">
+        <span class="eje-label">Eje III</span>
+        <div class="eje-par">Atenea · Ares</div>
+        <p class="eje-desc">Guerra táctica / Guerra instintiva. Entre ellos se define qué tipo de fuerza merece el nombre de virtud.</p>
+      </div>
+      <div class="eje-item">
+        <span class="eje-label">Eje IV</span>
+        <div class="eje-par">Deméter · Afrodita</div>
+        <p class="eje-desc">Fecundidad ctónica / Fecundidad celeste. Ambas sostienen la continuidad de la vida desde principios radicalmente distintos.</p>
+      </div>
+      <div class="eje-item">
+        <span class="eje-label">Eje V</span>
+        <div class="eje-par">Artemisa · Hermes</div>
+        <p class="eje-desc">Límite / Transgresión. La que custodia los bordes y el que los cruza todos. Sin límites, las travesías no tienen sentido.</p>
+      </div>
+      <div class="eje-item">
+        <span class="eje-label">Eje VI</span>
+        <div class="eje-par">Hefesto · Hera</div>
+        <p class="eje-desc">Expulsión / Creación. El hijo arrojado que construye desde el margen y la madre que lo arrojó. La pregunta más incómoda del sistema.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="footer-logo">Casa Matriz</a>
+      <p>Arqueología visual de lo imaginario. Rastreamos la genealogía y las transformaciones de los símbolos a través del arte, la literatura y el cine.</p>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="seminarios.html">Seminarios</a></li>
+      <li><a href="sobre.html">Acerca de</a></li>
+      <li><a href="suscribite.html">Suscribite</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  const gods = ['zeus','hestia','hera','poseidon','atenea','ares','afrodita','apolo','hefesto','dioniso','artemisa','hermes','demeter'];
+  gods.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('mouseenter', () => {
+      el.querySelector('circle').style.fill = '#f5edd8';
+      el.querySelector('circle').style.stroke = '#c9a85c';
+      el.querySelector('circle').style.strokeWidth = '2';
+    });
+    el.addEventListener('mouseleave', () => {
+      const isZeus = id === 'zeus';
+      el.querySelector('circle').style.fill = isZeus ? '#f5edd8' : '#f7f4ee';
+      el.querySelector('circle').style.stroke = isZeus ? '#c9a85c' : '#d9d1c4';
+      el.querySelector('circle').style.strokeWidth = isZeus ? '1.5' : '1';
+    });
+    el.addEventListener('click', () => {
+      window.location.href = `${id}.html`;
+    });
+  });
+</script>
+
+</body>
+</html>

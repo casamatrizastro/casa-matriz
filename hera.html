@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hera — Doce tronos, trece dioses · Casa Matriz</title>
+<meta name="description" content="Hera: La que todo lo ve y nada puede cambiar. Motivo, animal sagrado, pathosformeln visuales y conexiones cruzadas dentro del sistema olímpico.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1814; --ink-soft: #3d3830; --ink-muted: #7a7268; --ink-faint: #b5afa6;
+    --parchment: #f7f4ee; --parchment-warm: #ede8df; --parchment-dark: #d9d1c4;
+    --terra: #8b4a2e; --terra-light: #c4845e; --terra-faint: #f0e0d4;
+    --gold: #9a7a3a; --gold-light: #c9a85c; --gold-faint: #f5edd8;
+    --serif-display: 'IM Fell English', Georgia, serif;
+    --serif-body: 'Cormorant Garamond', Georgia, serif;
+    --serif-ui: 'Libre Baskerville', Georgia, serif;
+  }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { background: var(--parchment); color: var(--ink); font-family: var(--serif-body); font-size: 1.125rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid var(--parchment-dark); background: var(--parchment); position: sticky; top: 0; z-index: 10; }
+  .nav-logo { font-family: var(--serif-ui); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
+  .nav-dossier { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; }
+  .nav-dossier:hover { color: var(--ink); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-family: var(--serif-ui); font-size: 0.8rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .breadcrumb { max-width: 820px; margin: 0 auto; padding: 1.5rem 2.5rem 0; display: flex; align-items: center; gap: 0.5rem; }
+  .breadcrumb a, .breadcrumb span { font-family: var(--serif-ui); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--ink-faint); }
+  .breadcrumb a:hover { color: var(--ink-muted); }
+  .breadcrumb .sep { color: var(--parchment-dark); }
+  .ficha-hero { max-width: 820px; margin: 0 auto; padding: 3rem 2.5rem 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; border-bottom: 0.5px solid var(--parchment-dark); }
+  .ficha-num-hero { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+  .ficha-hero h1 { font-family: var(--serif-display); font-size: clamp(3.5rem, 8vw, 5.5rem); font-weight: 400; line-height: 1; color: var(--ink); margin-bottom: 0.5rem; }
+  .ficha-subtitulo { font-family: var(--serif-display); font-style: italic; font-size: 1.25rem; color: var(--ink-muted); display: block; margin-bottom: 1rem; }
+  .ficha-eje-tag { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); display: inline-block; border: 0.5px solid var(--terra-light); padding: 0.25rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; margin-bottom: 0.25rem; }
+  .ficha-hero-right { text-align: right; padding-bottom: 0.5rem; }
+  .animal-display { font-family: var(--serif-display); font-style: italic; font-size: 1rem; color: var(--ink-faint); display: block; margin-bottom: 0.3rem; }
+  .animal-name { font-family: var(--serif-display); font-size: 1.4rem; color: var(--ink-soft); }
+  .epigrafe-wrap { max-width: 820px; margin: 0 auto; padding: 2.5rem 2.5rem 0; }
+  .epigrafe { border-left: 2px solid var(--gold-light); padding-left: 1.5rem; margin-bottom: 3rem; }
+  .epigrafe p { font-family: var(--serif-display); font-style: italic; font-size: 1.15rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 0.5rem; }
+  .epigrafe cite { font-family: var(--serif-ui); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--ink-faint); font-style: normal; }
+  .ficha-layout { max-width: 820px; margin: 0 auto; padding: 0 2.5rem; display: grid; grid-template-columns: 1fr 220px; gap: 4rem; align-items: start; }
+  .ficha-body p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-soft); margin-bottom: 1.4rem; }
+  .ficha-body p:last-child { margin-bottom: 0; }
+  .section-title { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); margin-top: 3rem; margin-bottom: 1.25rem; display: block; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--parchment-dark); }
+  .obra { margin-bottom: 1.75rem; padding-left: 1rem; border-left: 2px solid var(--parchment-dark); }
+  .obra:hover { border-left-color: var(--gold-light); }
+  .obra-header { font-family: var(--serif-body); font-size: 0.95rem; color: var(--ink); margin-bottom: 0.3rem; }
+  .obra-header em { font-style: italic; }
+  .obra-header strong { font-weight: 600; }
+  .obra-museo { font-family: var(--serif-ui); font-size: 0.7rem; color: var(--ink-faint); letter-spacing: 0.05em; display: block; margin-bottom: 0.4rem; }
+  .obra-desc { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.7; }
+  .ficha-sidebar { position: sticky; top: 5rem; }
+  .sidebar-block { margin-bottom: 2.5rem; }
+  .sidebar-label { font-family: var(--serif-ui); font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; display: block; padding-bottom: 0.4rem; border-bottom: 0.5px solid var(--parchment-dark); }
+  .sidebar-motivo { font-family: var(--serif-display); font-style: italic; font-size: 1rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 1.5rem; }
+  .conexion-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--parchment-warm); }
+  .conexion-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .conexion-dios { font-family: var(--serif-display); font-size: 0.95rem; color: var(--terra); display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem; text-decoration: none; }
+  .conexion-dios:hover { color: var(--terra-light); }
+  .conexion-dios::before { content: "↔"; font-style: normal; font-size: 0.75rem; }
+  .conexion-txt { font-size: 0.82rem; color: var(--ink-muted); line-height: 1.6; }
+  .notas-section { max-width: 820px; margin: 4rem auto 0; padding: 2rem 2.5rem; border-top: 0.5px solid var(--parchment-dark); }
+  .notas-title { font-family: var(--serif-ui); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.25rem; display: block; }
+  .nota { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--ink-muted); line-height: 1.6; }
+  .nota-num { font-family: var(--serif-ui); font-size: 0.7rem; color: var(--ink-faint); min-width: 1.4rem; padding-top: 0.05rem; }
+  .ficha-nav { max-width: 820px; margin: 0 auto; padding: 3rem 2.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 0.5px solid var(--parchment-dark); gap: 1rem; }
+  .ficha-nav-link { text-decoration: none; display: flex; flex-direction: column; gap: 0.2rem; }
+  .ficha-nav-link.next { text-align: right; }
+  .nav-dir { font-family: var(--serif-ui); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+  .nav-dios { font-family: var(--serif-display); font-size: 1.2rem; color: var(--terra); transition: color 0.2s; }
+  .ficha-nav-link:hover .nav-dios { color: var(--terra-light); }
+  .ficha-nav-center { font-family: var(--serif-ui); font-size: 0.7rem; color: var(--ink-faint); text-decoration: none; letter-spacing: 0.1em; text-align: center; }
+  .ficha-nav-center:hover { color: var(--ink-muted); }
+  footer { background: var(--ink); padding: 3rem 2.5rem; }
+  .footer-inner { max-width: 820px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
+  .footer-logo { font-family: var(--serif-ui); font-size: 0.82rem; font-weight: 700; color: var(--parchment-warm); text-decoration: none; letter-spacing: 0.05em; display: block; margin-bottom: 0.4rem; }
+  footer p { font-size: 0.78rem; color: var(--ink-muted); line-height: 1.6; max-width: 340px; }
+  .footer-nav { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; text-align: right; }
+  .footer-nav a { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--parchment); }
+  sup { font-family: var(--serif-ui); font-size: 0.65rem; color: var(--gold); vertical-align: super; line-height: 0; margin-left: 1px; }
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.25rem; } .nav-links { display: none; }
+    .ficha-hero { grid-template-columns: 1fr; padding: 2rem 1.25rem 1.5rem; } .ficha-hero-right { text-align: left; }
+    .ficha-layout { grid-template-columns: 1fr; gap: 2rem; padding: 0 1.25rem; } .ficha-sidebar { position: static; }
+    .epigrafe-wrap, .notas-section, .ficha-nav { padding-left: 1.25rem; padding-right: 1.25rem; } .breadcrumb { padding-left: 1.25rem; padding-right: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Casa Matriz</a>
+  <a href="olimpo.html" class="nav-dossier">← Doce tronos, trece dioses</a>
+  <ul class="nav-links">
+    <li><a href="revista.html">Revista</a></li>
+    <li><a href="seminarios.html">Seminarios</a></li>
+    <li><a href="suscribite.html">Suscribite</a></li>
+  </ul>
+</nav>
+<div class="breadcrumb">
+  <a href="index.html">Casa Matriz</a>
+  <span class="sep">·</span>
+  <a href="index.html">Doce tronos, trece dioses</a>
+  <span class="sep">·</span>
+  <span>Hera</span>
+</div>
+<header class="ficha-hero">
+  <div class="ficha-hero-left">
+    <span class="ficha-num-hero">Ficha III de XIII</span>
+    <h1>Hera</h1>
+    <span class="ficha-subtitulo">La que todo lo ve y nada puede cambiar</span>
+    <span class="ficha-eje-tag">Expulsión / Creación</span><span class="ficha-eje-tag">Eje VI · Hefesto / Hera</span>
+  </div>
+  <div class="ficha-hero-right">
+    <span class="animal-display">Animal sagrado</span>
+    <span class="animal-name">El pavo real (antes: el cuco)</span>
+  </div>
+</header>
+<div class="epigrafe-wrap">
+  <blockquote class="epigrafe">
+    <p>Sacrificios puros te ofrece el pueblo hoy como entonces:<br>las doncellas traen un hermoso peplo.</p>
+    <cite>Safo</cite>
+  </blockquote>
+</div>
+<div class="ficha-layout">
+  <main class="ficha-body">
+    <p>Antes de ser la esposa celosa de Zeus, Hera fue una gran diosa prehelénica. Su nombre puede derivar de <em>Herwá</em>: 'Protectora'. Era venerada como diosa del año natural y civil, representada en sus tres fases —niña, novia, viuda— como la luna nueva, llena y vieja. Las invasiones aqueas del siglo XIII a.C. impusieron la sucesión patrilineal. El casamiento forzoso de Hera con Zeus —que según el mito la violó disfrazado de cuco enlodado— conmemora en clave simbólica esas conquistas militares.<sup>1</sup></p>
+    <p>El cuco que fue su primer animal sagrado tiene una biología extraordinaria: la hembra coloca sus huevos en nidos ajenos porque su temperatura corporal es demasiado alta para empollarlos. Sus crías nacen en nidos que no son suyos y pronto lo saben. El cuco macho es la antítesis del padre. Hera amaba este pájaro, el mismo con el que Zeus la engañó. ¿Casualidad o reconocimiento?</p>
+    <p>El pavo real que reemplazó al cuco en la iconografía renacentista condensa toda la paradoja de Hera. Tiene ojos en la cola y todo lo ve. Pero solo el macho despliega el esplendor. La hembra, reducida a ave de corral, mira. Hera ve todo lo que Zeus hace y no puede cambiarlo. Esa es la trampa: no la sumisión sino la proximidad.</p>
+    <p>La <em>Ilíada</em> registra el único momento en que Hera se acerca a derrocar el sistema: organiza la conspiración contra Zeus con Poseidón y Apolo mientras él duerme. Zeus despierta, la suspende del firmamento con brazaletes de oro y yunques en los tobillos. Luego la libera si todos juran no rebelarse. Hera acepta. El sistema se restituye. Y ella sigue siendo la que más sabe sobre su mecanismo.</p>
+    <span class="section-title">Pathosformeln visuales</span>
+    
+    <div class="obra">
+      <p class="obra-header"><strong>Anónimo</strong>, <em>Hera de Samos (escultura arcaica)</em> (siglo VII a.C.)</p>
+      <span class="obra-museo">Museo del Louvre, París</span>
+      <p class="obra-desc">Una de las primeras representaciones monumentales de Hera: figura frontal, hierática, con la corona polós. <em>Pathosformel</em> de la soberanía pre-olímpica: la diosa que precede a Zeus, antes de ser reducida a su consorte.</p>
+    </div>
+    <div class="obra">
+      <p class="obra-header"><strong>Rubens, P. P.</strong>, <em>El juicio de Paris</em> (1636)</p>
+      <span class="obra-museo">Museo del Prado, Madrid</span>
+      <p class="obra-desc">Hera, Afrodita y Atenea ante Paris. Hera ofrece el poder; pierde. <em>Pathosformel</em> del poder que no seduce: la reina que sabe que el sistema ya no funciona como ella cree.</p>
+    </div>
+    <div class="obra">
+      <p class="obra-header"><strong>Anónimo (crátera de figuras rojas)</strong>, <em>Hera con el pavo real</em> (siglo IV a.C.)</p>
+      <span class="obra-museo">Museo Arqueológico Nacional, Nápoles</span>
+      <p class="obra-desc">Hera en trono con el cetro y el pavo real a su lado. <em>Pathosformel</em> de la vigilancia sin poder de intervención: la mirada multiplicada en cien ojos que todo lo observa pero no puede detener nada.</p>
+    </div>
+  </main>
+  <aside class="ficha-sidebar">
+    <div class="sidebar-block">
+      <span class="sidebar-label">El motivo</span>
+      <p class="sidebar-motivo">La sujeción de la identidad al lugar social que se ocupa. Demasiado cerca del centro neurálgico del Olimpo, queda capturada —como la luna— como satélite de un cuerpo mayor.</p>
+    </div>
+    <div class="sidebar-block">
+      <span class="sidebar-label">Conexiones cruzadas</span>
+      
+    <div class="conexion-item">
+      <a href="hefesto.html" class="conexion-dios">Hefesto</a>
+      <p class="conexion-txt">Hera arroja a Hefesto del Olimpo. Y Hefesto se venga enviándole el trono de oro que la atrapa. La relación madre–hijo más perturbadora del sistema.</p>
+    </div>
+    <div class="conexion-item">
+      <a href="atenea.html" class="conexion-dios">Atenea</a>
+      <p class="conexion-txt">Atenea se declara 'totalmente en favor del Padre'. La alianza entre la hija de Zeus y el padre contra la madre es uno de los gestos fundadores del patriarcado olímpico.</p>
+    </div>
+    <div class="conexion-item">
+      <a href="zeus.html" class="conexion-dios">Zeus</a>
+      <p class="conexion-txt">La dinámica Hera–Zeus no es de sumisión sino de captura política. Hera acepta su lugar a cambio de permanecer en el centro del sistema que la redujo.</p>
+    </div>
+    </div>
+    <div class="sidebar-block">
+      <span class="sidebar-label">Eje del sistema</span>
+      <p style="font-size:0.82rem;color:var(--ink-muted);line-height:1.7;">
+        <strong style="font-family:var(--serif-display);font-weight:400;color:var(--ink);">Expulsión / Creación</strong><br>
+        Hera y Hefesto. La madre que expulsa y el hijo que regresa con una trampa. La pregunta más incómoda del sistema: ¿qué hace el sistema con lo que nació dentro y fue rechazado?
+      </p>
+    </div>
+    <div class="sidebar-block">
+      <span class="sidebar-label">Referencias</span>
+      <p style="font-size:0.78rem;color:var(--ink-faint);line-height:1.7;">Homero, <em>Ilíada</em> · Graves, <em>Los mitos griegos</em> · Gimbutas, <em>The Language of the Goddess</em></p>
+    </div>
+  </aside>
+</div>
+<section class="notas-section"><span class="notas-title">Notas</span>
+    <div class="nota"><span class="nota-num">1.</span><span>Graves, Robert. <em>Los mitos griegos</em>. Trad. Luis Echávarri. FCE, 2010, §12.a–b. Graves reconstruye la alianza como un proceso histórico de conquista: el casamiento forzoso de Hera con Zeus conmemora la toma micénica y la imposición del matrilinaje patriarcal sobre la tradición de la Gran Diosa prehelénica.</span></div></section>
+<nav class="ficha-nav" aria-label="Navegación entre fichas">
+  <a href="hestia.html" class="ficha-nav-link prev">
+        <span class="nav-dir">← Ficha II</span>
+        <span class="nav-dios">Hestia</span>
+       </a>
+  <a href="index.html" class="ficha-nav-center">· · ·</a>
+  <a href="poseidon.html" class="ficha-nav-link next">
+        <span class="nav-dir">Ficha IV →</span>
+        <span class="nav-dios">Poseidón</span>
+       </a>
+</nav>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="nav-logo footer-logo">Casa Matriz</a>
+      <p>Arqueología visual de lo imaginario. Rastreamos la genealogía y las transformaciones de los símbolos a través del arte, la literatura y el cine.</p>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="seminarios.html">Seminarios</a></li>
+      <li><a href="sobre.html">Acerca de</a></li>
+      <li><a href="suscribite.html">Suscribite</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
