@@ -20,7 +20,7 @@
   html { font-size: 16px; scroll-behavior: smooth; }
   body { background: var(--parchment); color: var(--ink); font-family: var(--serif-body); font-size: 1.125rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
   nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid var(--parchment-dark); background: var(--parchment); position: sticky; top: 0; z-index: 10; }
-  .nav-logo { display: flex; align-items: center; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
+  .nav-logo { font-family: var(--serif-ui); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
   .nav-dossier { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; }
   .nav-dossier:hover { color: var(--ink); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -94,7 +94,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz" style="height:32px;width:32px;object-fit:contain;"></a>
+  <a href="index.html" class="nav-logo">Casa Matriz</a>
   <a href="olimpo.html" class="nav-dossier">← Doce tronos, trece dioses</a>
   <ul class="nav-links">
     <li><a href="revista.html">Revista</a></li>
@@ -129,10 +129,10 @@
 </div>
 <div class="ficha-layout">
   <main class="ficha-body">
-    <p>Ares es el dios de la guerra, pero no un dios de guerra admirado. Homero lo llama furioso e insensato en la <em>Ilíada</em>; los propios olímpicos lo desprecian. Su origen es tracio —bárbaro, según los griegos clásicos— y su presencia en el panteón es casi una concesión: se lo tolera porque su función es necesaria, aunque nadie quiera reconocerlo. En la isla de Cos, como vimos en el estudio del canon, Ares es excluido del panteón local: cuando el sistema prefiere la legitimación heroica, el dios del furor instintivo sobra.</p>
-    <p>Sus buitres dicen más de él que cualquier genealogía. Aves liminales por excelencia: sus garras no están hechas para matar sino para desplazarse. Se alimentan de los muertos, de los despojos de las batallas. En el zoroastrismo persa, los buitres consumían los cuerpos de los difuntos en las 'torres del silencio' para evitar que contaminaran la tierra sagrada. Ares y sus buitres realizan el trabajo sucio que el sistema necesita pero no quiere ver.</p>
-    <p>La escena más reveladora del mito no es una batalla sino una cama: Ares y Afrodita descubiertos por Hefesto en el lecho conyugal, atrapados en una red de metal ante los otros dioses. Cualquier otro olímpico habría sucumbido a la vergüenza o el furor. Ares rió. Y esa risa contagió a todos los presentes. Para los griegos, la risa tenía dos palabras: <em>gelao</em> (brillo, alegría compartida) y <em>katagelao</em> (risa despectiva, de arriba hacia abajo). La de Ares es la primera: la del que acepta la situación sin dramatizarla.</p>
-    <p>Sus hijos son Phobos (miedo) y Deimos (terror), pero también Eros (deseo) y Harmonía, frutos de su unión con Afrodita. El humanista Pico della Mirandola escribió: 'No existe belleza alguna en una naturaleza simple.'<sup>1</sup> Ares es la prueba: la fuerza disruptiva que abre espacio para que algo más complejo pueda crecer.</p>
+    <p>Ares es el dios de la guerra, aunque no un dios admirado. Homero lo llama furioso e insensato en la <em>Ilíada</em>; los propios olímpicos lo desprecian. Su origen es tracio —bárbaro, según los griegos clásicos— y su presencia en el panteón es casi una concesión: se lo tolera porque su función es necesaria, aunque nadie quiera reconocerlo. En la isla de Cos, como vimos en el estudio del canon, Ares es excluido del panteón local, cuando el sistema prefiere la legitimación heroica, el dios del furor instintivo sobra.</p>
+    <p>Sus buitres dicen más de él que cualquier genealogía. Aves liminales por excelencia, sus garras no están hechas para matar sino para desplazarse. Se alimentan de los muertos, de los despojos de las batallas. En el zoroastrismo persa, los buitres consumían los cuerpos de los difuntos en las 'torres del silencio' para evitar que contaminaran la tierra sagrada. Ares y sus buitres realizan el trabajo sucio que el sistema necesita pero no quiere ver.</p>
+    <p>La escena más reveladora del mito ocurre en una cama: Ares y Afrodita descubiertos por Hefesto en el lecho conyugal, atrapados en una red de metal ante los otros dioses. Cualquier otro olímpico habría sucumbido a la vergüenza o el furor. Ares rió. Y esa risa contagió a todos los presentes. Para los griegos, la risa tenía dos palabras: <em>gelao</em> (brillo, alegría compartida) y <em>katagelao</em> (risa despectiva, de arriba hacia abajo). La de Ares es la primera: la del que acepta la situación sin dramatizarla.</p>
+    <p>Sus hijos son Phobos (miedo) y Deimos (terror), pero también Eros (deseo) y Harmonía, frutos de su unión con Afrodita. El humanista Pico della Mirandola escribió: 'No existe belleza alguna en una naturaleza simple.'<sup>1</sup> Ares da pruebas de que una fuerza disruptiva puede abrir el espacio para que algo bello pueda crecer.</p>
     <span class="section-title">Pathosformeln visuales</span>
     
     <div class="obra">
@@ -151,7 +151,7 @@
       <p class="obra-header"><strong>Rubens, P. P.</strong>, <em>Consecuencias de la guerra (Marte expulsado por Venus)</em> (1638)</p>
       <span class="obra-museo">Palazzo Pitti, Florencia</span>
       <img src="img-ares.jpg" alt="" style="width:100%;border-radius:4px;margin:0.75rem 0;aspect-ratio:16/10;object-fit:cover;display:block;">
-      <p class="obra-desc">Venus retiene a Marte mientras la Discordia, la Furia y el Hambre se llevan Europa. <em>Pathosformel</em> del costo de la guerra: lo que Ares destruye mientras nadie lo contiene.</p>
+      <p class="obra-desc">Venus retiene a Marte mientras la Discordia, la Furia y el Hambre se llevan Europa.</p>
     </div>
   </main>
   <aside class="ficha-sidebar">
@@ -168,7 +168,7 @@
     </div>
     <div class="conexion-item">
       <a href="afrodita.html" class="conexion-dios">Afrodita</a>
-      <p class="conexion-txt">Sus hijos son el miedo, el terror, el deseo y la armonía. La unión de la guerra y la belleza produce las formas más complejas de la experiencia humana.</p>
+      <p class="conexion-txt">De su unión nacen el miedo, el terror, el deseo y la armonía. La unión entre la guerra y la belleza produce las formas más complejas de la experiencia humana.</p>
     </div>
     <div class="conexion-item">
       <a href="zeus.html" class="conexion-dios">Zeus</a>
