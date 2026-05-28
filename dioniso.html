@@ -20,7 +20,7 @@
   html { font-size: 16px; scroll-behavior: smooth; }
   body { background: var(--parchment); color: var(--ink); font-family: var(--serif-body); font-size: 1.125rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
   nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid var(--parchment-dark); background: var(--parchment); position: sticky; top: 0; z-index: 10; }
-  .nav-logo { display: flex; align-items: center; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
+  .nav-logo { font-family: var(--serif-ui); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
   .nav-dossier { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; }
   .nav-dossier:hover { color: var(--ink); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -94,7 +94,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz" style="height:32px;width:32px;object-fit:contain;"></a>
+  <a href="index.html" class="nav-logo">Casa Matriz</a>
   <a href="olimpo.html" class="nav-dossier">← Doce tronos, trece dioses</a>
   <ul class="nav-links">
     <li><a href="revista.html">Revista</a></li>
@@ -129,9 +129,11 @@
 </div>
 <div class="ficha-layout">
   <main class="ficha-body">
-    <p>Dioniso es el dios más extraño del panteón. Es el único que muere y resucita. Es el único cuyo culto recorre el mundo antes de instalarse en Grecia: Tracia, Frigia, Anatolia, Egipto. Es el único que hace del desborde su método y de la disolución de los límites su teología. Y, como señalamos al estudiar el canon, es el que ocupa el lugar de Hestia en el panteón tardío: el dios del exceso reemplaza a la diosa del centro.<sup>1</sup></p>
-    <p><em>Las Bacantes</em> de Eurípides narran lo que ocurre cuando Penteo, rey de Tebas, intenta resistir la llegada del culto dionisíaco: su propia madre, en estado de trance báquico, lo mata y le arranca la cabeza creyendo que es un animal de caza.<sup>2</sup> El mensaje es transparente: lo dionisíaco no se puede prohibir. Solo se puede integrar. El que intenta resistirlo desde el orden establecido será destruido por los suyos.</p>
-    <p>Warburg dedicó varias láminas de su <em>Atlas Mnemosyne</em> a la <em>Pathosformel</em> dionisíaca: el manto que vuela, el cuerpo que se curva hacia atrás en éxtasis, la cabeza echada hacia atrás, los cabellos sueltos.<sup>3</sup> Esta fórmula de pathos aparece en los sarcófagos romanos, en los frescos de la Villa de los Misterios en Pompeya y en las pinturas renacentistas: desde las ménades griegas hasta el rock and roll, desde el teatro de Artaud hasta el trance electrónico.</p>
+    <p>Dioniso es, quizá, la figura más inquietante del panteón griego. Es uno de los pocos dioses cuya mitología incorpora, en ciertas tradiciones órficas, un ciclo de desmembramiento y renacimiento; uno de los pocos cuyo culto parece arribar a Grecia desde geografías periféricas —Tracia, Frigia, Anatolia—; y el único que convierte el exceso en principio religioso y la disolución de los límites en experiencia teológica. En algunas tradiciones tardías, incluso, ocupa el lugar de Hestia entre los doce olímpicos: el dios del desborde reemplaza así a la diosa del centro doméstico.<sup>1</sup></p>
+    <p><em>Las bacantes</em> de Eurípides narran las consecuencias de esa irrupción. Cuando Penteo, rey de Tebas, intenta resistir la llegada del culto dionisíaco, termina despedazado por su propia madre, poseída por el trance báquico. La tragedia sugiere que aquello dionisíaco que el orden busca reprimir retorna con violencia redoblada. No puede prohibirse; sólo puede ser reconocido e integrado.</p>
+    <p>Aby Warburg identificó en varias láminas de su <em>Atlas Mnemosyne</em> la persistencia de una <em>Pathosformel</em> dionisíaca: el cuerpo arqueado hacia atrás, la cabeza lanzada en éxtasis, los cabellos sueltos, el paño agitado por una energía centrífuga. La fórmula reaparece en sarcófagos romanos, en los frescos de la Villa de los Misterios y en la pintura renacentista, para prolongarse —como supervivencia formal— en modulaciones expresivas posteriores.</p>
+
+    <p>El Baco de Caravaggio presenta a un adolescente de mirada entornada que ofrece una copa mientras parece beber de ella. No sabemos si contemplamos a un hombre disfrazado de dios o a un dios que ha descendido hasta hacerse indistinguible de lo humano. Y acaso la verdad última de Dioniso reside en la fisura donde la identidad comienza a disolverse.</p>
     <p>Caravaggio lo entendió mejor que nadie: su <em>Baco</em> de los Uffizi (1596–97) no es un dios sino un adolescente con los ojos a medio cerrar, ofreciendo una copa que él mismo está bebiendo. Un individuo ordinario disfrazado de dios. O un dios que ha bajado tanto que ya es indistinguible de la humanidad.</p>
     <span class="section-title">Pathosformeln visuales</span>
     
@@ -152,13 +154,13 @@
       <span class="obra-museo">National Gallery, Londres</span>
       
       <img src="img-dioniso-2.jpg" alt="" style="width:100%;border-radius:4px;margin:0.75rem 0;aspect-ratio:16/10;object-fit:cover;display:block;">
-      <p class="obra-desc">Dioniso saltando de su carro hacia Ariadna. <em>Pathosformel</em> del encuentro dionisíaco: la irrupción del desborde en la vida ordenada de quien esperaba otra cosa.</p>
+      <p class="obra-desc">La escena formula una <em>Pathosformel</em> del encuentro dionisíaco: el instante en que el exceso irrumpe en una vida organizada para desbaratarla y rehacerla.</p>
     </div>
   </main>
   <aside class="ficha-sidebar">
     <div class="sidebar-block">
       <span class="sidebar-label">El motivo</span>
-      <p class="sidebar-motivo">La experiencia de conexión que disuelve el yo: no como patología sino como forma de conocimiento. El problema es que ese conocimiento no puede ser sostenido indefinidamente. Dioniso es el dios que el sistema incorpora para domesticarlo y que el sistema no puede domesticar.</p>
+      <p class="sidebar-motivo">La experiencia de conexión que disuelve el yo como forma de conocimiento. El problema es que ese conocimiento no puede ser sostenido indefinidamente. Dioniso es el dios que el sistema incorpora para domesticarlo y que el sistema no puede domesticar.</p>
     </div>
     <div class="sidebar-block">
       <span class="sidebar-label">Conexiones cruzadas</span>
@@ -169,7 +171,7 @@
     </div>
     <div class="conexion-item">
       <a href="apolo.html" class="conexion-dios">Apolo</a>
-      <p class="conexion-txt">Los dos principios del arte griego según Nietzsche. El oráculo de Delfos es el lugar donde ambos conviven: Apolo lo administra, pero el entusiasmo que genera es dionisíaco.</p>
+      <p class="conexion-txt">El oráculo délfico condensa la paradoja central del pensamiento nietzscheano: bajo administración apolínea, produce una experiencia dionisíaca. La forma pertenece a Apolo; la irrupción extática que la anima, a Dioniso.</p>
     </div>
     <div class="conexion-item">
       <a href="demeter.html" class="conexion-dios">Deméter</a>
