@@ -20,7 +20,7 @@
   html { font-size: 16px; scroll-behavior: smooth; }
   body { background: var(--parchment); color: var(--ink); font-family: var(--serif-body); font-size: 1.125rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
   nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; border-bottom: 0.5px solid var(--parchment-dark); background: var(--parchment); position: sticky; top: 0; z-index: 10; }
-  .nav-logo { display: flex; align-items: center; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
+  .nav-logo { font-family: var(--serif-ui); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; color: var(--ink); }
   .nav-dossier { font-family: var(--serif-ui); font-size: 0.75rem; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.03em; }
   .nav-dossier:hover { color: var(--ink); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -94,7 +94,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Casa Matriz" style="height:32px;width:32px;object-fit:contain;"></a>
+  <a href="index.html" class="nav-logo">Casa Matriz</a>
   <a href="olimpo.html" class="nav-dossier">← Doce tronos, trece dioses</a>
   <ul class="nav-links">
     <li><a href="revista.html">Revista</a></li>
@@ -129,10 +129,10 @@
 </div>
 <div class="ficha-layout">
   <main class="ficha-body">
-    <p>Deméter es la diosa más antigua del panteón en términos de culto real: antes de que Zeus se instalara en el Olimpo, ella ya era adorada en Eleusis. Su nombre lo confirma: <em>Damáter</em>, la Madre Da, donde <em>Da</em> es un nombre antiquísimo de la tierra. Robert Graves y Marija Gimbutas sostienen que Deméter es una supervivencia directa del culto a la Gran Diosa: una divinidad que precede a todo el panteón olímpico y fue incorporada a él a costa de perder su centralidad.<sup>1</sup></p>
+    <p>Deméter es la diosa más antigua del panteón en términos de culto real: antes de que Zeus se instalara en el Olimpo, ella ya era adorada en Eleusis. Su nombre lo confirma: <em>Damáter</em>, la Madre Da, donde <em>Da</em> es un nombre antiquísimo de la tierra. Robert Graves y Marija Gimbutas sostienen que Deméter es una supervivencia directa del culto a la Gran Diosa, una divinidad que precede a todo el panteón olímpico y fue incorporada a él a costa de perder su centralidad.<sup>1</sup></p>
     <p>El mito que la define no es de poder sino de pérdida: Hades rapta a Perséfone y la lleva al inframundo. Deméter la busca durante nueve días sin comer ni beber, con antorchas encendidas. Cuando se entera de lo ocurrido, abandona el Olimpo y se instala en Eleusis disfrazada de anciana. La tierra deja de dar frutos. Zeus, alarmado por la catástrofe agrícola, negocia: Perséfone pasará parte del año con su madre y otra parte en el inframundo. Las estaciones son el resultado de ese acuerdo.</p>
-    <p>Los Misterios de Eleusis —el culto iniciático más importante de Grecia, documentado desde el siglo XV a.C. hasta el siglo IV d.C.— giraban alrededor de esta pérdida y este retorno.<sup>2</sup> Sus contenidos permanecen desconocidos por el juramento de silencio de los iniciados, pero el marco narrativo es transparente: la muerte como transformación, no como fin.</p>
-    <p>Lo extraordinario de este mito es que Deméter gana y pierde al mismo tiempo. Recupera a su hija pero no completamente. El acuerdo la obliga a aceptar la ausencia periódica, a integrar la separación como parte del vínculo. El motivo de Deméter es el duelo que enseña: no el que paraliza sino el que, en su búsqueda, reconfigura el mundo.</p>
+    <p>Los Misterios de Eleusis —el culto iniciático más importante de Grecia, documentado desde el siglo XV a.C. hasta el siglo IV d.C.— giraban alrededor de esta pérdida y este retorno.<sup>2</sup> Su contenido permanece desconocido aunque el marco narrativo consiste en interpretar la muerte como transformación, no como fin.</p>
+    <p>Lo extraordinario de este mito es que Deméter gana y pierde al mismo tiempo. Recupera a su hija pero no completamente. El acuerdo la obliga a aceptar la ausencia periódica, a integrar la separación como parte del vínculo. El motivo de Deméter es la ciclicidad que reconfigura el mundo.</p>
     <span class="section-title">Pathosformeln visuales</span>
     
     <div class="obra">
@@ -144,19 +144,19 @@
     <div class="obra">
       <p class="obra-header"><strong>Anónimo</strong>, <em>Gran relieve eleusino (Deméter, Triptólemo, Perséfone)</em> (siglo V a.C.)</p>
       <span class="obra-museo">Museo Arqueológico Nacional, Atenas</span>
-      <p class="obra-desc">Deméter entregando las espigas de trigo a Triptólemo para que las distribuya entre los hombres. <em>Pathosformel</em> de la generosidad que nace del dolor: la madre que, después de recuperar a su hija, enseña a los humanos a cultivar.</p>
+      <p class="obra-desc">Deméter entregando las espigas de trigo a Triptólemo para que las distribuya entre los hombres. <em>Pathosformel</em> del ciclo poder-dolor.</p>
     </div>
     <div class="obra">
       <p class="obra-header"><strong>Leighton, Frederic</strong>, <em>El retorno de Perséfone</em> (1891)</p>
       <span class="obra-museo">Leeds Art Gallery, Leeds</span>
       <img src="img-demeter.jpg" alt="" style="width:100%;border-radius:4px;margin:0.75rem 0;aspect-ratio:16/10;object-fit:cover;display:block;">
-      <p class="obra-desc">Hermes conduce a Perséfone de vuelta al mundo superior; Deméter la espera con los brazos abiertos. <em>Pathosformel</em> del reencuentro que no puede deshacer la separación pero puede sobrevivirla.</p>
+      <p class="obra-desc">Hermes conduce a Perséfone de vuelta al mundo superior; Deméter la espera con los brazos abiertos. <em>Pathosformel</em> del reencuentro que no puede deshacer la separación.</p>
     </div>
   </main>
   <aside class="ficha-sidebar">
     <div class="sidebar-block">
       <span class="sidebar-label">El motivo</span>
-      <p class="sidebar-motivo">El duelo que enseña. No el que paraliza sino el que, en su búsqueda, reconfigura el mundo. La tierra que no da frutos mientras Deméter llora es la imagen más precisa de lo que la pérdida hace al entorno.</p>
+      <p class="sidebar-motivo">El duelo que reconfigura el mundo. La tierra que no da frutos mientras Deméter llora es la imagen más precisa de lo que la pérdida hace al entorno.</p>
     </div>
     <div class="sidebar-block">
       <span class="sidebar-label">Conexiones cruzadas</span>
